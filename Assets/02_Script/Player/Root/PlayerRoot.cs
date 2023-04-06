@@ -12,7 +12,9 @@ public class PlayerRoot : MonoBehaviour
     protected virtual void Awake()
     {
 
-
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        rigid = GetComponent<Rigidbody2D>();
 
     }
 
