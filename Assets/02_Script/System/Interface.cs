@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Interface : MonoBehaviour
+namespace Interface
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public interface IEventObject
     {
-        
+
+        public void AddEvent();
+        public void RemoveEvent();
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
