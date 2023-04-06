@@ -78,14 +78,21 @@ public class InputManager : MonoBehaviour
                         evt.actionEvent?.Invoke(Input.GetAxisRaw("Horizontal"));
 
                     }
-                    else
+                    else if (evt.getAxisType == GetAxisType.Default)
                     {
 
                         evt.actionEvent?.Invoke(Input.GetAxis("Horizontal"));
 
                     }
+                    else
+                    {
 
-                },
+                        evt.actionEvent?.Invoke(Input.GetAxisRaw("Horizontal") + Input.GetAxis("Horizontal"));
+
+                    }
+
+                }
+                ,
 
                 AxisEventType.Vertical => () =>
                 {
@@ -96,14 +103,21 @@ public class InputManager : MonoBehaviour
                         evt.actionEvent?.Invoke(Input.GetAxisRaw("Vertical"));
 
                     }
-                    else
+                    else if(evt.getAxisType == GetAxisType.Default)
                     {
 
                         evt.actionEvent?.Invoke(Input.GetAxis("Vertical"));
 
                     }
+                    else
+                    {
 
-                },
+                        evt.actionEvent?.Invoke(Input.GetAxisRaw("Vertical") + Input.GetAxis("Vertical"));
+
+                    }
+
+                }
+                ,
                 _ => null
 
             };

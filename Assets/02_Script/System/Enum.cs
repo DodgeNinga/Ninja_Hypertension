@@ -26,7 +26,8 @@ namespace Enums
     {
 
         Default,
-        Raw
+        Raw,
+        All,
 
     }
 

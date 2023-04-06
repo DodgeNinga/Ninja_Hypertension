@@ -1,11 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 
 public class PlayerMove : PlayerBehaviorRoot
 {
 
     [SerializeField] private float moveSpeed;
+
+    protected override void Awake()
+    {
+
+        base.Awake();
+
+        AddEvent();
+        
+
+    }
 
     private void Move(float inputX)
     {

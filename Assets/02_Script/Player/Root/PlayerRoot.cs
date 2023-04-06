@@ -9,6 +9,7 @@ public class PlayerRoot : MonoBehaviour
     protected SpriteRenderer spriteRenderer;
     protected Rigidbody2D rigid;
     protected PlayerActionSystem actionSystem;
+    protected JumpCol jumpCol;
 
     protected virtual void Awake()
     {
@@ -16,6 +17,7 @@ public class PlayerRoot : MonoBehaviour
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         rigid = GetComponent<Rigidbody2D>();
+        jumpCol = GetComponentInChildren<JumpCol>();
 
         actionSystem = transform.Find("Input").GetComponent<PlayerActionSystem>();
 
