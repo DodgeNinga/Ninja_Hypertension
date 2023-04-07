@@ -26,14 +26,14 @@ public class PlayerJump : PlayerBehaviorRoot
     public override void AddEvent()
     {
 
-        actionSystem.jumpKeyEvent += Jump;
+        actionSystem.OnJumpKeyEvent += Jump;
 
     }
 
     public override void RemoveEvent()
     {
 
-        actionSystem.jumpKeyEvent -= Jump;
+        actionSystem.OnJumpKeyEvent -= Jump;
 
     }
 }
