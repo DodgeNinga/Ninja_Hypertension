@@ -19,6 +19,8 @@ public class PlayerJump : PlayerBehaviorRoot
     private void Jump()
     {
 
+        if (!jumpCol.isGround) return;
+
         rigid.velocity += Vector2.up * jumpPower;
 
     }
