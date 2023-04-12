@@ -17,6 +17,7 @@ namespace FD.Program.Runtime
         static FAED_Set()
         {            
 
+
             if(Directory.Exists(string.Format("{0}/{1}", Application.dataPath,@"\Resources\FAED")) == false)
             {
 

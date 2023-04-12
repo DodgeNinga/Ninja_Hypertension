@@ -13,4 +13,13 @@ namespace Interface
 
     }
 
+    public interface IHpObject
+    {
+
+        public float HP { get; set;}
+        public void TakeDamage(float damage);
+        public void HealingHP(float healPoint);
+
+    }
+
 }
