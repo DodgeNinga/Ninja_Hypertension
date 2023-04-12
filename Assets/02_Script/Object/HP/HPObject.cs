@@ -1,18 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Interface;
 
-public class HPObject : MonoBehaviour
+public class HPObject : MonoBehaviour, IHpObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public float HP { get; protected set; }
+    public void TakeDamage(float damage) { }
+    public void HealingHP(float healPoint) { }
+
 }
