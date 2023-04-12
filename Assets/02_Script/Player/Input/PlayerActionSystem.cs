@@ -10,8 +10,8 @@ public class PlayerActionSystem : MonoBehaviour
     public event Action<float> OnVerticalEvnet;
     public event Action OnJumpKeyEvent;
 
-    public void OnHorizontalExecute(float v) => OnHorizontalEvnet(v);
-    public void OnVerticalExecute(float v) => OnVerticalEvnet(v);
-    public void OnJumpKeyExecute() => OnJumpKeyEvent();
+    public void OnHorizontalExecute(float v) => OnHorizontalEvnet?.Invoke(v);
+    public void OnVerticalExecute(float v) => OnVerticalEvnet?.Invoke(v);
+    public void OnJumpKeyExecute() => OnJumpKeyEvent?.Invoke();
 
 }

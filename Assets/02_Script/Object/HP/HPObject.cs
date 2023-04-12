@@ -1,13 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Interface;
 
-public class HPObject : MonoBehaviour, IHpObject
+public class HPObject : MonoBehaviour
 {
 
     public float HP { get; protected set; }
-    public void TakeDamage(float damage) { }
-    public void HealingHP(float healPoint) { }
+
+    public virtual void TakeDamage(float damage) 
+    { 
+        
+        HP -= damage;
+
+    }
+
+    public virtual void HealingHP(float healPoint)  
+    { 
+        
+        HP += healPoint;
+
+    }
 
 }
