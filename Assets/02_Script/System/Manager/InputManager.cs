@@ -4,19 +4,20 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class InputManager : MonoBehaviour
 {
 
     [SerializeField, Header("___Key___")] private List<KeyEvent> keyEvents = new List<KeyEvent>();
     [SerializeField, Header("___Axis___")] private List<AxisEvent> axisEvents = new List<AxisEvent>();
+    [SerializeField, Header("___MultKey___")] private List<MultKeyEvnet> multKeyEvnets = new List<MultKeyEvnet>();
 
     private void Update()
     {
 
         KeyEvent();
         AxisEvent();
+        MultKeyEvnet();
 
     }
 
@@ -123,6 +124,60 @@ public class InputManager : MonoBehaviour
             };
 
             action?.Invoke();
+
+        }
+
+    }
+    
+    private void MultKeyEvnet()
+    {
+
+        foreach(var item in multKeyEvnets)
+        {
+
+            int number = 0;
+
+            foreach(var evt in item.inputkeys)
+            {
+
+                Action action = item.eventType switch
+                {
+
+                    KeyEventType.Up => () =>
+                    {
+
+                        if (Input.GetKeyUp(evt)) number++;
+
+                    }
+                    ,
+                    KeyEventType.Down => () =>
+                    {
+
+                        if (Input.GetKeyDown(evt)) number++;
+
+                    }
+                    ,
+                    KeyEventType.Alway => () =>
+                    {
+
+                        if (Input.GetKey(evt)) number++;
+
+                    }
+                    ,
+                    _ => null
+
+                };
+
+                action?.Invoke();
+
+            }
+
+            if(item.inputkeys.Count == number) 
+            { 
+                
+                item.actionEvent?.Invoke();
+            
+            }
 
         }
 

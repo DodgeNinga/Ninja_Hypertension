@@ -28,4 +28,14 @@ namespace Struct
 
     }
 
+    [System.Serializable]
+    public struct MultKeyEvnet
+    {
+
+        public List<KeyCode> inputkeys;
+        public KeyEventType eventType;
+        public UnityEvent actionEvent;
+
+    }
+
 }
