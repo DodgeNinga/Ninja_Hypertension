@@ -20,8 +20,8 @@ public class PlayerFlip : PlayerBehaviorRoot
         spriteRenderer.flipX = value switch
         {
 
-            1 => true,
-            -1 => false,
+            1 => false,
+            -1 => true,
             _ => spriteRenderer.flipX
 
         };
