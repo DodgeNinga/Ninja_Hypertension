@@ -12,6 +12,8 @@ public class PlayerAnimator : MonoBehaviour
     private readonly int WallFallHash = Animator.StringToHash("WallFall");
 
     private MargedSencer margedSencer;
+    private PlayerFlip playerFlip;
+    private SpriteRenderer spriteRenderer;
     private Animator animator;
     private Rigidbody2D rigid;
     private JumpCol jumpCol;
@@ -21,6 +23,8 @@ public class PlayerAnimator : MonoBehaviour
     {
         
         rigid = GetComponent<Rigidbody2D>();
+        playerFlip = GetComponent<PlayerFlip>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         jumpCol = GetComponentInChildren<JumpCol>();
         margedSencer = GetComponentInChildren<MargedSencer>();
@@ -76,16 +80,23 @@ public class PlayerAnimator : MonoBehaviour
     private void WallChack()
     {
 
-        if(margedSencer.RightSencer || margedSencer.LeftSencer)
+        if((margedSencer.RightSencer || margedSencer.LeftSencer) && fallDownTime > 0f)
         {
 
             animator.SetFloat(WallFallHash, 1);
+
+            if(margedSencer.RightSencer) spriteRenderer.flipX = true;
+            else spriteRenderer.flipX = false;
+
+            playerFlip.useFlip = false;
+
 
         }
         else
         {
 
             animator.SetFloat(WallFallHash, 0);
+            playerFlip.useFlip = true;
 
         }
 

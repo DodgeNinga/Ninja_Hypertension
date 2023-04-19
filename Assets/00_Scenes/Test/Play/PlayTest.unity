@@ -340,7 +340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52315be2d66cee345a7924050ea19204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpPower: 7
+  jumpPower: 8.5
 --- !u!114 &73164380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -411,6 +411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9000e09a372d3ad43aa413b84f77c745, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useFlip: 1
 --- !u!114 &73164385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -562,7 +563,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 208306129}
-  - component: {fileID: 208306131}
   - component: {fileID: 208306130}
   m_Layer: 0
   m_Name: WallSencer
@@ -597,21 +597,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 208306128}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3171fddb421a3f04ebd8af67e6cdac7a, type: 3}
+  m_Script: {fileID: 11500000, guid: d63dbe5388470ab4583f0267238015d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &208306131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 208306128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3171fddb421a3f04ebd8af67e6cdac7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  leftSencer:
+  - {fileID: 1164453908}
+  - {fileID: 25100401}
+  rightSencer:
+  - {fileID: 1093493316}
+  - {fileID: 1902153410}
 --- !u!1 &341479108
 GameObject:
   m_ObjectHideFlags: 0

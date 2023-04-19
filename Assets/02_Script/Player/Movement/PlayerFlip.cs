@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerFlip : PlayerBehaviorRoot
 {
 
+    public bool useFlip = true;
+
     protected override void Awake()
     {
 
@@ -16,6 +18,8 @@ public class PlayerFlip : PlayerBehaviorRoot
 
     private void Flip(float value)
     {
+
+        if (!useFlip) return;
 
         spriteRenderer.flipX = value switch
         {
