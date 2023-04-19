@@ -9,7 +9,9 @@ public class PlayerAnimator : MonoBehaviour
     private readonly int MoveVelYHash = Animator.StringToHash("MoveVelY");
     private readonly int JumpHash = Animator.StringToHash("Jump");
     private readonly int LandingTriggerHash = Animator.StringToHash("LandingTrigger");
+    private readonly int WallFallHash = Animator.StringToHash("WallFall");
 
+    private MargedSencer margedSencer;
     private Animator animator;
     private Rigidbody2D rigid;
     private JumpCol jumpCol;
@@ -21,6 +23,7 @@ public class PlayerAnimator : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         jumpCol = GetComponentInChildren<JumpCol>();
+        margedSencer = GetComponentInChildren<MargedSencer>();
 
     }
 
@@ -30,6 +33,7 @@ public class PlayerAnimator : MonoBehaviour
         SetMoveVelHash();
         FallDownChack();
         ChackLanding();
+        WallChack();
 
     }
     private void SetMoveVelHash()
@@ -65,6 +69,23 @@ public class PlayerAnimator : MonoBehaviour
 
             fallDownTime = 0;
             animator.SetTrigger(LandingTriggerHash);
+
+        }
+
+    }
+    private void WallChack()
+    {
+
+        if(margedSencer.RightSencer || margedSencer.LeftSencer)
+        {
+
+            animator.SetFloat(WallFallHash, 1);
+
+        }
+        else
+        {
+
+            animator.SetFloat(WallFallHash, 0);
 
         }
 
