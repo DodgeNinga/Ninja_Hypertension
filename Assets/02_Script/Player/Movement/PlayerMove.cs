@@ -16,7 +16,7 @@ public class PlayerMove : PlayerBehaviorRoot
         base.Awake();
 
         AddEvent();
-        
+
 
     }
 
@@ -34,6 +34,20 @@ public class PlayerMove : PlayerBehaviorRoot
 
         StartCoroutine(KnockBackCo(vel));
 
+    }
+
+    public void SetMoveAble(float value)
+    {
+
+        moveAble = value switch
+        {
+
+            0 => false,
+            1 => true,
+            _ => false,
+
+        };
+    
     }
 
     public override void AddEvent()
