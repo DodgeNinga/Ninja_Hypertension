@@ -5,6 +5,41 @@ using UnityEngine;
 public class PlayerFlip : PlayerBehaviorRoot
 {
 
+    protected override void Awake()
+    {
 
+        base.Awake();
+
+        AddEvent();
+
+    }
+
+    private void Flip(float value)
+    {
+
+        spriteRenderer.flipX = value switch
+        {
+
+            1 => true,
+            -1 => false,
+            _ => spriteRenderer.flipX
+
+        };
+
+    }
+
+    public override void AddEvent()
+    {
+
+        actionSystem.OnHorizontalEvnet += Flip;
+
+    }
+
+    public override void RemoveEvent()
+    {
+
+        actionSystem.OnHorizontalEvnet -= Flip;
+
+    }
 
 }

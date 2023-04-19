@@ -8,6 +8,7 @@ public class PlayerActionSystem : MonoBehaviour
 
     public event Action<float> OnHorizontalEvnet;
     public event Action<float> OnVerticalEvnet;
+    public event Action<float> OnHorizontalEventRaw;
     public event Action OnJumpKeyEvent;
     public event Action OnSkillKeyPressEvent;
     //여기에 키 인풋코드 추가
