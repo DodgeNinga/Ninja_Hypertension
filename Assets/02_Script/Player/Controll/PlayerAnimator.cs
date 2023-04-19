@@ -40,6 +40,7 @@ public class PlayerAnimator : MonoBehaviour
         WallChack();
 
     }
+
     private void SetMoveVelHash()
     {
 
