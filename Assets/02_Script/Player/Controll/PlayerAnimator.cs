@@ -7,7 +7,7 @@ public class PlayerAnimator : MonoBehaviour
 
     private readonly int MoveVelXHash = Animator.StringToHash("MoveVelX");
     private readonly int MoveVelYHash = Animator.StringToHash("MoveVelY");
-    private readonly int JunpHash = Animator.StringToHash("Jump");
+    private readonly int JumpHash = Animator.StringToHash("Jump");
     private readonly int LandingHash = Animator.StringToHash("Landing");
     private readonly int LandingTriggerHash = Animator.StringToHash("LandingTrigger");
 
@@ -34,6 +34,13 @@ public class PlayerAnimator : MonoBehaviour
 
         animator.SetFloat(MoveVelXHash, Mathf.Abs(rigid.velocity.x));
         animator.SetFloat(MoveVelYHash, rigid.velocity.y);
+
+    }
+
+    public void SetJump()
+    {
+
+        animator.SetTrigger(JumpHash);
 
     }
 
