@@ -31,14 +31,14 @@ public class PlayerFlip : PlayerBehaviorRoot
     public override void AddEvent()
     {
 
-        actionSystem.OnHorizontalEvnet += Flip;
+        actionSystem.OnHorizontalRawEvent += Flip;
 
     }
 
     public override void RemoveEvent()
     {
 
-        actionSystem.OnHorizontalEvnet -= Flip;
+        actionSystem.OnHorizontalRawEvent -= Flip;
 
     }
 

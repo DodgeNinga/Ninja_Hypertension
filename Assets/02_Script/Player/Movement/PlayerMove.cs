@@ -28,14 +28,14 @@ public class PlayerMove : PlayerBehaviorRoot
     public override void AddEvent()
     {
 
-        actionSystem.OnHorizontalEvnet += Move;
+        actionSystem.OnHorizontalEvent += Move;
 
     }
 
     public override void RemoveEvent()
     {
 
-        actionSystem.OnHorizontalEvnet -= Move;
+        actionSystem.OnHorizontalEvent -= Move;
 
     }
 
