@@ -7,6 +7,7 @@ public class PlayerJump : PlayerBehaviorRoot
 
     [SerializeField] private float jumpPower;
 
+
     protected override void Awake()
     {
 
@@ -21,6 +22,7 @@ public class PlayerJump : PlayerBehaviorRoot
 
         if (!jumpCol.isGround) return;
 
+        animator.SetJump();
         rigid.velocity += Vector2.up * jumpPower;
 
     }
