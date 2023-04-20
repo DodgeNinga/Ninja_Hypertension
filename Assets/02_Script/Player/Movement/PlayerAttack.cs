@@ -53,6 +53,33 @@ public class PlayerAttack : PlayerBehaviorRoot
 
     }
 
+
+    public void EndAttackAnime()
+    {
+
+        playerFlip.flipAble = true;
+        playerJump.jumpAble = true;
+        attackAble = true;
+        StartCoroutine(ComboAbleTimeCo());
+
+    }
+
+    public void EndAttack()
+    {
+
+        FAED.InvokeDelay(() => 
+        {
+
+            animator.SetEndAttack();
+            playerMove.SetMoveAble(1);
+            playerJump.jumpAble = true;
+            playerFlip.flipAble = true;
+
+        }, 0.2f);
+        attackAble = false;
+        StartCoroutine(AttackDelayCo());
+
+    }
     public override void AddEvent()
     {
 
@@ -64,34 +91,6 @@ public class PlayerAttack : PlayerBehaviorRoot
     {
 
         actionSystem.OnSkillKeyPressEvent -= Attack;
-
-    }
-
-    public void EndAttackAnime()
-    {
-
-        playerFlip.flipAble = true;
-        playerJump.jumpAble = true;
-        attackAble = true;
-        StartCoroutine(ComboAbleTimeCo());
-
-    }
-    /// <summary>
-    /// 
-    /// </summary>
-    public void EndAttack()
-    {
-
-        FAED.InvokeDelay(() => 
-        {
-
-            animator.SetEndAttack();
-            playerMove.SetMoveAble(1);
-            playerJump.jumpAble = true; 
-
-        }, 0.2f);
-        attackAble = false;
-        StartCoroutine(AttackDelayCo());
 
     }
 
