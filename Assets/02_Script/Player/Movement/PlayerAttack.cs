@@ -53,7 +53,6 @@ public class PlayerAttack : PlayerBehaviorRoot
 
     }
 
-
     public void EndAttackAnime()
     {
 
@@ -80,6 +79,7 @@ public class PlayerAttack : PlayerBehaviorRoot
         StartCoroutine(AttackDelayCo());
 
     }
+
     public override void AddEvent()
     {
 
