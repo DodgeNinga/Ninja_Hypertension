@@ -41,6 +41,7 @@ public class PlayerSkill : PlayerBehaviorRoot
         playerMove.SetMoveSpeed(holdMoveSpeed);
 
         animator.SetSkillHoldHash(true);
+        animator.SetSkillHoldTriggerHash();
 
         StartCoroutine(LvUpCo());
 

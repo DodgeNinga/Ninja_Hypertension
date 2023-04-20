@@ -163,4 +163,11 @@ public class PlayerAnimator : MonoBehaviour
 
     }
 
+    public void SetSkillHoldTriggerHash()
+    {
+
+        animator.SetTrigger(SkillHoldTriggerHash);
+
+    }
+
 }
