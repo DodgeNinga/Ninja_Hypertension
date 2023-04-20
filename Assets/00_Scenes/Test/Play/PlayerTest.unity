@@ -204,6 +204,7 @@ GameObject:
   - component: {fileID: 73164386}
   - component: {fileID: 73164387}
   - component: {fileID: 73164388}
+  - component: {fileID: 73164389}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -448,6 +449,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &73164389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73164374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 307531cfa8a063c48bc9ce400681da63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lvUpTime: 1
+  skillAble: 1
 --- !u!1 &79837477
 GameObject:
   m_ObjectHideFlags: 0
@@ -792,6 +807,40 @@ MonoBehaviour:
         - m_Target: {fileID: 531737388}
           m_TargetAssemblyTypeName: PlayerActionSystem, Assembly-CSharp
           m_MethodName: OnSkillKeyPressExecute
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - inputKey: 107
+    eventType: 1
+    actionEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 531737388}
+          m_TargetAssemblyTypeName: PlayerActionSystem, Assembly-CSharp
+          m_MethodName: OnHoldSkillPressExecute
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - inputKey: 107
+    eventType: 2
+    actionEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 531737388}
+          m_TargetAssemblyTypeName: PlayerActionSystem, Assembly-CSharp
+          m_MethodName: OnHoldSkillUpExecute
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

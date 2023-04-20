@@ -9,8 +9,10 @@ public class PlayerSkill : PlayerBehaviorRoot
     private readonly int OutLineColorHash = Shader.PropertyToID("_OuterOutlineColor");
 
     [SerializeField] private float lvUpTime = 1f;
+    [SerializeField] private float holdMoveSpeed;
 
     private MaterialPropertyBlock propertyBlock;
+    private PlayerMove playerMove;
     private int currentLV = 1;
 
     public bool skillAble = true;
@@ -19,7 +21,10 @@ public class PlayerSkill : PlayerBehaviorRoot
     {
 
         base.Awake();
+        propertyBlock = new MaterialPropertyBlock();
+        playerMove = GetComponent<PlayerMove>();
         spriteRenderer.GetPropertyBlock(propertyBlock);
+        
         AddEvent();
 
     }
@@ -29,8 +34,10 @@ public class PlayerSkill : PlayerBehaviorRoot
 
         if (!skillAble) return;
 
-        propertyBlock.SetFloat(OutLineValueHash, 1);
-        spriteRenderer.SetPropertyBlock(propertyBlock);
+        spriteRenderer.material.SetFloat(OutLineValueHash, 1);
+        playerMove.SetMoveSpeed(holdMoveSpeed);
+
+        animator.SetSkillHoldHash(true);
 
         StartCoroutine(LvUpCo());
 
@@ -41,8 +48,12 @@ public class PlayerSkill : PlayerBehaviorRoot
 
         if (!skillAble) return;
 
-        propertyBlock.SetFloat(OutLineValueHash, 0);
-        spriteRenderer.SetPropertyBlock(propertyBlock);
+        spriteRenderer.material.SetFloat(OutLineValueHash, 0);
+        currentLV = 0;
+
+        animator.SetSkillHoldHash(false);
+        playerMove.SetMoveSpeed(-1);
+
         StopAllCoroutines();
 
     }
@@ -66,10 +77,10 @@ public class PlayerSkill : PlayerBehaviorRoot
     private IEnumerator LvUpCo()
     {
 
-        while(currentLV != 3)
+        while(currentLV <= 3)
         {
 
-            propertyBlock.SetColor(OutLineColorHash, currentLV switch
+            spriteRenderer.material.SetColor(OutLineColorHash, currentLV switch
             {
 
                 1 => Color.white,
@@ -78,7 +89,6 @@ public class PlayerSkill : PlayerBehaviorRoot
                 _ => Color.black
 
             });
-            spriteRenderer.SetPropertyBlock(propertyBlock);
 
             yield return new WaitForSeconds(lvUpTime);
             currentLV++;

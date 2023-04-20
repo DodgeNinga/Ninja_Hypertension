@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.Intrinsics;
 using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 
@@ -7,6 +8,8 @@ public class PlayerMove : PlayerBehaviorRoot
 {
 
     [SerializeField] private float moveSpeed;
+
+    private float currentSpeed;
 
     private bool moveAble = true;
 
@@ -16,6 +19,7 @@ public class PlayerMove : PlayerBehaviorRoot
         base.Awake();
 
         AddEvent();
+        currentSpeed = moveSpeed;
 
 
     }
@@ -25,7 +29,7 @@ public class PlayerMove : PlayerBehaviorRoot
 
         if (!moveAble) return;
 
-        rigid.velocity = new Vector2(inputX * moveSpeed, rigid.velocity.y);
+        rigid.velocity = new Vector2(inputX * currentSpeed, rigid.velocity.y);
 
     }
 
@@ -48,6 +52,20 @@ public class PlayerMove : PlayerBehaviorRoot
 
         };
     
+    }
+
+    public void SetMoveSpeed(float value)
+    {
+
+        if(value <= -1)
+        {
+
+            currentSpeed = moveSpeed;
+
+        }
+
+        currentSpeed = value;
+
     }
 
     public override void AddEvent()
