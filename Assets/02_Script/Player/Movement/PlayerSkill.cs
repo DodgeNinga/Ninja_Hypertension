@@ -6,11 +6,11 @@ public class PlayerSkill : PlayerBehaviorRoot
 {
 
     private readonly int OutLineValueHash = Shader.PropertyToID("_OuterOutlineFade");
+    private readonly int OutLineColorHash = Shader.PropertyToID("_OuterOutlineColor");
 
     [SerializeField] private float lvUpTime = 1f;
 
     private MaterialPropertyBlock propertyBlock;
-    private bool addValue;
     private int currentLV = 1;
 
     public bool skillAble = true;
@@ -24,24 +24,20 @@ public class PlayerSkill : PlayerBehaviorRoot
 
     }
 
-    private void Update()
-    {
-        
-        
-
-    }
-
     private void PressEvent()
     {
 
+        if (!skillAble) return;
 
+        propertyBlock.SetFloat(OutLineValueHash, 1);
+        spriteRenderer.SetPropertyBlock(propertyBlock);
 
     }
 
     private void UpEvent()
     {
 
-
+        if (!skillAble) return;
 
     }
 
@@ -67,8 +63,19 @@ public class PlayerSkill : PlayerBehaviorRoot
         while(currentLV != 3)
         {
 
+            propertyBlock.SetColor(OutLineColorHash, currentLV switch
+            {
+
+                1 => Color.white,
+                2 => Color.cyan,
+                3 => Color.red,
+                _ => Color.black
+
+            });
+
             yield return new WaitForSeconds(lvUpTime);
             currentLV++;
+
 
         }
 
