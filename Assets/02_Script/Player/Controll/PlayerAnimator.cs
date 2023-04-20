@@ -128,6 +128,7 @@ public class PlayerAnimator : MonoBehaviour
     public void SetAttackTrigger()
     {
 
+        animator.ResetTrigger(AttackEndHash);
         animator.SetTrigger(AttackTriggerHash);
 
     }

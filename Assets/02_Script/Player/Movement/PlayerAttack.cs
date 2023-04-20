@@ -10,6 +10,8 @@ public class PlayerAttack : PlayerBehaviorRoot
     [SerializeField] private float attackDelayTime = 1;
 
     private PlayerMove playerMove;
+    private PlayerJump playerJump;
+    private PlayerFlip playerFlip;
     private int comboCnt;
     private bool attackAble = true;
 
@@ -21,6 +23,8 @@ public class PlayerAttack : PlayerBehaviorRoot
         AddEvent();
 
         playerMove = GetComponent<PlayerMove>();
+        playerJump = GetComponent<PlayerJump>();
+        playerFlip = GetComponent<PlayerFlip>();
 
     }
         
@@ -28,21 +32,18 @@ public class PlayerAttack : PlayerBehaviorRoot
     {
 
         if (!attackAble) return;
+        attackAble = false;
+        playerJump.jumpAble = false;
+        playerFlip.flipAble = false;
 
         StopAllCoroutines();
         playerMove.SetMoveAble(0);
         comboCnt++;
 
-        if (comboCnt == 1)
-        {
-
-            animator.SetAttackTrigger();
-
-        }
+        animator.SetAttackTrigger();
 
         animator.SetComboCount(comboCnt);
 
-        attackAble = false;
     }
 
     public void SetAttackAble(float value)
@@ -69,11 +70,15 @@ public class PlayerAttack : PlayerBehaviorRoot
     public void EndAttackAnime()
     {
 
+        playerFlip.flipAble = true;
+        playerJump.jumpAble = true;
         attackAble = true;
         StartCoroutine(ComboAbleTimeCo());
 
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
     public void EndAttack()
     {
 
@@ -82,6 +87,7 @@ public class PlayerAttack : PlayerBehaviorRoot
 
             animator.SetEndAttack();
             playerMove.SetMoveAble(1);
+            playerJump.jumpAble = true; 
 
         }, 0.2f);
         attackAble = false;

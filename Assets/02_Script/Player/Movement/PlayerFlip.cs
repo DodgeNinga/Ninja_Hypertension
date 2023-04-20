@@ -6,6 +6,7 @@ public class PlayerFlip : PlayerBehaviorRoot
 {
 
     public bool useFlip = true;
+    public bool flipAble = true;
 
     protected override void Awake()
     {
@@ -19,7 +20,7 @@ public class PlayerFlip : PlayerBehaviorRoot
     private void Flip(float value)
     {
 
-        if (!useFlip) return;
+        if (!useFlip || !flipAble) return;
 
         spriteRenderer.flipX = value switch
         {
