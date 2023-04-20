@@ -80,6 +80,18 @@ public class PlayerAttack : PlayerBehaviorRoot
 
     }
 
+    public void ResetAnimeValue()
+    {
+
+        comboCnt = 0;
+        playerMove.SetMoveAble(1);
+        playerFlip.flipAble = true;
+        playerJump.jumpAble = true;
+        attackAble = true;
+        StopAllCoroutines();
+
+    }
+
     public override void AddEvent()
     {
 
