@@ -199,11 +199,11 @@ GameObject:
   - component: {fileID: 73164378}
   - component: {fileID: 73164377}
   - component: {fileID: 73164381}
-  - component: {fileID: 73164382}
   - component: {fileID: 73164383}
   - component: {fileID: 73164384}
   - component: {fileID: 73164385}
   - component: {fileID: 73164386}
+  - component: {fileID: 73164387}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -367,18 +367,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravityPower: 9.8
---- !u!114 &73164382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 73164374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: daed8b98297cc084897845efe8e67ef2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &73164383
 Animator:
   serializedVersion: 5
@@ -443,6 +431,20 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!114 &73164387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73164374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80d50466542637549917a021b5d00124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  comboAbleTime: 0.2
+  attackDelayTime: 1
 --- !u!1 &79837477
 GameObject:
   m_ObjectHideFlags: 0
@@ -770,6 +772,23 @@ MonoBehaviour:
         - m_Target: {fileID: 531737388}
           m_TargetAssemblyTypeName: PlayerActionSystem, Assembly-CSharp
           m_MethodName: OnJumpKeyExecute
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - inputKey: 106
+    eventType: 1
+    actionEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 531737388}
+          m_TargetAssemblyTypeName: PlayerActionSystem, Assembly-CSharp
+          m_MethodName: OnSkillKeyPressExecute
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

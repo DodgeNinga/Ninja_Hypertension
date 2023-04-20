@@ -10,7 +10,7 @@ public class PlayerAnimator : MonoBehaviour
     private readonly int JumpHash = Animator.StringToHash("Jump");
     private readonly int LandingTriggerHash = Animator.StringToHash("LandingTrigger");
     private readonly int WallFallHash = Animator.StringToHash("WallFall");
-    private readonly int AttackTriggerHash = Animator.StringToHash("AttacckTrigger");
+    private readonly int AttackTriggerHash = Animator.StringToHash("AttackTrigger");
     private readonly int ComboCountHash = Animator.StringToHash("ComboCount");
     private readonly int AttackEndHash = Animator.StringToHash("AttackEnd");
 

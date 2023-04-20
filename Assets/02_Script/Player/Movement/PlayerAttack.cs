@@ -1,3 +1,4 @@
+using FD.Dev;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,9 +7,11 @@ public class PlayerAttack : PlayerBehaviorRoot
 {
 
     [SerializeField] private float comboAbleTime = 0.2f;
+    [SerializeField] private float attackDelayTime = 1;
 
+    private PlayerMove playerMove;
     private int comboCnt;
-    private bool attackAble;
+    private bool attackAble = true;
 
     protected override void Awake()
     {
@@ -17,6 +20,8 @@ public class PlayerAttack : PlayerBehaviorRoot
 
         AddEvent();
 
+        playerMove = GetComponent<PlayerMove>();
+
     }
         
     private void Attack()
@@ -24,9 +29,20 @@ public class PlayerAttack : PlayerBehaviorRoot
 
         if (!attackAble) return;
 
+        StopAllCoroutines();
+        playerMove.SetMoveAble(0);
         comboCnt++;
-        attackAble = false;
 
+        if (comboCnt == 1)
+        {
+
+            animator.SetAttackTrigger();
+
+        }
+
+        animator.SetComboCount(comboCnt);
+
+        attackAble = false;
     }
 
     public void SetAttackAble(float value)
@@ -47,6 +63,46 @@ public class PlayerAttack : PlayerBehaviorRoot
     {
 
         actionSystem.OnSkillKeyPressEvent -= Attack;
+
+    }
+
+    public void EndAttackAnime()
+    {
+
+        attackAble = true;
+        StartCoroutine(ComboAbleTimeCo());
+
+    }
+
+    public void EndAttack()
+    {
+
+        FAED.InvokeDelay(() => 
+        {
+
+            animator.SetEndAttack();
+            playerMove.SetMoveAble(1);
+
+        }, 0.2f);
+        attackAble = false;
+        StartCoroutine(AttackDelayCo());
+
+    }
+
+    private IEnumerator ComboAbleTimeCo()
+    {
+        
+        yield return new WaitForSeconds(comboAbleTime);
+        EndAttack();
+
+    }
+
+    private IEnumerator AttackDelayCo()
+    {
+
+        yield return new WaitForSeconds(attackDelayTime);
+        comboCnt = 0;
+        attackAble = true;
 
     }
 
