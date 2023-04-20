@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class EnemyMove : MonoBehaviour
 {
-    [SerializeField] float delayTime;
+    [SerializeField] float drbTime;
     [SerializeField] float speed;
     [SerializeField] float chasingSpeed;
-    int flip = -1;
-    int moveDir = -1;
     Vector3 direction;
     EnemyChase EC;
     Transform player;
@@ -22,9 +20,9 @@ public class EnemyMove : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(delayTime);
-            transform.localScale = new Vector2(transform.localScale.x*flip, 1);
-            moveDir *= -1;
+            yield return new WaitForSeconds(drbTime);
+            //transform.localScale = new Vector2(transform.localScale.x*flip, 1);
+            //moveDir *= -1;
         }
     }
 
@@ -34,13 +32,13 @@ public class EnemyMove : MonoBehaviour
         direction = direction.normalized;
         if (EC.chasing == false)
         {
-            transform.Translate(Vector3.right * speed * moveDir * Time.deltaTime);
-            flip = moveDir;
+            //transform.Translate(Vector3.right * speed * moveDir * Time.deltaTime);
+            //flip = moveDir;
         }
         else
         {
             transform.position += direction * chasingSpeed * Time.deltaTime;
-            flip = 1;
+            //flip = 1;
         }
     }
 }
