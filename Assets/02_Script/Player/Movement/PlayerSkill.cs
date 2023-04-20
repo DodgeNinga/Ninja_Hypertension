@@ -41,6 +41,10 @@ public class PlayerSkill : PlayerBehaviorRoot
 
         if (!skillAble) return;
 
+        propertyBlock.SetFloat(OutLineValueHash, 0);
+        spriteRenderer.SetPropertyBlock(propertyBlock);
+        StopAllCoroutines();
+
     }
 
     public override void AddEvent()
@@ -74,6 +78,7 @@ public class PlayerSkill : PlayerBehaviorRoot
                 _ => Color.black
 
             });
+            spriteRenderer.SetPropertyBlock(propertyBlock);
 
             yield return new WaitForSeconds(lvUpTime);
             currentLV++;
