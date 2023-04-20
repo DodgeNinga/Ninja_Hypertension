@@ -32,6 +32,8 @@ public class PlayerSkill : PlayerBehaviorRoot
         propertyBlock.SetFloat(OutLineValueHash, 1);
         spriteRenderer.SetPropertyBlock(propertyBlock);
 
+        StartCoroutine(LvUpCo());
+
     }
 
     private void UpEvent()
