@@ -10,6 +10,7 @@ public class PlayerAnimator : MonoBehaviour
     private readonly int JumpHash = Animator.StringToHash("Jump");
     private readonly int LandingTriggerHash = Animator.StringToHash("LandingTrigger");
     private readonly int WallFallHash = Animator.StringToHash("WallFall");
+    private readonly int AttackTriggerHash = Animator.StringToHash("AttacckTrigger");
 
     private MargedSencer margedSencer;
     private PlayerFlip playerFlip;
@@ -106,6 +107,12 @@ public class PlayerAnimator : MonoBehaviour
     {
 
         animator.SetTrigger(JumpHash);
+
+    }
+    public void SetAttackTrigger()
+    {
+
+        animator.SetTrigger()
 
     }
 
