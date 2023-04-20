@@ -2,16 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerSkill : MonoBehaviour
+public class PlayerSkill : PlayerBehaviorRoot
 {
-    // Start is called before the first frame update
-    void Start()
+
+    private readonly int OutLineValueHash = Shader.PropertyToID("_OuterOutlineFade");
+
+    private MaterialPropertyBlock propertyBlock;
+
+    protected override void Awake()
+    {
+
+        base.Awake();
+        spriteRenderer.GetPropertyBlock(propertyBlock);
+
+    }
+
+    public override void AddEvent()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void RemoveEvent()
     {
         
     }

@@ -12,6 +12,8 @@ public class PlayerActionSystem : MonoBehaviour
     public event Action OnJumpKeyEvent;
     public event Action OnSkillKeyPressEvent;
     public event Action OnSkillKeyUpEvent;
+    public event Action OnHoldSkillPressEvnet;
+    public event Action OnHoldSkillKeyUpEvent;
     //여기에 키 인풋코드 추가
 
     public void OnHorizontalExecute(float v) => OnHorizontalEvent?.Invoke(v);
@@ -20,5 +22,7 @@ public class PlayerActionSystem : MonoBehaviour
     public void OnJumpKeyExecute() => OnJumpKeyEvent?.Invoke();
     public void OnSkillKeyPressExecute() => OnSkillKeyPressEvent?.Invoke();
     public void OnSkillKeyUpExecute() => OnSkillKeyUpEvent?.Invoke();
+    public void OnHoldSkillPressExecute() => OnHoldSkillPressEvnet?.Invoke();
+    public void OnHoldSkillUpExecute() => OnHoldSkillKeyUpEvent?.Invoke();
 
 }
