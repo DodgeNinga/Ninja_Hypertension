@@ -341,6 +341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpPower: 8.5
+  jumpAble: 1
 --- !u!114 &73164380
 MonoBehaviour:
   m_ObjectHideFlags: 0

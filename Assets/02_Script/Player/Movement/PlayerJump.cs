@@ -7,7 +7,7 @@ public class PlayerJump : PlayerBehaviorRoot
 
     [SerializeField] private float jumpPower;
 
-    [HideInInspector] public bool jumpAble = true;
+    public bool jumpAble = true;
 
     protected override void Awake()
     {

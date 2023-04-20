@@ -13,6 +13,7 @@ public class PlayerAnimator : MonoBehaviour
     private readonly int AttackTriggerHash = Animator.StringToHash("AttackTrigger");
     private readonly int ComboCountHash = Animator.StringToHash("ComboCount");
     private readonly int AttackEndHash = Animator.StringToHash("AttackEnd");
+    private readonly int IsAirHash = Animator.StringToHash("IsAir");
 
     private MargedSencer margedSencer;
     private PlayerFlip playerFlip;
@@ -41,6 +42,7 @@ public class PlayerAnimator : MonoBehaviour
         FallDownChack();
         ChackLanding();
         WallChack();
+        SetIsAir();
 
     }
 
@@ -106,6 +108,13 @@ public class PlayerAnimator : MonoBehaviour
             playerFlip.useFlip = true;
 
         }
+
+    }
+
+    private void SetIsAir()
+    {
+
+        animator.SetFloat(IsAirHash, rigid.velocity.y == 0 ? 0 : 1);
 
     }
 
