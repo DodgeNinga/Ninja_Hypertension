@@ -462,6 +462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lvUpTime: 1
+  holdMoveSpeed: 0.5
   skillAble: 1
 --- !u!1 &79837477
 GameObject:

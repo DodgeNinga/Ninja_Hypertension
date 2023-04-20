@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class PlayerSkill : PlayerBehaviorRoot
 {
@@ -13,6 +14,7 @@ public class PlayerSkill : PlayerBehaviorRoot
 
     private MaterialPropertyBlock propertyBlock;
     private PlayerMove playerMove;
+    private PlayerFlip flip;
     private int currentLV = 1;
 
     public bool skillAble = true;
@@ -23,6 +25,7 @@ public class PlayerSkill : PlayerBehaviorRoot
         base.Awake();
         propertyBlock = new MaterialPropertyBlock();
         playerMove = GetComponent<PlayerMove>();
+        flip = GetComponent<PlayerFlip>();
         spriteRenderer.GetPropertyBlock(propertyBlock);
         
         AddEvent();
@@ -49,12 +52,21 @@ public class PlayerSkill : PlayerBehaviorRoot
         if (!skillAble) return;
 
         spriteRenderer.material.SetFloat(OutLineValueHash, 0);
-        currentLV = 0;
+        currentLV = 1;
+        flip.flipAble = false;
 
         animator.SetSkillHoldHash(false);
-        playerMove.SetMoveSpeed(-1);
+
 
         StopAllCoroutines();
+
+    }
+
+    public void HoldEventEnd()
+    {
+
+        flip.flipAble = true;
+        playerMove.SetMoveSpeed(-1);
 
     }
 

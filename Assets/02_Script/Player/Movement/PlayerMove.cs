@@ -57,14 +57,18 @@ public class PlayerMove : PlayerBehaviorRoot
     public void SetMoveSpeed(float value)
     {
 
-        if(value <= -1)
+        if(value == -1)
         {
 
             currentSpeed = moveSpeed;
 
         }
+        else
+        {
 
-        currentSpeed = value;
+            currentSpeed = value;
+
+        }
 
     }
 

@@ -15,6 +15,7 @@ public class PlayerAnimator : MonoBehaviour
     private readonly int AttackEndHash = Animator.StringToHash("AttackEnd");
     private readonly int IsAirHash = Animator.StringToHash("IsAir");
     private readonly int SkillHoldHash = Animator.StringToHash("SkillHold");
+    private readonly int SkillHoldTriggerHash = Animator.StringToHash("SkillHoldTrigger");
 
     private MargedSencer margedSencer;
     private PlayerFlip playerFlip;
