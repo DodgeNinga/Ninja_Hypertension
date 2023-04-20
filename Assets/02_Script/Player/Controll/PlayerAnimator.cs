@@ -14,6 +14,7 @@ public class PlayerAnimator : MonoBehaviour
     private readonly int ComboCountHash = Animator.StringToHash("ComboCount");
     private readonly int AttackEndHash = Animator.StringToHash("AttackEnd");
     private readonly int IsAirHash = Animator.StringToHash("IsAir");
+    private readonly int SkillHoldHash = Animator.StringToHash("SkillHold");
 
     private MargedSencer margedSencer;
     private PlayerFlip playerFlip;
@@ -144,13 +145,20 @@ public class PlayerAnimator : MonoBehaviour
     {
 
         animator.SetInteger(ComboCountHash, 0);
-
+        
     }
 
     public void SetEndAttack()
     {
 
         animator.SetTrigger(AttackEndHash);
+
+    }
+
+    public void SetSkillHoldHash(bool value)
+    {
+
+
 
     }
 
