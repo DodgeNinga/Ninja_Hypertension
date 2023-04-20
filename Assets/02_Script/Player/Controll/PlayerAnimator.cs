@@ -158,7 +158,7 @@ public class PlayerAnimator : MonoBehaviour
     public void SetSkillHoldHash(bool value)
     {
 
-
+        animator.SetBool(SkillHoldHash, value);
 
     }
 
