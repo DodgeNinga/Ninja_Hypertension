@@ -7,38 +7,63 @@ public class EnemyMove : MonoBehaviour
     [SerializeField] float drbTime;
     [SerializeField] float speed;
     [SerializeField] float chasingSpeed;
-    Vector3 direction;
-    EnemyChase EC;
+    [SerializeField] bool chasing;
+    Animator anime;
+    float delayTime;
+    bool drb = true;
+    ChaseRange ChaseRange;
+    Vector3 playerDir;
+    int moveDir =-1;
+    
     Transform player;
 
     private void Awake()
     {
+        anime = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        EC = FindObjectOfType<EnemyChase>().GetComponent<EnemyChase>();
+        ChaseRange = FindObjectOfType<ChaseRange>().GetComponent<ChaseRange>();
+        StartCoroutine("ChangeDir");
     }
     IEnumerator ChangeDir()
     {
         while (true)
         {
             yield return new WaitForSeconds(drbTime);
-            //transform.localScale = new Vector2(transform.localScale.x*flip, 1);
-            //moveDir *= -1;
+            if (drb)
+            {
+                transform.localScale = new Vector2(transform.localScale.x * -1, 1);
+                moveDir *= -1;
+            }
         }
     }
 
     void Update()
     {
-        direction = player.position - transform.position;
-        direction = direction.normalized;
-        if (EC.chasing == false)
+        if (chasing) Chase();
+    }
+    void Chase()
+    {
+        playerDir = player.position - transform.position;
+        playerDir = playerDir.normalized;
+        if (ChaseRange.onRange)
         {
-            //transform.Translate(Vector3.right * speed * moveDir * Time.deltaTime);
-            //flip = moveDir;
+            anime.SetBool("fire", true);
+            if ((player.position.x - transform.position.x) > 0)
+            {
+                transform.localScale = new Vector2(-1, 1);
+                moveDir = 1;
+            }
+            else
+            {
+                transform.localScale = new Vector2(1, 1);
+                moveDir = -1;
+            }
+            transform.position += playerDir * chasingSpeed * Time.deltaTime;
         }
         else
         {
-            transform.position += direction * chasingSpeed * Time.deltaTime;
-            //flip = 1;
+            anime.SetBool("fire", false);
+            transform.Translate(Vector2.right * moveDir * speed * Time.deltaTime);
         }
     }
 }
