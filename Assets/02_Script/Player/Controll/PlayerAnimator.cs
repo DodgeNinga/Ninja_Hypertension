@@ -11,6 +11,8 @@ public class PlayerAnimator : MonoBehaviour
     private readonly int LandingTriggerHash = Animator.StringToHash("LandingTrigger");
     private readonly int WallFallHash = Animator.StringToHash("WallFall");
     private readonly int AttackTriggerHash = Animator.StringToHash("AttacckTrigger");
+    private readonly int ComboCountHash = Animator.StringToHash("ComboCount");
+    private readonly int AttackEndHash = Animator.StringToHash("AttackEnd");
 
     private MargedSencer margedSencer;
     private PlayerFlip playerFlip;
@@ -49,6 +51,7 @@ public class PlayerAnimator : MonoBehaviour
         animator.SetFloat(MoveVelYHash, rigid.velocity.y);
 
     }
+
     private void FallDownChack()
     {
 
@@ -67,6 +70,7 @@ public class PlayerAnimator : MonoBehaviour
 
 
     }
+
     private void ChackLanding()
     {
 
@@ -79,6 +83,7 @@ public class PlayerAnimator : MonoBehaviour
         }
 
     }
+
     private void WallChack()
     {
 
@@ -103,16 +108,39 @@ public class PlayerAnimator : MonoBehaviour
         }
 
     }
+
     public void SetJump()
     {
 
         animator.SetTrigger(JumpHash);
 
     }
+
     public void SetAttackTrigger()
     {
 
-        animator.SetTrigger()
+        animator.SetTrigger(AttackTriggerHash);
+
+    }
+
+    public void SetComboCount(int count)
+    {
+
+        animator.SetInteger(ComboCountHash, count);
+
+    }
+
+    public void ResetComboCount()
+    {
+
+        animator.SetInteger(ComboCountHash, 0);
+
+    }
+
+    public void SetEndAttack()
+    {
+
+        animator.SetTrigger(AttackEndHash);
 
     }
 
