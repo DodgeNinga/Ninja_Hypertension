@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed5fe4f65728d9046b5d48fc7a22a33e, type: 3}
-  m_Name: SettingData
+  m_Script: {fileID: 11500000, guid: d15621ca6b7a3bf40abb3206c2e75766, type: 3}
+  m_Name: Pool
   m_EditorClassIdentifier: 
-  poolData: {fileID: 11400000, guid: 841bc09f79ca0004ea668af232004279, type: 2}
-  soundList: {fileID: 0}
+  poolingList:
+  - poolName: HoldPTC
+    poolObj: {fileID: 173862685479799491, guid: 02d0f00e8b48df94389282bf79072544, type: 3}
+    poolSize: 10

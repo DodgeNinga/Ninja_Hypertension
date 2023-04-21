@@ -170,4 +170,11 @@ public class PlayerAnimator : MonoBehaviour
 
     }
 
+    public void ResetLandingTrigger()
+    {
+
+        animator.ResetTrigger(LandingTriggerHash);
+
+    }
+
 }

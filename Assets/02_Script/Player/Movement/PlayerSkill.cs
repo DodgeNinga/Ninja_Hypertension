@@ -1,3 +1,4 @@
+using FD.Dev;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,11 +9,15 @@ public class PlayerSkill : PlayerBehaviorRoot
     private readonly int OutLineValueHash = Shader.PropertyToID("_OuterOutlineFade");
     private readonly int OutLineColorHash = Shader.PropertyToID("_OuterOutlineColor");
 
+    [SerializeField] private Transform particlePos;
     [SerializeField] private float lvUpTime = 1f;
     [SerializeField] private float holdMoveSpeed;
+    [SerializeField] private float skillCoolDownTile = 2f;
 
-    private MaterialPropertyBlock propertyBlock;
+
     private PlayerMove playerMove;
+    private PlayerJump playerJump;
+    private PlayerAttack playerAttack;
     private PlayerFlip flip;
     private int currentLV = 1;
 
@@ -22,10 +27,10 @@ public class PlayerSkill : PlayerBehaviorRoot
     {
 
         base.Awake();
-        propertyBlock = new MaterialPropertyBlock();
         playerMove = GetComponent<PlayerMove>();
         flip = GetComponent<PlayerFlip>();
-        spriteRenderer.GetPropertyBlock(propertyBlock);
+        playerAttack = GetComponent<PlayerAttack>();
+        playerJump = GetComponent<PlayerJump>();
         
         AddEvent();
 
@@ -39,6 +44,9 @@ public class PlayerSkill : PlayerBehaviorRoot
         spriteRenderer.material.SetFloat(OutLineValueHash, 1);
         playerMove.SetMoveSpeed(holdMoveSpeed);
 
+        playerAttack.RemoveEvent();
+        playerJump.RemoveEvent();
+
         animator.SetSkillHoldHash(true);
         animator.SetSkillHoldTriggerHash();
 
@@ -51,14 +59,17 @@ public class PlayerSkill : PlayerBehaviorRoot
 
         if (!skillAble) return;
 
+        animator.ResetLandingTrigger();
         spriteRenderer.material.SetFloat(OutLineValueHash, 0);
         currentLV = 1;
         flip.flipAble = false;
 
         animator.SetSkillHoldHash(false);
 
-
         StopAllCoroutines();
+        skillAble = false;
+
+        FAED.InvokeDelay(() => skillAble = true, skillCoolDownTile);
 
     }
 
@@ -66,6 +77,8 @@ public class PlayerSkill : PlayerBehaviorRoot
     {
 
         flip.flipAble = true;
+        playerAttack.AddEvent();
+        playerJump.AddEvent();
         playerMove.SetMoveSpeed(-1);
 
     }
@@ -101,6 +114,19 @@ public class PlayerSkill : PlayerBehaviorRoot
                 _ => Color.black
 
             });
+
+            var obj = FAED.Pop("HoldPTC", particlePos.position, Quaternion.Euler(-90, 0, 0));
+            obj.transform.localScale = spriteRenderer.flipX switch
+            {
+
+                true => new Vector3(-1, 1, 1),
+                false => new Vector3(1, 1, 1)
+
+            };
+            var ptc = obj.GetComponent<ParticleSystem>();
+            ptc.Play();
+
+            FAED.InvokeDelay(() => FAED.Push(obj), 0.9f);
 
             yield return new WaitForSeconds(lvUpTime);
             currentLV++;
