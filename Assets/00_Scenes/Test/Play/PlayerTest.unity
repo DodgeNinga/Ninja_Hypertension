@@ -462,7 +462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particlePos: {fileID: 1136930913}
-  lvUpTime: 1
+  lvUpTime: 1.5
   holdMoveSpeed: 0.5
   skillCoolDownTile: 2
   skillAble: 1

@@ -20,6 +20,8 @@ public class PlayerSkill : PlayerBehaviorRoot
     private PlayerAttack playerAttack;
     private PlayerFlip flip;
     private int currentLV = 1;
+    private bool isShowAnime = false;
+
 
     public bool skillAble = true;
 
@@ -41,6 +43,7 @@ public class PlayerSkill : PlayerBehaviorRoot
 
         if (!skillAble) return;
 
+        isShowAnime = true;
         spriteRenderer.material.SetFloat(OutLineValueHash, 1);
         playerMove.SetMoveSpeed(holdMoveSpeed);
 
@@ -57,8 +60,9 @@ public class PlayerSkill : PlayerBehaviorRoot
     private void UpEvent()
     {
 
-        if (!skillAble) return;
+        if (!skillAble || !isShowAnime) return;
 
+        isShowAnime = false;
         animator.ResetLandingTrigger();
         spriteRenderer.material.SetFloat(OutLineValueHash, 0);
         currentLV = 1;
