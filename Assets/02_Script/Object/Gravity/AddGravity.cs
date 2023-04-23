@@ -10,6 +10,8 @@ public class AddGravity : MonoBehaviour
     private Rigidbody2D rigid;
     private JumpCol jumpCol;
 
+    public bool onGravity { get; set; } = true;
+
     private void Awake()
     {
         
@@ -21,7 +23,7 @@ public class AddGravity : MonoBehaviour
     private void Update()
     {
 
-        if (!jumpCol.isGround)
+        if (!jumpCol.isGround || onGravity)
         {
 
             rigid.velocity -= new Vector2(0, gravityPower * Time.deltaTime);

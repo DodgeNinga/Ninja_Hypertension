@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerDash : PlayerBehaviorRoot
 {
 
+    public bool dashAble { get; set; } = true;
+
     protected override void Awake()
     {
 
