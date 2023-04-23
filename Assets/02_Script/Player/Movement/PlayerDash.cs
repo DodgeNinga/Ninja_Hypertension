@@ -43,6 +43,23 @@ public class PlayerDash : PlayerBehaviorRoot
 
         rigid.velocity = new Vector2(curDashPower, 0);
 
+        StartCoroutine(DashEndCo());
+
+    }
+
+    private void DashEnd()
+    {
+
+        gravity.onGravity = true;
+        rigid.gravityScale = originGravityScale;
+
+        foreach(var item in manageBehaviors)
+        {
+
+            item.AddEvent();
+
+        }
+
     }
 
     public override void AddEvent()
@@ -56,6 +73,15 @@ public class PlayerDash : PlayerBehaviorRoot
     {
 
         actionSystem.OnDashKeyPressEvent -= Dash;
+
+    }
+
+    private IEnumerator DashEndCo()
+    {
+
+        yield return new WaitForSeconds(dashTime);
+
+        DashEnd();
 
     }
 
