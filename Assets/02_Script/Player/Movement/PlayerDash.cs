@@ -24,12 +24,14 @@ public class PlayerDash : PlayerBehaviorRoot
     public override void AddEvent()
     {
 
-        actionSystem
+        actionSystem.OnDashKeyPressEvent += Dash;
 
     }
 
     public override void RemoveEvent()
     {
+
+        actionSystem.OnDashKeyPressEvent -= Dash;
 
     }
 

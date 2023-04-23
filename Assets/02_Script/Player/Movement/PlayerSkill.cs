@@ -14,14 +14,13 @@ public class PlayerSkill : PlayerBehaviorRoot
     [SerializeField] private float holdMoveSpeed;
     [SerializeField] private float skillCoolDownTile = 2f;
 
-
     private PlayerMove playerMove;
     private PlayerJump playerJump;
+    private PlayerDash playerDash;
     private PlayerAttack playerAttack;
     private PlayerFlip flip;
     private int currentLV = 1;
     private bool isShowAnime = false;
-
 
     public bool skillAble = true;
 
@@ -33,6 +32,7 @@ public class PlayerSkill : PlayerBehaviorRoot
         flip = GetComponent<PlayerFlip>();
         playerAttack = GetComponent<PlayerAttack>();
         playerJump = GetComponent<PlayerJump>();
+        playerDash = GetComponent<PlayerDash>();
         
         AddEvent();
 
@@ -48,6 +48,7 @@ public class PlayerSkill : PlayerBehaviorRoot
         playerMove.SetMoveSpeed(holdMoveSpeed);
 
         playerAttack.RemoveEvent();
+        playerDash.RemoveEvent();
         playerJump.RemoveEvent();
 
         animator.SetSkillHoldHash(true);
@@ -83,6 +84,7 @@ public class PlayerSkill : PlayerBehaviorRoot
         flip.flipAble = true;
         playerAttack.AddEvent();
         playerJump.AddEvent();
+        playerDash.AddEvent();
         playerMove.SetMoveSpeed(-1);
 
     }
