@@ -16,6 +16,8 @@ public class PlayerAnimator : MonoBehaviour
     private readonly int IsAirHash = Animator.StringToHash("IsAir");
     private readonly int SkillHoldHash = Animator.StringToHash("SkillHold");
     private readonly int SkillHoldTriggerHash = Animator.StringToHash("SkillHoldTrigger");
+    private readonly int DashTriggerHash = Animator.StringToHash("DashTrigger");
+    private readonly int IsDashHash = Animator.StringToHash("IsDash");
 
     private MargedSencer margedSencer;
     private PlayerFlip playerFlip;
@@ -36,7 +38,6 @@ public class PlayerAnimator : MonoBehaviour
         margedSencer = GetComponentInChildren<MargedSencer>();
 
     }
-
     private void Update()
     {
 
@@ -47,7 +48,6 @@ public class PlayerAnimator : MonoBehaviour
         SetIsAir();
 
     }
-
     private void SetMoveVelHash()
     {
 
@@ -55,7 +55,6 @@ public class PlayerAnimator : MonoBehaviour
         animator.SetFloat(MoveVelYHash, rigid.velocity.y);
 
     }
-
     private void FallDownChack()
     {
 
@@ -74,7 +73,6 @@ public class PlayerAnimator : MonoBehaviour
 
 
     }
-
     private void ChackLanding()
     {
 
@@ -87,7 +85,6 @@ public class PlayerAnimator : MonoBehaviour
         }
 
     }
-
     private void WallChack()
     {
 
@@ -112,21 +109,18 @@ public class PlayerAnimator : MonoBehaviour
         }
 
     }
-
     private void SetIsAir()
     {
 
         animator.SetFloat(IsAirHash, rigid.velocity.y == 0 ? 0 : 1);
 
     }
-
     public void SetJump()
     {
 
         animator.SetTrigger(JumpHash);
 
     }
-
     public void SetAttackTrigger()
     {
 
@@ -134,47 +128,53 @@ public class PlayerAnimator : MonoBehaviour
         animator.SetTrigger(AttackTriggerHash);
 
     }
-
     public void SetComboCount(int count)
     {
 
         animator.SetInteger(ComboCountHash, count);
 
     }
-
     public void ResetComboCount()
     {
 
         animator.SetInteger(ComboCountHash, 0);
         
     }
-
     public void SetEndAttack()
     {
 
         animator.SetTrigger(AttackEndHash);
 
     }
-
     public void SetSkillHoldHash(bool value)
     {
 
         animator.SetBool(SkillHoldHash, value);
 
     }
-
     public void SetSkillHoldTriggerHash()
     {
 
         animator.SetTrigger(SkillHoldTriggerHash);
 
     }
-
     public void ResetLandingTrigger()
     {
 
         animator.ResetTrigger(LandingTriggerHash);
 
+    }
+    public void SetDashTrigger()
+    {
+
+        animator.SetTrigger(DashTriggerHash);
+
+    }
+    public void SetIsDash(bool value) 
+    {
+        
+        animator.SetBool(IsDashHash, value);
+    
     }
 
 }
