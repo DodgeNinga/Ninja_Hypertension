@@ -203,8 +203,9 @@ GameObject:
   - component: {fileID: 73164385}
   - component: {fileID: 73164386}
   - component: {fileID: 73164387}
-  - component: {fileID: 73164388}
   - component: {fileID: 73164389}
+  - component: {fileID: 73164390}
+  - component: {fileID: 73164391}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -429,7 +430,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   comboAbleTime: 0.2
   attackDelayTime: 1
---- !u!95 &73164388
+--- !u!114 &73164389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73164374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 307531cfa8a063c48bc9ce400681da63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particlePos: {fileID: 1136930913}
+  lvUpTime: 1.5
+  holdMoveSpeed: 0.5
+  skillCoolDownTile: 2
+  skillAble: 1
+--- !u!95 &73164390
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -449,7 +467,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &73164389
+--- !u!114 &73164391
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -458,14 +476,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 73164374}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 307531cfa8a063c48bc9ce400681da63, type: 3}
+  m_Script: {fileID: 11500000, guid: 1408457ee64c4a5418195aaed5132a41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particlePos: {fileID: 1136930913}
-  lvUpTime: 1.5
-  holdMoveSpeed: 0.5
-  skillCoolDownTile: 2
-  skillAble: 1
+  dashPower: 5
+  dashTime: 1
+  manageBehaviors:
+  - {fileID: 73164389}
+  - {fileID: 73164387}
+  - {fileID: 73164380}
 --- !u!1 &79837477
 GameObject:
   m_ObjectHideFlags: 0

@@ -23,7 +23,7 @@ public class AddGravity : MonoBehaviour
     private void Update()
     {
 
-        if (!jumpCol.isGround || onGravity)
+        if (!jumpCol.isGround && onGravity)
         {
 
             rigid.velocity -= new Vector2(0, gravityPower * Time.deltaTime);
