@@ -11,11 +11,13 @@ public class TimeManager
 
         if (isSetTime) return;
 
+        isSetTime = true;
         Time.timeScale = value;
+
         FAED.InvokeDelayReal(() =>
         {
 
-            isSetTime = true;
+            isSetTime = false;
             Time.timeScale = 1;
 
         }, duration);

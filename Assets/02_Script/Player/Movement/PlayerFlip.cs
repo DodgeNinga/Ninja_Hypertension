@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerFlip : PlayerBehaviorRoot
 {
 
+    private HitSencer hitSencer;
+
     public bool useFlip = true;
     public bool flipAble = true;
 
@@ -13,6 +15,7 @@ public class PlayerFlip : PlayerBehaviorRoot
 
         base.Awake();
 
+        hitSencer = GetComponent<HitSencer>();
         AddEvent();
 
     }
@@ -24,12 +27,14 @@ public class PlayerFlip : PlayerBehaviorRoot
 
         spriteRenderer.flipX = value switch
         {
-
+            
             1 => false,
             -1 => true,
             _ => spriteRenderer.flipX
 
         };
+
+        hitSencer.swap = spriteRenderer.flipX;
 
     }
 
