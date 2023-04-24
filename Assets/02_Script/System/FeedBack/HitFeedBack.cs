@@ -16,6 +16,9 @@ public class HitFeedBack : FeedBack
 
         obj = FAED.Pop(eftPoolKey, transform.position, Quaternion.identity);
 
+        var ptc = obj.GetComponent<ParticleSystem>();
+        ptc.Play();
+
         Destroy(obj, eftPlayTime);
 
     }
