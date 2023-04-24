@@ -4822,7 +4822,7 @@ GameObject:
   - component: {fileID: 4696489601247907580}
   - component: {fileID: 4695399070081480248}
   m_Layer: 0
-  m_Name: PlayerAttackEFT
+  m_Name: HitEFT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -19,3 +19,6 @@ MonoBehaviour:
   - poolName: DashPTC
     poolObj: {fileID: 6393673055994313307, guid: 3e78e79de80cfbf40b6cb62b14cb5276, type: 3}
     poolSize: 10
+  - poolName: HitEFT
+    poolObj: {fileID: 4893318617749225886, guid: 11b2a33c10a593644a55d269ece0b940, type: 3}
+    poolSize: 10
