@@ -9,6 +9,7 @@ public class CameraManager : MonoBehaviour
 
     private CinemachineVirtualCamera cvcam;
     private CinemachineBasicMultiChannelPerlin cbmcp;
+    private bool isDurated = false;
 
     private void Awake()
     {
@@ -18,8 +19,17 @@ public class CameraManager : MonoBehaviour
 
     }
 
-    public void Shake(float amplitudeGain, float frequencyGain, float duration)
+    public void Shake(float amplitudeGain, float frequencyGain, float duration, bool isDurated)
     {
+
+        if (isDurated && !this.isDurated) return;
+
+        if (isDurated)
+        {
+
+            this.isDurated = true;
+
+        }
 
         cbmcp.m_AmplitudeGain += amplitudeGain;
         cbmcp.m_FrequencyGain += frequencyGain;
@@ -29,6 +39,13 @@ public class CameraManager : MonoBehaviour
 
             cbmcp.m_AmplitudeGain -= amplitudeGain;
             cbmcp.m_FrequencyGain -= frequencyGain;
+
+            if (isDurated)
+            {
+
+                this.isDurated = false;
+
+            }
 
         }, duration);
 
