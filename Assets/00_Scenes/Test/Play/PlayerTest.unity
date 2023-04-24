@@ -256,7 +256,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 1361490473, guid: d752a07a9491585449bbdaa096bdede6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -281,6 +281,7 @@ Transform:
   - {fileID: 409868647}
   - {fileID: 208306129}
   - {fileID: 1136930913}
+  - {fileID: 703212661}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -479,12 +480,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1408457ee64c4a5418195aaed5132a41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashPower: 5
-  dashTime: 1
+  dashPower: 20
+  dashTime: 0.2
+  dashCoolTime: 3
   manageBehaviors:
   - {fileID: 73164389}
   - {fileID: 73164387}
   - {fileID: 73164380}
+  - {fileID: 73164384}
 --- !u!1 &79837477
 GameObject:
   m_ObjectHideFlags: 0
@@ -872,6 +875,23 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - inputKey: 108
+    eventType: 1
+    actionEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 531737388}
+          m_TargetAssemblyTypeName: PlayerActionSystem, Assembly-CSharp
+          m_MethodName: OnDashKeyPressEventExecute
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   axisEvents:
   - inputKey: 0
     eventType: 0
@@ -1042,6 +1062,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dd77ff683f7fca42880a2f0c1d99cb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &703212660
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 703212661}
+  m_Layer: 0
+  m_Name: ParticlePlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &703212661
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 703212660}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1891177902}
+  m_Father: {fileID: 73164376}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1035144295
 GameObject:
   m_ObjectHideFlags: 0
@@ -1678,6 +1730,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fe86e9852061564da40100ea5d20039, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1891177901
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1891177902}
+  - component: {fileID: 1891177903}
+  m_Layer: 0
+  m_Name: DashParticle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1891177902
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891177901}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 703212661}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1891177903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891177901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ae40554c1188024b91de15ae76ee497, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particleKey: DashPTC
 --- !u!1 &1902153407
 GameObject:
   m_ObjectHideFlags: 0
