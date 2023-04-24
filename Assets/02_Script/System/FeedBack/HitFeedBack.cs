@@ -2,17 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HitFeedBack : MonoBehaviour
+public class HitFeedBack : FeedBack
 {
-    // Start is called before the first frame update
-    void Start()
+
+    [SerializeField] private float eftPlayTime;
+    [SerializeField] private string eftPoolKey;
+
+    public override void CreateFeedBack()
     {
-        
+
+
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void EndFeedBack()
     {
-        
+
+
+
     }
+
 }
