@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class EnemyMove : MonoBehaviour
 {
-    [SerializeField] float drbTime;
+    [SerializeField] bool allDirection;
     [SerializeField] float speed;
     [SerializeField] float chasingSpeed;
-    [SerializeField] bool chasing;
-    Animator anime;
-    float delayTime;
-    bool drb = true;
-    ChaseRange ChaseRange;
+    [SerializeField] float drbTime; 
     Vector3 playerDir;
+    Animator anime;
+    ChaseRange ChaseRange;
+    bool drb = true;
     int moveDir =-1;
+    float delayTime;
     
     Transform player;
 
@@ -39,13 +39,13 @@ public class EnemyMove : MonoBehaviour
 
     void Update()
     {
-        if (chasing) Chase();
+        Chase();
     }
     void Chase()
     {
         playerDir = player.position - transform.position;
         playerDir = playerDir.normalized;
-        if (ChaseRange.onRange)
+        if (ChaseRange.onChaseRange)
         {
             anime.SetBool("fire", true);
             if ((player.position.x - transform.position.x) > 0)
@@ -58,7 +58,10 @@ public class EnemyMove : MonoBehaviour
                 transform.localScale = new Vector2(1, 1);
                 moveDir = -1;
             }
-            transform.position += playerDir * chasingSpeed * Time.deltaTime;
+            if (allDirection)
+                transform.position += playerDir * chasingSpeed * Time.deltaTime;
+            else
+                transform.Translate(Vector2.right *moveDir * chasingSpeed * Time.deltaTime);
         }
         else
         {

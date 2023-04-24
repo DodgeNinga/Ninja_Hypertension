@@ -340,7 +340,7 @@ GameObject:
   - component: {fileID: 79837480}
   m_Layer: 0
   m_Name: TestGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -491,40 +491,6 @@ MonoBehaviour:
         - m_Target: {fileID: 531737388}
           m_TargetAssemblyTypeName: PlayerActionSystem, Assembly-CSharp
           m_MethodName: OnJumpKeyExecute
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - inputKey: 32
-    eventType: 2
-    actionEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 531737388}
-          m_TargetAssemblyTypeName: PlayerActionSystem, Assembly-CSharp
-          m_MethodName: 
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - inputKey: 108
-    eventType: 1
-    actionEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 531737388}
-          m_TargetAssemblyTypeName: PlayerActionSystem, Assembly-CSharp
-          m_MethodName: OnDashKeyPress
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -747,7 +713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d573273a962c394fa8784a1304f5c6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onRange: 0
+  onChaseRange: 0
 --- !u!1 &1116918258
 GameObject:
   m_ObjectHideFlags: 3
@@ -1019,7 +985,7 @@ GameObject:
   - component: {fileID: 1480495289}
   m_Layer: 0
   m_Name: Enemy_Skull
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1124,10 +1090,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 095e1fd3d02c7b941b5411cfcfa71d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drbTime: 3
+  allDirection: 1
   speed: 1
   chasingSpeed: 3
-  chasing: 1
+  drbTime: 3
 --- !u!1 &1886407421
 GameObject:
   m_ObjectHideFlags: 0

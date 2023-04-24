@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ChaseRange : MonoBehaviour
 {
-    public bool onRange = false;
+    public bool onChaseRange = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,14 +20,14 @@ public class ChaseRange : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            onRange = true;
+            onChaseRange = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            onRange = false;
+            onChaseRange = false;
         }
     }
 }
