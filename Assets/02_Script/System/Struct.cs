@@ -38,4 +38,13 @@ namespace Struct
 
     }
 
+    [System.Serializable]
+    public struct FeedBackManage
+    {
+
+        public string feedbackState;
+        public List<FeedBack> feedBack;
+
+    }
+
 }
