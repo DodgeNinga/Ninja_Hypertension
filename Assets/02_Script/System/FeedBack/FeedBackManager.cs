@@ -8,4 +8,36 @@ public class FeedBackManager : MonoBehaviour
 
     [SerializeField] private List<FeedBackManage> manegeFeedbacks = new List<FeedBackManage>();
 
+    public void PlayFeedback(string state)
+    {
+
+        var crtFeedBack = manegeFeedbacks.Find(x => x.feedbackState == state);
+
+        if (crtFeedBack.feedbackState == "") return;
+
+        foreach(var item in crtFeedBack.feedBack)
+        {
+
+            item.CreateFeedBack();
+
+        }
+
+    }
+
+    public void EndFeedback(string state)
+    {
+
+        var crtFeedBack = manegeFeedbacks.Find(x => x.feedbackState == state);
+
+        if (crtFeedBack.feedbackState == "") return;
+
+        foreach (var item in crtFeedBack.feedBack)
+        {
+
+            item.EndFeedBack();
+
+        }
+
+    }
+
 }
