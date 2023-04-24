@@ -36,6 +36,8 @@ public class HitSencer : MonoBehaviour
     {
         foreach(var item in hitRanges)         
         {
+            if (!item.visible) continue; 
+
             Gizmos.color = item.gizmoColor;
             Gizmos.DrawWireCube(swap ? transform.position + new Vector3(-item.offSet.x, item.offSet.y) : transform.position + new Vector3(item.offSet.x, item.offSet.y), item.range);;
             Gizmos.color = Color.white;

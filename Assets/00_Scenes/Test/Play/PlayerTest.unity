@@ -206,6 +206,7 @@ GameObject:
   - component: {fileID: 73164389}
   - component: {fileID: 73164390}
   - component: {fileID: 73164391}
+  - component: {fileID: 73164392}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -488,6 +489,57 @@ MonoBehaviour:
   - {fileID: 73164387}
   - {fileID: 73164380}
   - {fileID: 73164384}
+--- !u!114 &73164392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73164374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d300a4ba57ad2264eb247f5c54873207, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitAbleLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  hitRanges:
+  - atkKey: Atk1
+    visible: 0
+    gizmoColor: {r: 0, g: 0.89378977, b: 1, a: 1}
+    range: {x: 3, y: 2}
+    offSet: {x: 0.5, y: 0}
+  - atkKey: Atk2
+    visible: 0
+    gizmoColor: {r: 0.37169808, g: 0.9334737, b: 1, a: 1}
+    range: {x: 3, y: 1}
+    offSet: {x: 0.5, y: -0.3}
+  - atkKey: Atk3
+    visible: 0
+    gizmoColor: {r: 0.37169808, g: 0.9334737, b: 1, a: 1}
+    range: {x: 3, y: 3}
+    offSet: {x: 1, y: 0.5}
+  - atkKey: AirAtk1
+    visible: 0
+    gizmoColor: {r: 0, g: 0.09084773, b: 1, a: 1}
+    range: {x: 2, y: 3}
+    offSet: {x: 0.75, y: 0}
+  - atkKey: AirAtk2
+    visible: 0
+    gizmoColor: {r: 0, g: 0.09084773, b: 1, a: 1}
+    range: {x: 3, y: 1}
+    offSet: {x: 0.3, y: 0}
+  - atkKey: AirAtk3
+    visible: 0
+    gizmoColor: {r: 0, g: 0.09084773, b: 1, a: 1}
+    range: {x: 3, y: 3.5}
+    offSet: {x: 1, y: 0.3}
+  - atkKey: HoldAtk
+    visible: 1
+    gizmoColor: {r: 1, g: 0.2941045, b: 0, a: 1}
+    range: {x: 4, y: 2.5}
+    offSet: {x: 0.5, y: 0}
 --- !u!1 &79837477
 GameObject:
   m_ObjectHideFlags: 0
