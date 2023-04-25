@@ -11,18 +11,21 @@ public class CameraManager : MonoBehaviour
     private CinemachineBasicMultiChannelPerlin cbmcp;
     private bool isDurated = false;
 
+    public static CameraManager instance;
+
     private void Awake()
     {
         
         cvcam = FindObjectOfType<CinemachineVirtualCamera>();
         cbmcp = cvcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+        instance = this;
 
     }
 
     public void Shake(float amplitudeGain, float frequencyGain, float duration, bool isDurated)
     {
 
-        if (isDurated && !this.isDurated) return;
+        if (isDurated && this.isDurated) return;
 
         if (isDurated)
         {
