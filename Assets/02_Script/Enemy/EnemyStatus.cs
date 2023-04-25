@@ -1,16 +1,16 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyStatus : MonoBehaviour
+public class EnemyStatus : HPObject
 {
-    // Start is called before the first frame update
+    public float damage = 1000f;
     void Start()
     {
-        
+        HP = 2000;
     }
 
-    // Update is called once per frame
     void Update()
     {
         
