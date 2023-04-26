@@ -2,15 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyChase : MonoBehaviour
+public class ChaseRange : MonoBehaviour
 {
-    public bool chasing = false; 
-    
+    public bool onChaseRange = false;
+    // Start is called before the first frame update
     void Start()
     {
         
     }
 
+    // Update is called once per frame
     void Update()
     {
         
@@ -19,14 +20,14 @@ public class EnemyChase : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            chasing = true;
+            onChaseRange = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            chasing = false;
+            onChaseRange = false;
         }
     }
 }
