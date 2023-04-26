@@ -1,4 +1,4 @@
-using Struct;
+using Class;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,9 +25,14 @@ public class HitSencer : MonoBehaviour
         {
             foreach(var item in hitArr)
             {
+
                 item.transform.GetComponent<FeedBackManager>()?.PlayFeedback("Hit");
+                hit.hitEvt?.Invoke(item.GetComponent<HPObject>());
+
             }
         }
+
+        
     }
 
 #if UNITY_EDITOR

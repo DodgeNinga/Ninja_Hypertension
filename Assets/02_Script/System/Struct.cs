@@ -47,16 +47,4 @@ namespace Struct
 
     }
 
-    [System.Serializable]
-    public struct HitRangeStruct
-    {
-
-        public string atkKey;
-        public bool visible;
-        public Color gizmoColor;
-        public Vector2 range;
-        public Vector2 offSet;
-
-    }
-
 }

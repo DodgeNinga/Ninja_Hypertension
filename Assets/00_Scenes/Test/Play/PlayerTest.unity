@@ -297,6 +297,7 @@ GameObject:
   - component: {fileID: 73164390}
   - component: {fileID: 73164391}
   - component: {fileID: 73164392}
+  - component: {fileID: 73164393}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -630,6 +631,25 @@ MonoBehaviour:
     gizmoColor: {r: 1, g: 0.2941045, b: 0, a: 1}
     range: {x: 4, y: 2.5}
     offSet: {x: 0.5, y: 0}
+--- !u!114 &73164393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73164374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b15298f49f4704438b292bd15bec32f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 100
+  dotDelTime: 0.5
+  dotDel: 1
+  slider: {fileID: 34062364}
+  dieEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &79837477
 GameObject:
   m_ObjectHideFlags: 0

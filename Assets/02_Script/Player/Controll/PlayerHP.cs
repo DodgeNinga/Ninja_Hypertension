@@ -17,6 +17,7 @@ public class PlayerHP : HPObject
     {
 
         HP = maxHP / 2;
+        SetSlider();
 
     }
 
