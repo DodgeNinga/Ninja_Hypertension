@@ -7,15 +7,14 @@ public class EnemyAttack : MonoBehaviour
 {
     [SerializeField] float power;
     public float delayTime = 0f;
-    bool playerAttack;
 
-    bool _isPlayerAttacked;
-    bool _isPlayerAttackedMethodRunning;
+    bool playerAttack;
+    bool playerAttackRunning;
 
     void Start()
     {
-        _isPlayerAttacked = false;
-        _isPlayerAttackedMethodRunning = false;
+        playerAttack = false;
+        playerAttackRunning = false;
     }
 
     void Update()
@@ -25,10 +24,10 @@ public class EnemyAttack : MonoBehaviour
 
     private void onTriggerEnterAndStayMethod(Collider2D collision)
     {
-        if (collision.gameObject.name == "Player" && !_isPlayerAttacked && !_isPlayerAttackedMethodRunning)
+        if (collision.gameObject.name == "Player" && !playerAttack && !playerAttackRunning)
         {
-            _isPlayerAttacked = true;
-            _isPlayerAttackedMethodRunning = true;
+            playerAttack = true;
+            playerAttackRunning = true;
             StartCoroutine("PlayerAttack", delayTime);
             Debug.Log("attack");
         }
@@ -46,14 +45,11 @@ public class EnemyAttack : MonoBehaviour
         onTriggerEnterAndStayMethod(collision);
     }
 
-
-
-
     IEnumerator PlayerAttack(float delayTime)
     {
         yield return new WaitForSeconds(delayTime);
-        _isPlayerAttacked = false;
-        _isPlayerAttackedMethodRunning = false;
+        playerAttack = false;
+        playerAttackRunning = false;
 
         Debug.Log("isNotAttacked");
     }
