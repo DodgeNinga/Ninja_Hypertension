@@ -18,6 +18,7 @@ public class PlayerAnimator : MonoBehaviour
     private readonly int SkillHoldTriggerHash = Animator.StringToHash("SkillHoldTrigger");
     private readonly int DashTriggerHash = Animator.StringToHash("DashTrigger");
     private readonly int IsDashHash = Animator.StringToHash("IsDash");
+    private readonly int DieTriggerHash = Animator.StringToHash("Die");
 
     private MargedSencer margedSencer;
     private PlayerFlip playerFlip;
@@ -175,6 +176,12 @@ public class PlayerAnimator : MonoBehaviour
         
         animator.SetBool(IsDashHash, value);
     
+    }
+    public void SetDieTrigger()
+    {
+
+        animator.SetTrigger(DieTriggerHash);
+
     }
 
 }

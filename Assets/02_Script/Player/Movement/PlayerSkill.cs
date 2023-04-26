@@ -10,6 +10,7 @@ public class PlayerSkill : PlayerBehaviorRoot
     private readonly int OutLineColorHash = Shader.PropertyToID("_OuterOutlineColor");
 
     [SerializeField] private Transform particlePos;
+    [SerializeField] private float zoomInValue;
     [SerializeField] private float lvUpTime = 1f;
     [SerializeField] private float holdMoveSpeed;
     [SerializeField] private float skillCoolDownTile = 2f;
