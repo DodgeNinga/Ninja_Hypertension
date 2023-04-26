@@ -5,11 +5,7 @@ using UnityEngine;
 public class AttackRange : MonoBehaviour
 {
     public bool onAttackRange = false;
-    public float attackRange;
     Collider2D col;
-    public float colX;
-    public float colY;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -19,14 +15,14 @@ public class AttackRange : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        col.offset = new Vector3(colX, colY, 0);
-        GetComponent<CircleCollider2D>().radius = attackRange;
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
+            Debug.Log("Hi, Player");
             onAttackRange = true;
         }
     }
@@ -34,6 +30,7 @@ public class AttackRange : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            Debug.Log("Bye, Player");
             onAttackRange = false;
         }
     }
