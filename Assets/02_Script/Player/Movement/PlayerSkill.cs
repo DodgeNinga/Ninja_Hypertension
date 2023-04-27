@@ -126,8 +126,8 @@ public class PlayerSkill : PlayerBehaviorRoot
             obj.transform.localScale = spriteRenderer.flipX switch
             {
 
-                true => new Vector3(-2, 2, 2),
-                false => new Vector3(2, 2, 2)
+                true => new Vector3(-1, 1, 1),
+                false => new Vector3(1, 1, 1)
 
             };
             var ptc = obj.GetComponent<ParticleSystem>();

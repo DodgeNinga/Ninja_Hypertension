@@ -31,7 +31,7 @@ public class TextStory : MonoBehaviour
     public void SetText()
     {
 
-        //SetTextCo(tmpText)
+        SetTextCo(tmpText, storyTexts[crtIDX].nameText, storyTexts[crtIDX].textDuration, null, null);
 
     }
 
