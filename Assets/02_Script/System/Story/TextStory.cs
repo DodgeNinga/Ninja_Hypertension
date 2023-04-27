@@ -35,5 +35,12 @@ public class TextStory : MonoBehaviour
 
     }
 
+    public void SetText(TMP_Text text, string endValue, 
+        float showTextTime, UnityEvent apertureEvent, UnityEvent endEvent)
+    {
+
+
+
+    }
 
 }
