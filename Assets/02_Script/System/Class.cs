@@ -24,8 +24,18 @@ namespace Class
     public class StoryEvnetClass
     {
 
-
+        public List<StorySencer> storySencers;
         public UnityEvent ableEvent;
+
+    }
+
+    [System.Serializable]
+    public class StoryTextClass
+    {
+
+        public string storyNameField;
+        public string nameText;
+        public float textDuration;
 
     }
 
