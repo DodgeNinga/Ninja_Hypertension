@@ -31,15 +31,26 @@ public class TextStory : MonoBehaviour
     public void SetText()
     {
 
-        tmpText.DOText(storyTexts[crtIDX].storyNameField, storyTexts[crtIDX].textDuration);
+        //SetTextCo(tmpText)
 
     }
 
-    public void SetText(TMP_Text text, string endValue, 
+    public IEnumerator SetTextCo(TMP_Text text, string endValue, 
         float showTextTime, UnityEvent apertureEvent, UnityEvent endEvent)
     {
 
+        text.text = "";
 
+        for(int i = 0; i < endValue.Length; i++)
+        {
+
+            text.text += storyTexts[i];
+            apertureEvent?.Invoke();
+            yield return new WaitForSeconds(showTextTime);
+
+        }
+
+        endEvent?.Invoke();
 
     }
 
