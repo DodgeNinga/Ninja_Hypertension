@@ -3,54 +3,60 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class EnemyAttack : MonoBehaviour
+public class EnemyAttack : HPObject
 {
-    [SerializeField] float power;
+    public bool onAttackRange = false;
+    [SerializeField] float power = 10;
     public float delayTime = 0f;
 
-    bool playerAttack;
-    bool playerAttackRunning;
+    public bool coolTime = true;
+    public bool coolRunning = false;
 
-    void Start()
+    IEnumerator PlayerAttack()
     {
-        playerAttack = false;
-        playerAttackRunning = false;
-    }
-
-    void Update()
-    {
-        
-    }
-
-    private void onTriggerEnterAndStayMethod(Collider2D collision)
-    {
-        if (collision.gameObject.name == "Player" && !playerAttack && !playerAttackRunning)
+        yield return new WaitUntil(() => 
         {
-            playerAttack = true;
-            playerAttackRunning = true;
-            StartCoroutine("PlayerAttack", delayTime);
-            Debug.Log("attack");
+
+            return coolTime;
+
+        });
+        while(true)
+        {
+            TakeDamage(power);
+            Debug.Log("Attack");
+            yield return new WaitForSeconds(delayTime);
         }
     }
-
-
+    IEnumerator CoolTime()
+    {
+        yield return new WaitForSeconds(delayTime);
+        coolRunning = false;
+        coolTime = true; 
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        onTriggerEnterAndStayMethod(collision);
+        if(collision.CompareTag("Player"))
+        {
+            StartCoroutine("PlayerAttack");
+            onAttackRange = true;
+            Debug.Log("Start");
+        }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        onTriggerEnterAndStayMethod(collision);
-    }
-
-    IEnumerator PlayerAttack(float delayTime)
-    {
-        yield return new WaitForSeconds(delayTime);
-        playerAttack = false;
-        playerAttackRunning = false;
-
-        Debug.Log("isNotAttacked");
+        if (collision.CompareTag("Player"))
+        {
+            StopCoroutine("PlayerAttack");
+            coolTime = false;
+            onAttackRange = true;
+            if(!coolRunning)
+            {
+                StartCoroutine("CoolTime");
+                coolRunning = true;
+            }
+            Debug.Log("Stop");
+        }
     }
 }
