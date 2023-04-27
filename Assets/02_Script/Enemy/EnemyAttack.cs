@@ -3,54 +3,40 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class EnemyAttack : MonoBehaviour
+public class EnemyAttack : HPObject
 {
-    [SerializeField] float power;
+    [SerializeField] float power = 10;
     public float delayTime = 0f;
+    public bool isAttack = false;
 
-    bool playerAttack;
-    bool playerAttackRunning;
-
-    void Start()
+    private void Start()
     {
-        playerAttack = false;
-        playerAttackRunning = false;
+        StartCoroutine(PlayerAttack());
     }
 
-    void Update()
+    IEnumerator PlayerAttack()
     {
-        
-    }
-
-    private void onTriggerEnterAndStayMethod(Collider2D collision)
-    {
-        if (collision.gameObject.name == "Player" && !playerAttack && !playerAttackRunning)
+        while (true)
         {
-            playerAttack = true;
-            playerAttackRunning = true;
-            StartCoroutine("PlayerAttack", delayTime);
-            Debug.Log("attack");
+            if (isAttack == true)
+            {
+                TakeDamage(power);
+                Debug.Log("Attack");
+                yield return new WaitForSeconds(delayTime);
+            }
         }
     }
 
-
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        onTriggerEnterAndStayMethod(collision);
+        if (collision.CompareTag("Player"))
+        {
+            isAttack = true;
+        }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        onTriggerEnterAndStayMethod(collision);
-    }
-
-    IEnumerator PlayerAttack(float delayTime)
-    {
-        yield return new WaitForSeconds(delayTime);
-        playerAttack = false;
-        playerAttackRunning = false;
-
-        Debug.Log("isNotAttacked");
+        isAttack = false;
     }
 }

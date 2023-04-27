@@ -9,7 +9,6 @@ public class EnemyMove : MonoBehaviour
     [SerializeField] float chasingSpeed;
     [SerializeField] float drbTime; 
     Vector3 playerDir;
-    Animator anime;
     ChaseRange ChaseRange;
     bool drb = true;
     int moveDir =-1;
@@ -19,9 +18,8 @@ public class EnemyMove : MonoBehaviour
 
     private void Awake()
     {
-        anime = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        ChaseRange = FindObjectOfType<ChaseRange>().GetComponent<ChaseRange>();
+        ChaseRange = GetComponentInChildren<ChaseRange>();
         StartCoroutine("ChangeDir");
     }
     IEnumerator ChangeDir()
@@ -47,7 +45,6 @@ public class EnemyMove : MonoBehaviour
         playerDir = playerDir.normalized;
         if (ChaseRange.onChaseRange)
         {
-            anime.SetBool("fire", true);
             if ((player.position.x - transform.position.x) > 0)
             {
                 transform.localScale = new Vector2(-1, 1);
@@ -65,7 +62,6 @@ public class EnemyMove : MonoBehaviour
         }
         else
         {
-            anime.SetBool("fire", false);
             transform.Translate(Vector2.right * moveDir * speed * Time.deltaTime);
         }
     }
