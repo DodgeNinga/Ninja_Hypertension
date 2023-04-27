@@ -7,7 +7,7 @@ public class HitSencer : MonoBehaviour
 {
 
     [SerializeField] private LayerMask hitAbleLayer;
-    [SerializeField] private List<HitRangeStruct> hitRanges = new List<HitRangeStruct>();
+    [SerializeField] private List<HitRangeClass> hitRanges = new List<HitRangeClass>();
 
     public bool swap { get; set; }
 

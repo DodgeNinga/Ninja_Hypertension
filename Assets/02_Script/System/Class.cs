@@ -7,7 +7,7 @@ namespace Class
 {
 
     [System.Serializable]
-    public class HitRangeStruct
+    public class HitRangeClass
     {
 
         public string atkKey;
@@ -17,6 +17,15 @@ namespace Class
         public Vector2 range;
         public Vector2 offSet;
         public UnityEvent<HPObject> hitEvt;
+
+    }
+
+    [System.Serializable]
+    public class StoryEvnetClass
+    {
+
+
+        public UnityEvent ableEvent;
 
     }
 
