@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyMove : MonoBehaviour
 {
     [SerializeField] bool allDirection;
+    [SerializeField] bool chaseJump;
     [SerializeField] float speed;
     [SerializeField] float chasingSpeed;
     [SerializeField] float drbTime; 
@@ -21,7 +22,7 @@ public class EnemyMove : MonoBehaviour
     {
         anime = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        ChaseRange = FindObjectOfType<ChaseRange>().GetComponent<ChaseRange>();
+        ChaseRange = GetComponentInChildren<ChaseRange>();
         StartCoroutine("ChangeDir");
     }
     IEnumerator ChangeDir()
