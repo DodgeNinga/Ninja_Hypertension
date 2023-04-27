@@ -35,7 +35,7 @@ public class TextStory : MonoBehaviour
 
     }
 
-    public IEnumerator SetTextCo(TMP_Text text, string endValue, 
+    private IEnumerator SetTextCo(TMP_Text text, string endValue, 
         float showTextTime, UnityEvent apertureEvent, UnityEvent endEvent)
     {
 
