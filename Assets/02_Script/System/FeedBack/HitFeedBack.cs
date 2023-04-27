@@ -7,19 +7,24 @@ public class HitFeedBack : FeedBack
 {
 
     [SerializeField] private float eftPlayTime;
-    [SerializeField] private string eftPoolKey;
-
-    private GameObject obj;
+    [SerializeField] private string[] eftPoolKey;
 
     public override void CreateFeedBack()
     {
 
-        obj = FAED.Pop(eftPoolKey, transform.position, Quaternion.identity);
+        foreach(var item in eftPoolKey)
+        {
 
-        var ptc = obj.GetComponent<ParticleSystem>();
-        ptc.Play();
+            var obj = FAED.Pop(item, 
+                transform.position + new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f)),
+                Quaternion.identity);
 
-        Destroy(obj, eftPlayTime);
+            var ptc = obj.GetComponent<ParticleSystem>();
+            ptc.Play();
+
+            Destroy(obj, eftPlayTime);
+
+        }
 
     }
 

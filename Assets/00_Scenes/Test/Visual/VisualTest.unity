@@ -12910,6 +12910,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particlePos: {fileID: 1125666613}
+  zoomInValue: 0
   lvUpTime: 1.5
   holdMoveSpeed: 0.5
   skillCoolDownTile: 2
