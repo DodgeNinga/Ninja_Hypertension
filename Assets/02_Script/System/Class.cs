@@ -33,7 +33,7 @@ namespace Class
     public class StoryTextClass
     {
 
-        public string storyNameField;
+        public string storyText;
         public string nameText;
         public float textDuration;
 
