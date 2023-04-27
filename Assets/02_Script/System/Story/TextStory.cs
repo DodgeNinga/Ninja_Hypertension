@@ -16,8 +16,6 @@ public class TextStory : MonoBehaviour
     [SerializeField] private TextMeshProUGUI tmpText;
     [SerializeField] private List<StoryTextClass> storyTexts = new List<StoryTextClass>();
 
-    Text t;
-
     private int crtIDX = 0;
 
     public void StartText()
@@ -33,8 +31,9 @@ public class TextStory : MonoBehaviour
     public void SetText()
     {
 
-        tmpText
+        tmpText.DOText(storyTexts[crtIDX].storyNameField, storyTexts[crtIDX].textDuration);
 
     }
+
 
 }
