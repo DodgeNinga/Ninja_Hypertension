@@ -8,10 +8,9 @@ public class EnemyAttack : HPObject
     public bool onAttackRange = false;
     [SerializeField] float power = 10;
     public float delayTime = 0f;
-
     public bool coolTime = true;
     public bool coolRunning = false;
-
+    
     IEnumerator PlayerAttack()
     {
         yield return new WaitUntil(() => 
@@ -50,7 +49,7 @@ public class EnemyAttack : HPObject
         {
             StopCoroutine("PlayerAttack");
             coolTime = false;
-            onAttackRange = true;
+            onAttackRange = false;
             if(!coolRunning)
             {
                 StartCoroutine("CoolTime");

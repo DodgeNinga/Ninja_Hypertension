@@ -8,9 +8,13 @@ public class EnemyMove : MonoBehaviour
     [SerializeField] bool chaseJump;
     [SerializeField] float speed;
     [SerializeField] float chasingSpeed;
-    [SerializeField] float drbTime; 
+    [SerializeField] float jumpPower;
+    [SerializeField] float drbTime;
+    Rigidbody2D rigid;
     Vector3 playerDir;
     ChaseRange ChaseRange;
+    ChaseStopRange ChaseStopRange;
+    EnemyDG EnemyDG;
     bool drb = true;
     int moveDir =-1;
     float delayTime;
@@ -21,7 +25,12 @@ public class EnemyMove : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         ChaseRange = GetComponentInChildren<ChaseRange>();
+        ChaseStopRange = GetComponentInChildren<ChaseStopRange>();
+        if(chaseJump)
+            EnemyDG = GetComponentInChildren<EnemyDG>();
+        rigid = GetComponent<Rigidbody2D>();
         StartCoroutine("ChangeDir");
+        jumpPower *= 10;
     }
     IEnumerator ChangeDir()
     {
@@ -56,14 +65,22 @@ public class EnemyMove : MonoBehaviour
                 transform.localScale = new Vector2(1, 1);
                 moveDir = -1;
             }
-            if (allDirection)
-                transform.position += playerDir * chasingSpeed * Time.deltaTime;
-            else
-                transform.Translate(Vector2.right *moveDir * chasingSpeed * Time.deltaTime);
+            if (!ChaseStopRange.onChaseStopRange) {
+                if (allDirection)
+                    transform.position += playerDir * chasingSpeed * Time.deltaTime;
+                else
+                    transform.Translate(Vector2.right * moveDir * chasingSpeed * Time.deltaTime);
+            }
+            if (chaseJump&&(EnemyDG.onGround && (player.position.y - 1 > transform.position.y||ChaseStopRange.onChaseStopRange)))
+                Jump();
         }
         else
         {
             transform.Translate(Vector2.right * moveDir * speed * Time.deltaTime);
         }
+    }
+    void Jump()
+    {
+        rigid.AddForce(new Vector2(0, jumpPower));
     }
 }
