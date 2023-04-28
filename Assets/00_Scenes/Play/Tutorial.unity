@@ -23151,6 +23151,76 @@ MonoBehaviour:
       endEvent:
         m_PersistentCalls:
           m_Calls: []
+  - storyName: Secound
+    startEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1612812801}
+          m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+          m_MethodName: set_text
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: "Space\uB97C \uC774\uC6A9\uD574 \uC810\uD504\uD574\uBCF4\uC790"
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 226512470}
+          m_TargetAssemblyTypeName: PlayerEventController, Assembly-CSharp
+          m_MethodName: SetAllEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 228140758}
+          m_TargetAssemblyTypeName: CameraManager, Assembly-CSharp
+          m_MethodName: SetTarget
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+    storyTexts:
+    - storyText: 
+      textDuration: 0.1
+      apertureEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      endEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - storyText: "\uC774\uC81C\uBD80\uD130 \uB108\uC758 \uD798\uC744 \uB2E4\uB8E8\uB294\uBC95\uC744
+        \uC54C\uB824\uC8FC\uB3C4\uB85D \uD558\uC9C0"
+      textDuration: 0.1
+      apertureEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      endEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - storyText: "\uAE30\uBCF8\uC801\uC73C\uB85C A\uC640 D\uB97C \uB204\uB974\uBA74
+        \uC6C0\uC9C1\uC77C \uC218 \uC788\uC744\uAC70\uB2E4"
+      textDuration: 0.1
+      apertureEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      endEvent:
+        m_PersistentCalls:
+          m_Calls: []
 --- !u!1 &1335591234
 GameObject:
   m_ObjectHideFlags: 0
