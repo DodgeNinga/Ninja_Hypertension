@@ -1,4 +1,6 @@
 using Class;
+using DG.Tweening;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -27,6 +29,16 @@ public class TextStory : MonoBehaviour
         StartCoroutine(SetTextCo(tmpText, obj.storyText, obj.textDuration, obj.apertureEvent, obj.endEvent));
 
     }
+
+    private void EndText()
+    {
+
+        currentStory.endEvent?.Invoke();
+        currentStory = null;
+        isAble = false;
+        baseImage.rectTransform.DOScale(Vector3.zero, 0.3f).SetEase(Ease.OutCirc);
+
+    }
     public void StartText(string value)
     {
 
@@ -34,9 +46,40 @@ public class TextStory : MonoBehaviour
 
         currentStory = stories.Find(x => x.storyName == value);
 
-        SetText();
+        baseImage.rectTransform.DOScale(Vector3.one, 0.3f).SetEase(Ease.OutCirc)
+            .OnComplete(SetText);
 
     }
+
+    public void NextText()
+    {
+
+        if(!isAble) return;
+
+        if (isTyping)
+        {
+
+            StopAllCoroutines();
+            isTyping=false;
+            tmpText.text = currentStory.storyTexts[crtIDX].storyText;
+
+        }
+        else
+        {
+
+            if(crtIDX == currentStory.storyTexts.Count)
+            {
+
+                EndText();
+                return;
+
+            }
+            SetText();
+
+        }
+
+    }
+
 
     private IEnumerator SetTextCo(TMP_Text text, string endValue, 
         float showTextTime, UnityEvent apertureEvent, UnityEvent endEvent)
