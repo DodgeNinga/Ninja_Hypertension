@@ -39,4 +39,16 @@ namespace Class
 
     }
 
+    [System.Serializable]
+    public class CameraTakeClass
+    {
+
+        public string takeName;
+        public Vector2 cameraTakePos;
+        public float duration;
+        public UnityEvent takeStartEvent;
+        public UnityEvent takeEndEvent;
+
+    }
+
 }
