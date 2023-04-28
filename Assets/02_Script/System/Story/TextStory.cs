@@ -18,7 +18,7 @@ public class TextStory : MonoBehaviour
     private StoryTextBaseClass currentStory;
     private bool isTyping;
     private int crtIDX = 0;
-    public bool isAble { get; set; }
+    public bool isAble { get; set; } = true;
 
 
     private void SetText()
@@ -35,7 +35,6 @@ public class TextStory : MonoBehaviour
 
         currentStory.endEvent?.Invoke();
         currentStory = null;
-        isAble = false;
         isTyping = false;
         crtIDX = 0;
         baseImage.rectTransform.DOScale(Vector3.zero, 0.3f).SetEase(Ease.OutCirc);
@@ -45,6 +44,7 @@ public class TextStory : MonoBehaviour
     {
 
         if (!isAble) return;
+
 
         currentStory = stories.Find(x => x.storyName == value);
 

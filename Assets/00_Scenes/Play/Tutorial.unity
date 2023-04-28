@@ -1267,6 +1267,7 @@ GameObject:
   - component: {fileID: 228140759}
   - component: {fileID: 228140758}
   - component: {fileID: 228140761}
+  - component: {fileID: 228140762}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -1287,6 +1288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 226512469}
+  cvcam: {fileID: 0}
 --- !u!114 &228140759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1527,6 +1529,69 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: First
+            m_BoolArgument: 0
+          m_CallState: 2
+  - storySencers:
+    - {fileID: 475350316}
+    ableEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 228140762}
+          m_TargetAssemblyTypeName: CameraTakeManager, Assembly-CSharp
+          m_MethodName: StartTake
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: BridgeTake
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &228140762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228140757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ae01d3ca6cd6043b46c7b4db78d3e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  takes:
+  - takeName: BridgeTake
+    cameraTakePos: {x: 32.52, y: 2.22}
+    duration: 2.1
+    takeStartEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 226512470}
+          m_TargetAssemblyTypeName: PlayerEventController, Assembly-CSharp
+          m_MethodName: UnSetAllEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    takeEndEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1300566023}
+          m_TargetAssemblyTypeName: TextStory, Assembly-CSharp
+          m_MethodName: StartText
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Secound
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &255031323
@@ -2818,7 +2883,7 @@ GameObject:
   - component: {fileID: 475350316}
   - component: {fileID: 475350315}
   m_Layer: 0
-  m_Name: Secound
+  m_Name: SecoundSencer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23267,14 +23332,6 @@ MonoBehaviour:
             m_BoolArgument: 1
           m_CallState: 2
     storyTexts:
-    - storyText: 
-      textDuration: 0.1
-      apertureEvent:
-        m_PersistentCalls:
-          m_Calls: []
-      endEvent:
-        m_PersistentCalls:
-          m_Calls: []
     - storyText: "\uC774\uC81C\uBD80\uD130 \uB108\uC758 \uD798\uC744 \uB2E4\uB8E8\uB294\uBC95\uC744
         \uC54C\uB824\uC8FC\uB3C4\uB85D \uD558\uC9C0"
       textDuration: 0.1
@@ -23284,8 +23341,7 @@ MonoBehaviour:
       endEvent:
         m_PersistentCalls:
           m_Calls: []
-    - storyText: "\uAE30\uBCF8\uC801\uC73C\uB85C A\uC640 D\uB97C \uB204\uB974\uBA74
-        \uC6C0\uC9C1\uC77C \uC218 \uC788\uC744\uAC70\uB2E4"
+    - storyText: "Space\uB97C \uB204\uB974\uBA74 \uC810\uD504\uD560 \uC218 \uC788\uC744\uAC70\uB2E4"
       textDuration: 0.1
       apertureEvent:
         m_PersistentCalls:
@@ -41685,6 +41741,37 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1863382169
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1863382170}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1863382170
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863382169}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 32.52, y: 2.22, z: -0.15179488}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1883982864
 GameObject:
   m_ObjectHideFlags: 0

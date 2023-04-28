@@ -19,7 +19,10 @@ public class CameraTakeManager : MonoBehaviour
         take.takeStartEvent?.Invoke();
         CameraManager.instance.SetTarget(false);
 
-        CameraManager.instance.cvcam.transform.DOMove(take.cameraTakePos, take.duration)
+        Vector3 vec = take.cameraTakePos;
+        vec.z = -10;
+
+        CameraManager.instance.cvcam.transform.DOMove(vec, take.duration)
             .OnComplete(() => take.takeEndEvent?.Invoke());
 
     }
