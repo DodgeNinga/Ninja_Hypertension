@@ -41,6 +41,15 @@ namespace Class
     }
 
     [System.Serializable]
+    public class StoryTextBaseClass
+    {
+
+        public string storyName;
+        public List<StoryTextClass> storyTexts;
+
+    }
+
+    [System.Serializable]
     public class CameraTakeClass
     {
 
