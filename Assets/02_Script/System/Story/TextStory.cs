@@ -17,8 +17,8 @@ public class TextStory : MonoBehaviour
 
     private StoryTextBaseClass currentStory;
     private bool isTyping;
-    private bool isAble;
     private int crtIDX = 0;
+    public bool isAble { get; set; }
 
 
     private void SetText()
@@ -69,13 +69,14 @@ public class TextStory : MonoBehaviour
         else
         {
 
-            if(crtIDX == currentStory.storyTexts.Count)
+            if(crtIDX == currentStory.storyTexts.Count - 1)
             {
 
                 EndText();
                 return;
 
             }
+            crtIDX++;
             SetText();
 
         }

@@ -8,6 +8,7 @@ using System;
 public class CameraManager : MonoBehaviour
 {
 
+    [SerializeField] private Transform target; 
     private CinemachineVirtualCamera cvcam;
     private CinemachineBasicMultiChannelPerlin cbmcp;
     private bool isDurated = false;
@@ -60,11 +61,7 @@ public class CameraManager : MonoBehaviour
     public void SetTarget(bool able)
     {
 
-        Action action = able ? 
-            () => { cvcam.AddCinemachineComponent<CinemachineFramingTransposer>(); } 
-        : cvcam.DestroyCinemachineComponent<CinemachineFramingTransposer>;
-
-        action();
+        cvcam.Follow = able ? target : null;
 
     }
 
