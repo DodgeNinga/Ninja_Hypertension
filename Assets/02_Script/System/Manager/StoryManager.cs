@@ -19,17 +19,18 @@ public class StoryManager : MonoBehaviour
 
     private void Update()
     {
-        
-        foreach(var story in storyEvents) 
-        { 
-            
-            foreach(var evt in story.storySencers)
+
+        for (int i = 0; i < storyEvents.Count; i++)
+        {
+            StoryEvnetClass story = storyEvents[i];
+            foreach (var evt in story.storySencers)
             {
 
                 if(evt.Sencing()) 
                 { 
                     
                     story.ableEvent?.Invoke();
+                    storyEvents.Remove(story);
 
                 }
 

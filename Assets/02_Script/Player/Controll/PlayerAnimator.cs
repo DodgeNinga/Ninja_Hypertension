@@ -45,8 +45,8 @@ public class PlayerAnimator : MonoBehaviour
     {
 
         SetMoveVelHash();
-        FallDownChack();
         ChackLanding();
+        FallDownChack();
         WallChack();
         SetIsAir();
         SetIsGround();
