@@ -9,7 +9,7 @@ public class CameraManager : MonoBehaviour
 {
 
     [SerializeField] private Transform target; 
-    private CinemachineVirtualCamera cvcam;
+    [HideInInspector] public CinemachineVirtualCamera cvcam;
     private CinemachineBasicMultiChannelPerlin cbmcp;
     private bool isDurated = false;
     private bool isZoomIn = false;
