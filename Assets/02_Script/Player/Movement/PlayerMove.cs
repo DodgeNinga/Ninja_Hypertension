@@ -72,6 +72,13 @@ public class PlayerMove : PlayerBehaviorRoot
 
     }
 
+    public void Stop()
+    {
+
+        rigid.velocity = new Vector2(0, rigid.velocity.y);
+
+    }
+
     public override void AddEvent()
     {
 

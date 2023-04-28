@@ -37,6 +37,7 @@ public class TextStory : MonoBehaviour
         currentStory = null;
         isTyping = false;
         crtIDX = 0;
+        tmpText.text = "";
         baseImage.rectTransform.DOScale(Vector3.zero, 0.3f).SetEase(Ease.OutCirc);
 
     }
@@ -56,7 +57,7 @@ public class TextStory : MonoBehaviour
     public void NextText()
     {
 
-        if(!isAble) return;
+        if(!isAble || currentStory == null) return;
 
         if (isTyping)
         {
