@@ -45,6 +45,8 @@ namespace Class
     {
 
         public string storyName;
+        public UnityEvent startEvent;
+        public UnityEvent endEvent;
         public List<StoryTextClass> storyTexts;
 
     }
