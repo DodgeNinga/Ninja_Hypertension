@@ -12,7 +12,6 @@ public class CameraManager : MonoBehaviour
     [HideInInspector] public CinemachineVirtualCamera cvcam;
     private CinemachineBasicMultiChannelPerlin cbmcp;
     private bool isDurated = false;
-    private bool isZoomIn = false;
 
     public static CameraManager instance;
 
