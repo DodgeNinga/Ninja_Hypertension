@@ -419,7 +419,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &77103395
 Transform:
   m_ObjectHideFlags: 0
@@ -1548,6 +1548,23 @@ MonoBehaviour:
             m_StringArgument: BridgeTake
             m_BoolArgument: 0
           m_CallState: 2
+  - storySencers:
+    - {fileID: 423692384}
+    ableEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 228140762}
+          m_TargetAssemblyTypeName: CameraTakeManager, Assembly-CSharp
+          m_MethodName: StartTake
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: BreakTake
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &228140762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1604,6 +1621,51 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: Secound
+            m_BoolArgument: 0
+          m_CallState: 2
+  - takeName: BreakTake
+    cameraTakePos: {x: 53.83, y: 2.22}
+    duration: 2
+    takeStartEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 226512470}
+          m_TargetAssemblyTypeName: PlayerEventController, Assembly-CSharp
+          m_MethodName: UnSetAllEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 226512467}
+          m_TargetAssemblyTypeName: PlayerMove, Assembly-CSharp
+          m_MethodName: Stop
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    takeEndEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1300566023}
+          m_TargetAssemblyTypeName: TextStory, Assembly-CSharp
+          m_MethodName: StartText
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Break
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &255031323
@@ -2333,6 +2395,78 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &423692381
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 423692382}
+  - component: {fileID: 423692384}
+  - component: {fileID: 423692383}
+  m_Layer: 0
+  m_Name: BreakSencer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &423692382
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423692381}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 45.15, y: 2.42, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1493691591}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &423692383
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423692381}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.2076836, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.415367, y: 10}
+  m_EdgeRadius: 0
+--- !u!114 &423692384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423692381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cb26258014d2114a96f74d095fcbeef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delTime: 0.5
 --- !u!1 &432286374
 GameObject:
   m_ObjectHideFlags: 0
@@ -23361,6 +23495,76 @@ MonoBehaviour:
       endEvent:
         m_PersistentCalls:
           m_Calls: []
+  - storyName: Break
+    startEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1612812801}
+          m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+          m_MethodName: set_text
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: "L\uD0A4\uB97C \uB20C\uB7EC \uB300\uC2DC\uD558\uC790"
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 228140758}
+          m_TargetAssemblyTypeName: CameraManager, Assembly-CSharp
+          m_MethodName: SetTarget
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 226512470}
+          m_TargetAssemblyTypeName: PlayerEventController, Assembly-CSharp
+          m_MethodName: SetAllEvent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+    storyTexts:
+    - storyText: "\uB2E4\uB9AC\uAC00 \uBD80\uC234\uC84C\uAD70"
+      textDuration: 0.1
+      apertureEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      endEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - storyText: "\uC774\uB7F0\uACF3\uC740 \uB300\uC2DC\uB97C \uC0AC\uC6A9\uD558\uC5EC
+        \uAC74\uB108\uAC00\uBA74 \uB41C\uB2E4"
+      textDuration: 0.1
+      apertureEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      endEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - storyText: "L\uD0A4\uB97C \uB204\uB974\uBA74 \uB300\uC2DC\uB97C \uC0AC\uC6A9\uD560
+        \uC218 \uC788\uB2E4"
+      textDuration: 0.1
+      apertureEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      endEvent:
+        m_PersistentCalls:
+          m_Calls: []
 --- !u!1 &1335591234
 GameObject:
   m_ObjectHideFlags: 0
@@ -23729,6 +23933,7 @@ Transform:
   m_Children:
   - {fileID: 1233005051}
   - {fileID: 475350314}
+  - {fileID: 423692382}
   m_Father: {fileID: 583518078}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -41777,7 +41982,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1863382169}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.52, y: 2.22, z: -0.15179488}
+  m_LocalPosition: {x: 53.83, y: 2.22, z: -0.15179488}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

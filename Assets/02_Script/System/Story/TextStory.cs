@@ -48,7 +48,7 @@ public class TextStory : MonoBehaviour
 
 
         currentStory = stories.Find(x => x.storyName == value);
-
+        currentStory.startEvent?.Invoke();
         baseImage.rectTransform.DOScale(Vector3.one, 0.3f).SetEase(Ease.OutCirc)
             .OnComplete(SetText);
 
