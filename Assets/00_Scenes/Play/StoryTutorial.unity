@@ -53246,6 +53246,35 @@ MonoBehaviour:
       endEvent:
         m_PersistentCalls:
           m_Calls: []
+    - humanName: "\uC8FC\uC778\uACF5"
+      storyText: "\uC73C\uC73D.. \uB204\uAD6C..?"
+      textDuration: 0.1
+      apertureEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      endEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - humanName: ???
+      storyText: "\uC73C\uD760.. \uC544\uC9C1 \uB178\uC774\uC988\uAC00 \uC870\uAE08
+        \uC788\uB294\uAC74\uAC00? \uADF8\uB798\uB3C4 \uC774\uC815\uB3C4\uBA74 \uC548\uC815\uAD8C\uC778\uAC83
+        \uAC19\uB124."
+      textDuration: 0.1
+      apertureEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      endEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - humanName: "\uC8FC\uC778"
+      storyText: 
+      textDuration: 0.1
+      apertureEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      endEvent:
+        m_PersistentCalls:
+          m_Calls: []
   - storyName: Secound
     startEvent:
       m_PersistentCalls:
