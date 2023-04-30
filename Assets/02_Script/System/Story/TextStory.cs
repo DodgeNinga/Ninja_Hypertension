@@ -63,7 +63,20 @@ public class TextStory : MonoBehaviour
 
             StopAllCoroutines();
             isTyping=false;
-            tmpText.text = currentStory.storyTexts[crtIDX].storyText;
+            if (currentStory.storyTexts[crtIDX].humanName != "")
+            {
+
+                tmpText.text = currentStory.storyTexts[crtIDX].humanName 
+                    + " : " + 
+                    currentStory.storyTexts[crtIDX].storyText;
+
+            }
+            else
+            {
+
+                tmpText.text = currentStory.storyTexts[crtIDX].storyText;
+
+            }
 
         }
         else
@@ -88,16 +101,11 @@ public class TextStory : MonoBehaviour
         float showTextTime, string human, UnityEvent apertureEvent, UnityEvent endEvent)
     {
 
+        text.text = "";
         if(human != "")
         {
 
             text.text += $"{human} : "; 
-
-        }
-        else
-        {
-
-            text.text = "";
 
         }
 

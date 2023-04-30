@@ -33444,7 +33444,8 @@ MonoBehaviour:
             m_BoolArgument: 1
           m_CallState: 2
     storyTexts:
-    - storyText: "\uB3C4\uCC29\uD588\uAD70"
+    - humanName: 
+      storyText: "\uB3C4\uCC29\uD588\uAD70"
       textDuration: 0.1
       apertureEvent:
         m_PersistentCalls:
@@ -33452,7 +33453,8 @@ MonoBehaviour:
       endEvent:
         m_PersistentCalls:
           m_Calls: []
-    - storyText: "\uC774\uC81C\uBD80\uD130 \uB108\uC758 \uD798\uC744 \uB2E4\uB8E8\uB294\uBC95\uC744
+    - humanName: 
+      storyText: "\uC774\uC81C\uBD80\uD130 \uB108\uC758 \uD798\uC744 \uB2E4\uB8E8\uB294\uBC95\uC744
         \uC54C\uB824\uC8FC\uB3C4\uB85D \uD558\uC9C0"
       textDuration: 0.1
       apertureEvent:
@@ -33461,7 +33463,8 @@ MonoBehaviour:
       endEvent:
         m_PersistentCalls:
           m_Calls: []
-    - storyText: "\uAE30\uBCF8\uC801\uC73C\uB85C A\uC640 D\uB97C \uB204\uB974\uBA74
+    - humanName: 
+      storyText: "\uAE30\uBCF8\uC801\uC73C\uB85C A\uC640 D\uB97C \uB204\uB974\uBA74
         \uC6C0\uC9C1\uC77C \uC218 \uC788\uC744\uAC70\uB2E4"
       textDuration: 0.1
       apertureEvent:
@@ -33514,7 +33517,8 @@ MonoBehaviour:
             m_BoolArgument: 1
           m_CallState: 2
     storyTexts:
-    - storyText: "\uC774\uACF3\uC740 \uC810\uD504\uB97C \uC774\uC6A9\uD558\uC5EC
+    - humanName: 
+      storyText: "\uC774\uACF3\uC740 \uC810\uD504\uB97C \uC774\uC6A9\uD558\uC5EC
         \uC774\uB3D9\uD574\uC57C \uD574\uC57C\uD55C\uB2E4"
       textDuration: 0.1
       apertureEvent:
@@ -33523,7 +33527,8 @@ MonoBehaviour:
       endEvent:
         m_PersistentCalls:
           m_Calls: []
-    - storyText: "Space\uB97C \uB204\uB974\uBA74 \uC810\uD504\uD560 \uC218 \uC788\uC744\uAC70\uB2E4"
+    - humanName: 
+      storyText: "Space\uB97C \uB204\uB974\uBA74 \uC810\uD504\uD560 \uC218 \uC788\uC744\uAC70\uB2E4"
       textDuration: 0.1
       apertureEvent:
         m_PersistentCalls:
@@ -33575,7 +33580,8 @@ MonoBehaviour:
             m_BoolArgument: 1
           m_CallState: 2
     storyTexts:
-    - storyText: "\uB2E4\uB9AC\uAC00 \uBD80\uC234\uC84C\uAD70"
+    - humanName: 
+      storyText: "\uB2E4\uB9AC\uAC00 \uBD80\uC234\uC84C\uAD70"
       textDuration: 0.1
       apertureEvent:
         m_PersistentCalls:
@@ -33583,7 +33589,8 @@ MonoBehaviour:
       endEvent:
         m_PersistentCalls:
           m_Calls: []
-    - storyText: "\uC774\uB7F0\uACF3\uC740 \uB300\uC2DC\uB97C \uC0AC\uC6A9\uD558\uC5EC
+    - humanName: 
+      storyText: "\uC774\uB7F0\uACF3\uC740 \uB300\uC2DC\uB97C \uC0AC\uC6A9\uD558\uC5EC
         \uAC74\uB108\uAC00\uBA74 \uB41C\uB2E4"
       textDuration: 0.1
       apertureEvent:
@@ -33592,7 +33599,8 @@ MonoBehaviour:
       endEvent:
         m_PersistentCalls:
           m_Calls: []
-    - storyText: "L\uD0A4\uB97C \uB204\uB974\uBA74 \uB300\uC2DC\uB97C \uC0AC\uC6A9\uD560
+    - humanName: 
+      storyText: "L\uD0A4\uB97C \uB204\uB974\uBA74 \uB300\uC2DC\uB97C \uC0AC\uC6A9\uD560
         \uC218 \uC788\uB2E4"
       textDuration: 0.1
       apertureEvent:
