@@ -23947,6 +23947,38 @@ Transform:
   m_Father: {fileID: 1349117618}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &779667419
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 779667420}
+  m_Layer: 0
+  m_Name: Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &779667420
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779667419}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1312452507}
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &830384285
 GameObject:
   m_ObjectHideFlags: 0
@@ -32279,6 +32311,134 @@ Transform:
   m_Father: {fileID: 1102716945}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1312452506
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1312452507}
+  - component: {fileID: 1312452508}
+  m_Layer: 0
+  m_Name: TalkAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1312452507
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312452506}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 779667420}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1312452508
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312452506}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 8583a993ae6d3754d89e582273b21295, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1312670581
 GameObject:
   m_ObjectHideFlags: 0
@@ -51419,6 +51579,15 @@ MonoBehaviour:
             m_StringArgument: Break
             m_BoolArgument: 0
           m_CallState: 2
+  - takeName: OriginBridge
+    cameraTakePos: {x: 32.52, y: 2.22}
+    duration: 2
+    takeStartEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    takeEndEvent:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!114 &1906684968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53099,7 +53268,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: "A\uC640 D\uB97C \uC774\uC6A9\uD574 \uC6C0\uC9C1\uC5EC\uBCF4\uC790"
+            m_StringArgument: "A\uC640 D\uB97C \uC774\uC6A9\uD574 \uBAA9\uC801\uC9C0\uAE4C\uC9C0
+              \uC774\uB3D9\uD558\uC790"
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1868342961}
@@ -53126,51 +53296,123 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
+        - m_Target: {fileID: 1906684967}
+          m_TargetAssemblyTypeName: CameraTakeManager, Assembly-CSharp
+          m_MethodName: EndTake
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
     storyTexts:
     - humanName: 
       storyText: "\uBB54\uAC00 \uB098\uB978\uD55C \uAE30\uBD84\uC5D0 \uB208\uC744
         \uB72C\uB2E4."
-      textDuration: 0.1
+      textDuration: 0.05
       apertureEvent:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 1312452508}
+            m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+            m_MethodName: Play
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       endEvent:
         m_PersistentCalls:
           m_Calls: []
     - humanName: "\uC8FC\uC778\uACF5"
       storyText: "\uC73C\uC74C.."
-      textDuration: 0.1
+      textDuration: 0.05
       apertureEvent:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 1312452508}
+            m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+            m_MethodName: Play
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       endEvent:
         m_PersistentCalls:
           m_Calls: []
     - humanName: "\uC8FC\uC778\uACF5"
       storyText: "\uC73C\uC73D.. \uBA38\uB9AC.."
-      textDuration: 0.1
+      textDuration: 0.05
       apertureEvent:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 1312452508}
+            m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+            m_MethodName: Play
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       endEvent:
         m_PersistentCalls:
           m_Calls: []
     - humanName: 
       storyText: "\uC544\uC9C1 \uD750\uB9BF\uD558\uAC8C \uBCF4\uC774\uB294 \uC2DC\uC57C\uB85C
         \uC8FC\uBCC0\uC744 \uB458\uB7EC\uBCF8\uB2E4."
-      textDuration: 0.1
+      textDuration: 0.05
       apertureEvent:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 1312452508}
+            m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+            m_MethodName: Play
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       endEvent:
         m_PersistentCalls:
           m_Calls: []
     - humanName: "\uC8FC\uC778\uACF5"
       storyText: "\uCD08\uB85D\uC0C9... \uC73C\uC74C.."
-      textDuration: 0.1
+      textDuration: 0.05
       apertureEvent:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 1312452508}
+            m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+            m_MethodName: Play
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       endEvent:
         m_PersistentCalls:
           m_Calls: []
@@ -53178,20 +53420,44 @@ MonoBehaviour:
       storyText: "\uC2DC\uC57C\uAC00 \uC810\uC810 \uB610\uB837\uD574\uC9C4\uB2E4.
         \uBB34\uC5B8\uAC00 \uC2E0\uBE44\uB85C\uC6B4 \uAE30\uC6B4\uC774 \uAC10\uB3C4\uB294
         \uC6B8\uCC3D\uD55C \uC232\uC774 \uBCF4\uC778\uB2E4."
-      textDuration: 0.1
+      textDuration: 0.05
       apertureEvent:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 1312452508}
+            m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+            m_MethodName: Play
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       endEvent:
         m_PersistentCalls:
           m_Calls: []
     - humanName: "\uC8FC\uC778\uACF5"
       storyText: "\uB09C.. \uC65C \uC5EC\uAE30\uC788\uC9C0..? \uADF8\uBCF4\uB2E4
         \uB09C \uB204\uAD6C\uC9C0..?"
-      textDuration: 0.1
+      textDuration: 0.05
       apertureEvent:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 1312452508}
+            m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+            m_MethodName: Play
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       endEvent:
         m_PersistentCalls:
           m_Calls: []
@@ -53199,19 +53465,43 @@ MonoBehaviour:
       storyText: "\uAE30\uC5B5\uC744 \uB5A0\uC62C\uB824 \uBCF4\uB824 \uD558\uC9C0\uB9CC
         \uAE30\uC5B5\uC758 \uB05D\uC774 \uC774\uC9C8\uC801\uC73C\uB85C \uC798\uB9B0
         \uB4EF \uC544\uBB34\uAC83\uB3C4 \uAE30\uC5B5\uB098\uC9C0 \uC54A\uB294\uB2E4."
-      textDuration: 0.1
+      textDuration: 0.05
       apertureEvent:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 1312452508}
+            m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+            m_MethodName: Play
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       endEvent:
         m_PersistentCalls:
           m_Calls: []
     - humanName: "\uC8FC\uC778\uACF5"
       storyText: "\uD6C4\uC6B0.. \uBB54\uAC00 \uBAB8\uC774 \uC774\uC0C1\uD574.."
-      textDuration: 0.1
+      textDuration: 0.05
       apertureEvent:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 1312452508}
+            m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+            m_MethodName: Play
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       endEvent:
         m_PersistentCalls:
           m_Calls: []
@@ -53219,19 +53509,43 @@ MonoBehaviour:
       storyText: "\uC6D0\uB798 \uB0B4 \uBAB8\uC774 \uC544\uB2CC\uAC83 \uAC19\uC740
         \uAE30\uBD84\uB098\uC05C \uAC10\uAC01.. \uC544\uC9C1 \uC0C1\uD669\uC774 \uB2E4
         \uC815\uB9AC\uB418\uC9C0 \uC54A\uB294\uB2E4.\r\n"
-      textDuration: 0.1
+      textDuration: 0.05
       apertureEvent:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 1312452508}
+            m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+            m_MethodName: Play
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       endEvent:
         m_PersistentCalls:
           m_Calls: []
     - humanName: ???
       storyText: "\uC5B4? \uC77C\uC5B4\uB0AC\uC5B4?\n"
-      textDuration: 0.1
+      textDuration: 0.05
       apertureEvent:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 1312452508}
+            m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+            m_MethodName: Play
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       endEvent:
         m_PersistentCalls:
           m_Calls: []
@@ -53239,19 +53553,43 @@ MonoBehaviour:
       storyText: "\uBA38\uB9BF\uC18D\uC5D0 \uBAA9\uC18C\uB9AC\uAC00 \uC6B8\uB9B0\uB2E4.
         \uC544\uC9C1 \uB2E4 \uAC00\uC2DC\uC9C0 \uC54A\uC740 \uB450\uD1B5\uC5D0 \uB354\uBD88\uC5B4
         \uBA38\uB9BF\uC18D\uC774 \uC2EC\uD558\uAC8C \uC9C0\uB048\uAC70\uB9B0\uB2E4."
-      textDuration: 0.1
+      textDuration: 0.05
       apertureEvent:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 1312452508}
+            m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+            m_MethodName: Play
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       endEvent:
         m_PersistentCalls:
           m_Calls: []
     - humanName: "\uC8FC\uC778\uACF5"
       storyText: "\uC73C\uC73D.. \uB204\uAD6C..?"
-      textDuration: 0.1
+      textDuration: 0.05
       apertureEvent:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 1312452508}
+            m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+            m_MethodName: Play
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       endEvent:
         m_PersistentCalls:
           m_Calls: []
@@ -53259,19 +53597,345 @@ MonoBehaviour:
       storyText: "\uC73C\uD760.. \uC544\uC9C1 \uB178\uC774\uC988\uAC00 \uC870\uAE08
         \uC788\uB294\uAC74\uAC00? \uADF8\uB798\uB3C4 \uC774\uC815\uB3C4\uBA74 \uC548\uC815\uAD8C\uC778\uAC83
         \uAC19\uB124."
-      textDuration: 0.1
+      textDuration: 0.05
       apertureEvent:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 1312452508}
+            m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+            m_MethodName: Play
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       endEvent:
         m_PersistentCalls:
           m_Calls: []
-    - humanName: "\uC8FC\uC778"
-      storyText: 
-      textDuration: 0.1
+    - humanName: "\uC8FC\uC778\uACF5"
+      storyText: "\uC808.. \uC544\uC2DC\uB098\uC694? \uC804 \uB204\uAD6C\uC8E0? \uC5B4\uC9F8\uC11C
+        \uC5EC\uAE30\uC5D0 \uC788\uB294\uAC74\uAC00\uC694?"
+      textDuration: 0.05
       apertureEvent:
         m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1312452508}
+            m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+            m_MethodName: Play
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      endEvent:
+        m_PersistentCalls:
           m_Calls: []
+    - humanName: 
+      storyText: "\uC2E0\uBE44\uB85C\uC6B4 \uAE30\uC6B4.. \uD558\uC9C0\uB9CC \uC544\uC9C1
+        \uC218\uC0C1\uCA4D\uAC8C \uB290\uAEF4\uC9C4\uB2E4. \uC870\uAE08\uC740 \uC18C\uB984\uB07C\uCE58\uB294
+        \uC0C1\uD669\uC18D\uC5D0\uC11C\r\n\uC54C\uC9C0\uB3C4 \uBABB\uD558\uB294 \uC874\uC7AC\uC5D0\uAC8C
+        \uC9C8\uBB38\uC744 \uD138\uC5B4\uB0C8\uB2E4."
+      textDuration: 0.05
+      apertureEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1312452508}
+            m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+            m_MethodName: Play
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      endEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - humanName: ???
+      storyText: "\uC74C.. \uB9D0 \uBABB\uD574!"
+      textDuration: 0.05
+      apertureEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1312452508}
+            m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+            m_MethodName: Play
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      endEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - humanName: 
+      storyText: "\uB2E4\uC2DC \uD55C\uBC88 \uBA38\uB9BF\uC18D\uC5D0\uC11C \uBAA9\uC18C\uB9AC\uAC00
+        \uC6B8\uB9B0\uB2E4. \uB450\uD1B5\uC774 \uC870\uAE08\uC740 \uC788\uC5C8\uC9C0\uB9CC
+        \uC544\uAE4C\uBCF4\uB2E4 \uD6E8\uC52C\r\n\uD3B8\uC548\uD558\uAC8C \uC6B8\uB824\uD37C\uC84C\uB2E4."
+      textDuration: 0.05
+      apertureEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1312452508}
+            m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+            m_MethodName: Play
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      endEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - humanName: 
+      storyText: "\uADF8\uB098\uC800\uB098 \uB9D0 \uBABB\uD55C\uB2E4\uB2C8.. \uADF8\uB807\uB2E4\uBA74
+        \uBB34\uC5B8\uAC00\uB97C \uC54C\uACE0\uB294 \uC788\uB2E4\uB294\uAC74\uAC00?"
+      textDuration: 0.05
+      apertureEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1312452508}
+            m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+            m_MethodName: Play
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      endEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - humanName: ???
+      storyText: "\uB108\uB294 \uB108\uAC00 \uB204\uAD6C\uC600\uB294\uC9C0 \uC54C\uACE0\uC2F6\uC740\uAC70\uC57C?"
+      textDuration: 0.05
+      apertureEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1312452508}
+            m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+            m_MethodName: Play
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      endEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - humanName: "\uC8FC\uC778\uACF5"
+      storyText: "\uADF8.. \uADF8\uAC70\uC57C \uB2F9\uC5F0\uD558\uC8E0! \uAC11\uC790\uAE30
+        \uC774 \uC232\uC18D\uC5D0\uC11C \uC0DD\uACA8\uB0AC\uC744\uB9AC\uB294 \uC5C6\uACE0.."
+      textDuration: 0.05
+      apertureEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1312452508}
+            m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+            m_MethodName: Play
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      endEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - humanName: ???
+      storyText: "\uC73C\uD760~ \uADF8\uB7FC \uC77C\uB2E8 \uC6C0\uC9C1\uC5EC\uBCFC\uB798?
+        \uBAB8\uC744 \uC6C0\uC9C1\uC774\uB2E4 \uBCF4\uBA74 \uB5A0\uC624\uB974\uB294\uAC8C
+        \uC788\uC744\uC9C0\uB3C4 \uBAA8\uB974\uC796\uC544?"
+      textDuration: 0.05
+      apertureEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1312452508}
+            m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+            m_MethodName: Play
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      endEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - humanName: "\uC8FC\uC778\uACF5"
+      storyText: "\uC73C\uD760.."
+      textDuration: 0.05
+      apertureEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1312452508}
+            m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+            m_MethodName: Play
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      endEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - humanName: 
+      storyText: "\uC790\uC138\uD788 \uC0DD\uAC01\uD574\uBCF4\uBA74 \uBA38\uB9BF\uC18D\uC5D0\uC11C
+        \uC6B8\uB824\uD37C\uC9C0\uB294 \uBAA9\uC18C\uB9AC, \uB098\uC758 \uC815\uCCB4\uB97C
+        \uC54C\uC9C0\uB3C4 \uBAA8\uB974\uB294 \uC874\uC7AC,\r\n\uC810\uC810 \uC12C\uB729\uD574\uC9C0\uB294
+        \uAC10\uAC01, \uBB50\uB4E0\uAC8C \uBBF8\uC2EC\uCA4D\uB2E4."
+      textDuration: 0.05
+      apertureEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1312452508}
+            m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+            m_MethodName: Play
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      endEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - humanName: 
+      storyText: "\uD558\uC9C0\uB9CC.. \uC774\uB807\uAC8C \uACE0\uBBFC\uD55C\uB2E4
+        \uCCD0\uB3C4 \uD574\uACB0\uB418\uB294\uAC83\uB3C4 \uC544\uB2C8\uB2C8 \uC77C\uB2E8
+        \uBAA9\uC18C\uB9AC\uC758 \uB9D0\uC744 \uB530\uB77C\uBCF4\uC790."
+      textDuration: 0.05
+      apertureEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1312452508}
+            m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+            m_MethodName: Play
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      endEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - humanName: 
+      storyText: "\uBAA9\uC18C\uB9AC\uC758 \uB9D0\uC5D0 \uB530\uB77C \uBAB8\uC744
+        \uCC9C\uCC9C\uD788 \uC77C\uC73C\uCF30\uB2E4."
+      textDuration: 0.05
+      apertureEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1312452508}
+            m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+            m_MethodName: Play
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      endEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1906684967}
+            m_TargetAssemblyTypeName: CameraTakeManager, Assembly-CSharp
+            m_MethodName: StartTake
+            m_Mode: 5
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: OriginBridge
+              m_BoolArgument: 0
+            m_CallState: 2
+    - humanName: ???
+      storyText: "\uC624\uD638~ \uADF8\uB7FC \uC77C\uB2E8 \uC800\uAE30 \uC800 \uB2E4\uB9AC\uAC00
+        \uBCF4\uC774\uC9C0? \uC800\uAE30\uAE4C\uC9C0 \uC6C0\uC9C1\uC5EC\uBCFC\uB798?"
+      textDuration: 0.05
+      apertureEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1312452508}
+            m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+            m_MethodName: Play
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      endEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - humanName: 
+      storyText: "\uC544\uC9C1\uC740 \uC758\uC2EC\uC2A4\uB7FD\uC9C0\uB9CC \uC6C0\uC9C1\uC5EC\uBCF4\uC790."
+      textDuration: 0.05
+      apertureEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1312452508}
+            m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+            m_MethodName: Play
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       endEvent:
         m_PersistentCalls:
           m_Calls: []

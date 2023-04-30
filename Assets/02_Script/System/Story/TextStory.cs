@@ -77,6 +77,7 @@ public class TextStory : MonoBehaviour
                 tmpText.text = currentStory.storyTexts[crtIDX].storyText;
 
             }
+            currentStory.storyTexts[crtIDX].endEvent?.Invoke();
 
         }
         else
