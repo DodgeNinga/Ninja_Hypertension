@@ -33,6 +33,7 @@ namespace Class
     public class StoryTextClass
     {
 
+        public string humanName;
         [TextArea] public string storyText;
         public float textDuration;
         public UnityEvent apertureEvent;

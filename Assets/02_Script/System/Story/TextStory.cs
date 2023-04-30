@@ -26,7 +26,7 @@ public class TextStory : MonoBehaviour
 
         isTyping = true;
         var obj = currentStory.storyTexts[crtIDX];
-        StartCoroutine(SetTextCo(tmpText, obj.storyText, obj.textDuration, obj.apertureEvent, obj.endEvent));
+        StartCoroutine(SetTextCo(tmpText, obj.storyText, obj.textDuration, obj.humanName,obj.apertureEvent, obj.endEvent));
 
     }
 
@@ -85,10 +85,22 @@ public class TextStory : MonoBehaviour
 
 
     private IEnumerator SetTextCo(TMP_Text text, string endValue, 
-        float showTextTime, UnityEvent apertureEvent, UnityEvent endEvent)
+        float showTextTime, string human, UnityEvent apertureEvent, UnityEvent endEvent)
     {
 
-        text.text = "";
+        if(human != "")
+        {
+
+            text.text += $"{human} : "; 
+
+        }
+        else
+        {
+
+            text.text = "";
+
+        }
+
 
         for(int i = 0; i < endValue.Length; i++)
         {
