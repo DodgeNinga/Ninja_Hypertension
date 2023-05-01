@@ -5,26 +5,85 @@ using UnityEngine;
 public class JumpCol : MonoBehaviour
 {
 
+    [SerializeField] private List<string> noGroundTag;
     public bool isGround { get; private set; } = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-        isGround = true;
+
+        bool isNoGround = false;
+
+        foreach(var item in noGroundTag)
+        {
+
+            if (collision.transform.CompareTag(item))
+            {
+
+                isNoGround = true; break;
+
+            }
+
+        }
+
+        if(!isNoGround) 
+        {
+            
+            isGround = true;
+
+        }
 
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
 
-        isGround = true;
+        bool isNoGround = false;
+
+        foreach (var item in noGroundTag)
+        {
+
+            if (collision.transform.CompareTag(item))
+            {
+
+                isNoGround = true; break;
+
+            }
+
+        }
+
+        if (!isNoGround)
+        {
+
+            isGround = true;
+
+        }
 
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        
-        isGround = false;
+
+        bool isNoGround = false;
+
+        foreach (var item in noGroundTag)
+        {
+
+            if (collision.transform.CompareTag(item))
+            {
+
+                isNoGround = true; 
+                break;
+
+            }
+
+        }
+
+        if (!isNoGround)
+        {
+
+            isGround = false;
+
+        }
 
     }
 

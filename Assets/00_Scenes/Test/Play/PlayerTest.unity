@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 25100399}
   - component: {fileID: 25100400}
   - component: {fileID: 25100401}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -298,9 +298,9 @@ GameObject:
   - component: {fileID: 73164391}
   - component: {fileID: 73164392}
   - component: {fileID: 73164393}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -365,7 +365,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 73164374}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.75, y: 10.28, z: 0}
+  m_LocalPosition: {x: -7.23, y: 10.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1014,7 +1014,7 @@ GameObject:
   m_Component:
   - component: {fileID: 208306129}
   - component: {fileID: 208306130}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WallSencer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1444,6 +1444,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9d264664eb69674bb05feb688516be7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  cvcam: {fileID: 0}
 --- !u!1 &409868646
 GameObject:
   m_ObjectHideFlags: 0
@@ -1455,7 +1457,7 @@ GameObject:
   - component: {fileID: 409868647}
   - component: {fileID: 409868649}
   - component: {fileID: 409868648}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: JumpCol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1489,6 +1491,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3c2f3295166c754b99d70b915f8b616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  noGroundTag:
+  - Enemy
 --- !u!61 &409868649
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1528,10 +1532,10 @@ GameObject:
   - component: {fileID: 486918606}
   - component: {fileID: 486918605}
   - component: {fileID: 486918604}
-  - component: {fileID: 486918603}
   - component: {fileID: 486918602}
   - component: {fileID: 486918610}
-  - component: {fileID: 486918609}
+  - component: {fileID: 486918611}
+  - component: {fileID: 486918612}
   m_Layer: 3
   m_Name: Capsule (1)
   m_TagString: Untagged
@@ -1551,21 +1555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7326f368d72513e4fb6363788ef7e77e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stopTimeScale: 0.2
-  hitStopDuration: 0.2
---- !u!114 &486918603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 486918601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7326f368d72513e4fb6363788ef7e77e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stopTimeScale: 0.2
+  stopTimeScale: 0.1
   hitStopDuration: 0.2
 --- !u!70 &486918604
 CapsuleCollider2D:
@@ -1580,8 +1570,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
+  m_Offset: {x: 0, y: 0.011051655}
+  m_Size: {x: 1, y: 1.2927313}
   m_Direction: 0
 --- !u!114 &486918605
 MonoBehaviour:
@@ -1616,7 +1606,8 @@ MonoBehaviour:
     feedBack:
     - {fileID: 486918605}
     - {fileID: 486918602}
-    - {fileID: 486918609}
+    - {fileID: 486918610}
+    - {fileID: 486918612}
 --- !u!212 &486918607
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1637,7 +1628,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: bdb7c37c64e5e4046990ff8472b50fc3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1658,7 +1649,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: da730647da0d39842911042bb35a49dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1677,27 +1668,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 486918601}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.68, y: 9.46, z: 0}
+  m_LocalPosition: {x: -4.52, y: 9.58, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &486918609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 486918601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7679b17a5e800d94c857ceec6b347f7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shakePower: 1
-  shakeCount: 10
 --- !u!114 &486918610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1712,6 +1689,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shakePower: 1
   shakeCount: 1
+  duration: 0.3
+--- !u!50 &486918611
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486918601}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &486918612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486918601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df008ec06ac6d547b348533f90a4a58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &531737386
 GameObject:
   m_ObjectHideFlags: 0
@@ -1722,7 +1733,7 @@ GameObject:
   m_Component:
   - component: {fileID: 531737387}
   - component: {fileID: 531737388}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Input
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1833,7 +1844,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 703212661}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ParticlePlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2078,7 +2089,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1035144296}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2113,7 +2124,7 @@ GameObject:
   - component: {fileID: 1093493314}
   - component: {fileID: 1093493315}
   - component: {fileID: 1093493316}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2172,7 +2183,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1101373300}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2290,7 +2301,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1136930913}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ParticlePos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2323,7 +2334,7 @@ GameObject:
   - component: {fileID: 1164453906}
   - component: {fileID: 1164453907}
   - component: {fileID: 1164453908}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2452,7 +2463,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1358628675}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.75, y: 10.28, z: -10}
+  m_LocalPosition: {x: -7.23, y: 10.16, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2589,7 +2600,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1428337395}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.75, y: 10.28, z: -10}
+  m_LocalPosition: {x: -7.23, y: 10.16, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2809,7 +2820,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1891177902}
   - component: {fileID: 1891177903}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DashParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2855,7 +2866,7 @@ GameObject:
   - component: {fileID: 1902153408}
   - component: {fileID: 1902153409}
   - component: {fileID: 1902153410}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}

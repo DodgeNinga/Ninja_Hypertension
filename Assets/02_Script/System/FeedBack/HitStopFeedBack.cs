@@ -12,7 +12,7 @@ public class HitStopFeedBack : FeedBack
     public override void CreateFeedBack()
     {
         
-        Manager.TimeManagerIns.SetTimeScale(hitStopDuration, stopTimeScale);
+        Manager.TimeManagerIns.SetTimeScale(stopTimeScale, hitStopDuration);
 
     }
 

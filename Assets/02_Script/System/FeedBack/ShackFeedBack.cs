@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShackFeedBack : FeedBack
 {
 
-    [SerializeField] private float shakePower = 1f, shakeCount = 1f;
+    [SerializeField] private float shakePower = 1f, shakeCount = 1f, duration = 0.3f;
 
     public override void CreateFeedBack()
     {
@@ -13,7 +13,7 @@ public class ShackFeedBack : FeedBack
         if(CameraManager.instance != null) 
         {
 
-            CameraManager.instance.Shake(shakePower, shakeCount, 0.3f, true);
+            CameraManager.instance.Shake(shakePower, shakeCount, duration, true);
 
         }
 
