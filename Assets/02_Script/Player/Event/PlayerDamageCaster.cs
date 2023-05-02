@@ -29,7 +29,7 @@ public class PlayerDamageCaster : MonoBehaviour
         hpObj.TakeDamage(damageValue);
 
         var obj = FAED.Pop("DamageText", hpObj.transform.position +
-            new Vector3(Random.Range(-1, 1f), Random.Range(-1, 1f)), Quaternion.identity);
+            new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f)), Quaternion.identity);
 
         var damage = obj.GetComponent<DamageText>();
         damage.SetText(damageValue);
