@@ -1437,7 +1437,7 @@ GameObject:
   - component: {fileID: 320976543}
   - component: {fileID: 320976545}
   - component: {fileID: 320976544}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1497,7 +1497,7 @@ GameObject:
   m_Component:
   - component: {fileID: 333532338}
   - component: {fileID: 333532339}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Input
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2421,7 +2421,7 @@ GameObject:
   - component: {fileID: 457901037}
   - component: {fileID: 457901036}
   - component: {fileID: 457901035}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2783,7 +2783,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1361490473, guid: d752a07a9491585449bbdaa096bdede6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5380,7 +5380,7 @@ GameObject:
   - component: {fileID: 682152894}
   - component: {fileID: 682152896}
   - component: {fileID: 682152895}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6513,7 +6513,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1004373571}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ParticlePos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7133,7 +7133,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1150928858}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7577,7 +7577,7 @@ GameObject:
   - component: {fileID: 1410510056}
   - component: {fileID: 1410510058}
   - component: {fileID: 1410510057}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7637,7 +7637,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1474153860}
   - component: {fileID: 1474153861}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DashParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7995,7 +7995,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1672581695}
   - component: {fileID: 1672581696}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WallSencer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31450,7 +31450,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1771841500}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31897,7 +31897,7 @@ GameObject:
   - component: {fileID: 1830470931}
   - component: {fileID: 1830470933}
   - component: {fileID: 1830470932}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32859,7 +32859,7 @@ GameObject:
   - component: {fileID: 2100972945}
   - component: {fileID: 2100972947}
   - component: {fileID: 2100972946}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: JumpCol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32929,7 +32929,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2127420119}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ParticlePlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}

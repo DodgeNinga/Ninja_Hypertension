@@ -16,7 +16,7 @@ namespace Class
         public Color gizmoColor;
         public Vector2 range;
         public Vector2 offSet;
-        public UnityEvent<HPObject> hitEvt;
+        public UnityEvent<HPObject, string> hitEvt;
 
     }
 
@@ -61,6 +61,22 @@ namespace Class
         public float duration;
         public UnityEvent takeStartEvent;
         public UnityEvent takeEndEvent;
+
+    }
+
+    [System.Serializable]
+    public class DamageCasterClass
+    {
+
+        public string eventKey;
+        public float damage;
+        public float randomValue;
+        public float GetDamageValue(float hpLV)
+        {
+
+            return Random.Range(damage - randomValue, damage + randomValue) + ((damage * hpLV) / 2);
+
+        } 
 
     }
 
