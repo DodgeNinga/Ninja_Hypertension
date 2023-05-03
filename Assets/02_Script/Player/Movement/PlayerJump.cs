@@ -6,6 +6,7 @@ public class PlayerJump : PlayerBehaviorRoot
 {
 
     [SerializeField] private float jumpPower;
+    [SerializeField] private float jumpAddValue;
 
     public bool jumpAble = true;
 
@@ -31,14 +32,14 @@ public class PlayerJump : PlayerBehaviorRoot
     public override void AddEvent()
     {
 
-        actionSystem.OnJumpKeyEvent += Jump;
+        actionSystem.OnJumpKeyDownEvent += Jump;
 
     }
 
     public override void RemoveEvent()
     {
 
-        actionSystem.OnJumpKeyEvent -= Jump;
+        actionSystem.OnJumpKeyDownEvent -= Jump;
 
     }
 }

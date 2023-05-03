@@ -23,6 +23,7 @@ public class PlayerSkill : PlayerBehaviorRoot
     private int currentLV = 1;
     private bool isShowAnime = false;
 
+    public int CurrentLV => currentLV;
     public bool skillAble = true;
 
     protected override void Awake()
@@ -44,6 +45,7 @@ public class PlayerSkill : PlayerBehaviorRoot
 
         if (!skillAble) return;
 
+        currentLV = 1;
         isShowAnime = true;
         spriteRenderer.material.SetFloat(OutLineValueHash, 1);
         playerMove.SetMoveSpeed(holdMoveSpeed);
@@ -67,7 +69,6 @@ public class PlayerSkill : PlayerBehaviorRoot
         isShowAnime = false;
         animator.ResetLandingTrigger();
         spriteRenderer.material.SetFloat(OutLineValueHash, 0);
-        currentLV = 1;
         flip.flipAble = false;
 
         animator.SetSkillHoldHash(false);

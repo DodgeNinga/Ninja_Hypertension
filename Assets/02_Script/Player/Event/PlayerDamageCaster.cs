@@ -10,11 +10,13 @@ public class PlayerDamageCaster : MonoBehaviour
     [SerializeField] private List<DamageCasterClass> castingList = new List<DamageCasterClass>();
 
     private PlayerHP playerHP;
+    private PlayerSkill skill;
 
     private void Awake()
     {
         
         playerHP = GetComponent<PlayerHP>();
+        skill = GetComponent<PlayerSkill>();
 
     }
 
@@ -26,6 +28,26 @@ public class PlayerDamageCaster : MonoBehaviour
         if (itemObj == null) return;
 
         float damageValue = itemObj.GetDamageValue(playerHP.GetHPLV);
+        hpObj.TakeDamage(damageValue);
+
+        var obj = FAED.Pop("DamageText", hpObj.transform.position +
+            new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f)), Quaternion.identity);
+
+        var damage = obj.GetComponent<DamageText>();
+        damage.SetText(damageValue);
+
+        playerHP.HealingHP(damageValue / 10);
+
+    }
+
+    public void CastingHoldAttackDamage(HPObject hpObj, string key)
+    {
+
+        var itemObj = castingList.Find(x => x.eventKey == key);
+
+        if (itemObj == null) return;
+
+        float damageValue = itemObj.GetDamageValue(playerHP.GetHPLV) * skill.CurrentLV;
         hpObj.TakeDamage(damageValue);
 
         var obj = FAED.Pop("DamageText", hpObj.transform.position +

@@ -2696,7 +2696,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 457901050}
           m_TargetAssemblyTypeName: PlayerDamageCaster, Assembly-CSharp
-          m_MethodName: CastingDamage
+          m_MethodName: CastingHoldAttackDamage
           m_Mode: 0
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
