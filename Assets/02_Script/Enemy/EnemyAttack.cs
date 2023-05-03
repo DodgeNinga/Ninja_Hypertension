@@ -50,7 +50,7 @@ public class EnemyAttack : HPObject
         {
             StopCoroutine("PlayerAttack");
             coolTime = false;
-            onAttackRange = true;
+            onAttackRange = false;
             if(!coolRunning)
             {
                 StartCoroutine("CoolTime");

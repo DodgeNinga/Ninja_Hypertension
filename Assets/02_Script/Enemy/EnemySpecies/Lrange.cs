@@ -6,11 +6,12 @@ public class Lrange : MonoBehaviour
 {
     public GameObject bulletPrefabs;
     ChaseRange ChaseRange;
-    public float delayTime;
+    public float delayTime = 1f;
     // Start is called before the first frame update
     void Start()
     {
         ChaseRange = GetComponentInChildren<ChaseRange>();
+        StartCoroutine("Fire");
     }
 
     // Update is called once per frame
