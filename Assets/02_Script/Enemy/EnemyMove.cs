@@ -5,12 +5,16 @@ using UnityEngine;
 public class EnemyMove : MonoBehaviour
 {
     [SerializeField] bool allDirection;
+    [SerializeField] bool chaseJump;
     [SerializeField] float speed;
     [SerializeField] float chasingSpeed;
-    [SerializeField] float drbTime; 
+    [SerializeField] float jumpPower;
+    [SerializeField] float drbTime;
+    Rigidbody2D rigid;
     Vector3 playerDir;
-    Animator anime;
     ChaseRange ChaseRange;
+    ChaseStopRange ChaseStopRange;
+    EnemyDG EnemyDG;
     bool drb = true;
     int moveDir =-1;
     float delayTime;
@@ -19,10 +23,14 @@ public class EnemyMove : MonoBehaviour
 
     private void Awake()
     {
-        anime = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        ChaseRange = FindObjectOfType<ChaseRange>().GetComponent<ChaseRange>();
+        ChaseRange = GetComponentInChildren<ChaseRange>();
+        ChaseStopRange = GetComponentInChildren<ChaseStopRange>();
+        if(chaseJump)
+            EnemyDG = GetComponentInChildren<EnemyDG>();
+        rigid = GetComponent<Rigidbody2D>();
         StartCoroutine("ChangeDir");
+        jumpPower *= 10;
     }
     IEnumerator ChangeDir()
     {
@@ -47,26 +55,34 @@ public class EnemyMove : MonoBehaviour
         playerDir = playerDir.normalized;
         if (ChaseRange.onChaseRange)
         {
-            anime.SetBool("fire", true);
-            if ((player.position.x - transform.position.x) > 0)
+            if (player.position.x -0.1f > transform.position.x)
             {
                 transform.localScale = new Vector2(-1, 1);
                 moveDir = 1;
             }
-            else
+            else if (transform.position.x-0.1f > player.position.x)
             {
                 transform.localScale = new Vector2(1, 1);
                 moveDir = -1;
             }
-            if (allDirection)
-                transform.position += playerDir * chasingSpeed * Time.deltaTime;
             else
-                transform.Translate(Vector2.right *moveDir * chasingSpeed * Time.deltaTime);
+                moveDir = 0;
+            if (!ChaseStopRange.onChaseStopRange) {
+                if (allDirection)
+                    transform.position += playerDir * chasingSpeed * Time.deltaTime;
+                else
+                    transform.Translate(Vector2.right * moveDir * chasingSpeed * Time.deltaTime);
+            }
+            if (chaseJump&&(EnemyDG.onGround && (player.position.y - 1 > transform.position.y||ChaseStopRange.onChaseStopRange)))
+                Jump();
         }
         else
         {
-            anime.SetBool("fire", false);
             transform.Translate(Vector2.right * moveDir * speed * Time.deltaTime);
         }
+    }
+    void Jump()
+    {
+        rigid.AddForce(new Vector2(0, jumpPower));
     }
 }
