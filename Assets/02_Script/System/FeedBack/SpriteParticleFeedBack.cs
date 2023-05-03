@@ -23,6 +23,8 @@ public class SpriteParticleFeedBack : FeedBack
 
         particle.MakeParticle(spriteRenderer.sprite);
 
+        FAED.InvokeDelay(() => FAED.Push(particle.gameObject), 1f);
+
     }
 
     public override void EndFeedBack()

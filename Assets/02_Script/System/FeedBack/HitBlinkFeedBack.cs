@@ -23,7 +23,6 @@ public class HitBlinkFeedBack : FeedBack
 
         spriteRenderer.material.SetFloat(BlinkHash, 1f);
         spriteRenderer.material.SetFloat(ShakeHash, 1f);
-        Debug.Log(123);
         FAED.InvokeDelayReal(() =>
         {
 
