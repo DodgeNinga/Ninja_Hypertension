@@ -19,27 +19,56 @@ public class PlayerJump : PlayerBehaviorRoot
 
     }
 
-    private void Jump()
+    private void JumpDown()
     {
 
         if (!jumpCol.isGround || !jumpAble) return;
 
         animator.SetJump();
         rigid.velocity += Vector2.up * jumpPower;
+        StartCoroutine(AddJumpPowerCo());
+
+    }
+
+    private void JumpUp()
+    {
+
+        StopAllCoroutines();
 
     }
 
     public override void AddEvent()
     {
 
-        actionSystem.OnJumpKeyDownEvent += Jump;
+        actionSystem.OnJumpKeyDownEvent += JumpDown;
+        actionSystem.OnJumpKeyUpEvent += JumpUp;
 
     }
 
     public override void RemoveEvent()
     {
 
-        actionSystem.OnJumpKeyDownEvent -= Jump;
+        actionSystem.OnJumpKeyDownEvent -= JumpDown;
+        actionSystem.OnJumpKeyUpEvent -= JumpUp;
 
     }
+
+    private IEnumerator AddJumpPowerCo()
+    {
+
+        float value = 0;
+
+        while(value >= jumpAddValue) 
+        {
+
+            value += Time.deltaTime * jumpAddValue;
+
+            rigid.velocity += Vector2.up * Time.deltaTime * jumpAddValue;
+
+            yield return null;
+        
+        }
+
+    }
+
 }

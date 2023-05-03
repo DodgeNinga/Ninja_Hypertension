@@ -10,6 +10,7 @@ public class PlayerActionSystem : MonoBehaviour
     public event Action<float> OnVerticalEvnet;
     public event Action<float> OnHorizontalRawEvent;
     public event Action OnJumpKeyDownEvent;
+    public event Action OnJumpKeyUpEvent;
     public event Action OnSkillKeyPressEvent;
     public event Action OnSkillKeyUpEvent;
     public event Action OnHoldSkillPressEvnet;
@@ -20,7 +21,8 @@ public class PlayerActionSystem : MonoBehaviour
     public void OnHorizontalExecute(float v) => OnHorizontalEvent?.Invoke(v);
     public void OnVerticalExecute(float v) => OnVerticalEvnet?.Invoke(v);
     public void OnHorizontalRawExecute(float v) => OnHorizontalRawEvent?.Invoke(v);
-    public void OnJumpKeyExecute() => OnJumpKeyDownEvent?.Invoke();
+    public void OnJumpKeyDownExecute() => OnJumpKeyDownEvent?.Invoke();
+    public void OnJumpKeyUpExecute() => OnJumpKeyUpEvent?.Invoke();
     public void OnSkillKeyPressExecute() => OnSkillKeyPressEvent?.Invoke();
     public void OnSkillKeyUpExecute() => OnSkillKeyUpEvent?.Invoke();
     public void OnHoldSkillPressExecute() => OnHoldSkillPressEvnet?.Invoke();
