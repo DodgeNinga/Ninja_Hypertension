@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,6 +20,7 @@ public class PlayerAnimator : MonoBehaviour
     private readonly int DashTriggerHash = Animator.StringToHash("DashTrigger");
     private readonly int IsDashHash = Animator.StringToHash("IsDash");
     private readonly int DieTriggerHash = Animator.StringToHash("Die");
+    private readonly int IsGroundHash = Animator.StringToHash("IsGround");
 
     private MargedSencer margedSencer;
     private PlayerFlip playerFlip;
@@ -43,12 +45,21 @@ public class PlayerAnimator : MonoBehaviour
     {
 
         SetMoveVelHash();
-        FallDownChack();
         ChackLanding();
+        FallDownChack();
         WallChack();
         SetIsAir();
+        SetIsGround();
 
     }
+
+    private void SetIsGround()
+    {
+
+        animator.SetBool(IsGroundHash, jumpCol.isGround);
+
+    }
+
     private void SetMoveVelHash()
     {
 
@@ -59,7 +70,7 @@ public class PlayerAnimator : MonoBehaviour
     private void FallDownChack()
     {
 
-        if(rigid.velocity.y < 0) 
+        if(rigid.velocity.y < 0 && jumpCol.isGround == false) 
         {
             
             fallDownTime += Time.deltaTime;

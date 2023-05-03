@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using FD.Dev;
+using System;
 
 public class CameraManager : MonoBehaviour
 {
 
-    private CinemachineVirtualCamera cvcam;
+    [SerializeField] private Transform target; 
+    [HideInInspector] public CinemachineVirtualCamera cvcam;
     private CinemachineBasicMultiChannelPerlin cbmcp;
     private bool isDurated = false;
-    private bool isZoomIn = false;
 
     public static CameraManager instance;
 
@@ -19,6 +20,7 @@ public class CameraManager : MonoBehaviour
         
         cvcam = FindObjectOfType<CinemachineVirtualCamera>();
         cbmcp = cvcam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+
         instance = this;
 
     }
@@ -55,48 +57,10 @@ public class CameraManager : MonoBehaviour
 
     }
 
-    public void ZoomIn(float zoomInValue, float duration, float spd)
+    public void SetTarget(bool able)
     {
 
-        if (isZoomIn) return;
-
-        isZoomIn = true;
-        StartCoroutine(ZoomInCo(zoomInValue, duration, spd));
-
-    }
-
-    private IEnumerator ZoomInCo(float zoomInValue, float duration, float spd)
-    {
-
-        float percent = 0;
-
-        while (percent < duration)
-        {
-
-            percent += Time.deltaTime;
-
-            cvcam.m_Lens.FarClipPlane = Mathf.Lerp(cvcam.m_Lens.FarClipPlane, 
-                zoomInValue, spd * Time.deltaTime);
-            yield return null;
-
-        }
-
-        yield return new WaitForSeconds(duration);
-
-        percent = 0;
-
-        while (percent < duration)
-        {
-
-            percent += Time.deltaTime;
-
-            cvcam.m_Lens.FarClipPlane = Mathf.Lerp(cvcam.m_Lens.FarClipPlane,
-                90, spd * Time.deltaTime);
-            yield return null;
-
-        }
-
-        isZoomIn = false;
+        cvcam.Follow = able ? target : null;
 
     }
 

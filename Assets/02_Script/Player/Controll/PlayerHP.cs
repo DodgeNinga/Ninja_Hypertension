@@ -13,6 +13,8 @@ public class PlayerHP : HPObject
     [SerializeField] private Slider slider;
     [SerializeField] private UnityEvent dieEvent;
 
+    public float GetHPLV => HP / maxHP;
+
     private void Awake()
     {
 
