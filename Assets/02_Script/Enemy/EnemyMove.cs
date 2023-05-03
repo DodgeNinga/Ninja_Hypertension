@@ -55,16 +55,18 @@ public class EnemyMove : MonoBehaviour
         playerDir = playerDir.normalized;
         if (ChaseRange.onChaseRange)
         {
-            if ((player.position.x - transform.position.x) > 0)
+            if (player.position.x -0.1f > transform.position.x)
             {
                 transform.localScale = new Vector2(-1, 1);
                 moveDir = 1;
             }
-            else
+            else if (transform.position.x-0.1f > player.position.x)
             {
                 transform.localScale = new Vector2(1, 1);
                 moveDir = -1;
             }
+            else
+                moveDir = 0;
             if (!ChaseStopRange.onChaseStopRange) {
                 if (allDirection)
                     transform.position += playerDir * chasingSpeed * Time.deltaTime;
