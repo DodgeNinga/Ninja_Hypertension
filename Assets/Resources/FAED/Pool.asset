@@ -28,3 +28,6 @@ MonoBehaviour:
   - poolName: DamageText
     poolObj: {fileID: 8972412278627808172, guid: 60a18f922280aa1418000e273c3de631, type: 3}
     poolSize: 30
+  - poolName: SpriteParticle
+    poolObj: {fileID: 2151807688663568373, guid: 7906b0f4377e97d4d95b9c5e58b2f6f9, type: 3}
+    poolSize: 30
