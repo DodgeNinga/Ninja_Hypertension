@@ -12,6 +12,7 @@ public class PlayerAttack : PlayerBehaviorRoot
     private PlayerMove playerMove;
     private PlayerJump playerJump;
     private PlayerFlip playerFlip;
+    private PlayerDash playerDash;
     private int comboCnt;
     private bool attackAble = true;
 
@@ -25,6 +26,7 @@ public class PlayerAttack : PlayerBehaviorRoot
         playerMove = GetComponent<PlayerMove>();
         playerJump = GetComponent<PlayerJump>();
         playerFlip = GetComponent<PlayerFlip>();
+        playerDash = GetComponent<PlayerDash>();
 
     }
         
@@ -35,6 +37,7 @@ public class PlayerAttack : PlayerBehaviorRoot
         attackAble = false;
         playerJump.jumpAble = false;
         playerFlip.flipAble = false;
+        playerDash.RemoveEvent();
 
         StopAllCoroutines();
         playerMove.SetMoveAble(0);
@@ -59,6 +62,7 @@ public class PlayerAttack : PlayerBehaviorRoot
         playerFlip.flipAble = true;
         playerJump.jumpAble = true;
         attackAble = true;
+        playerDash.AddEvent();
         StartCoroutine(ComboAbleTimeCo());
 
     }

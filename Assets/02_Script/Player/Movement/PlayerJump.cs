@@ -58,7 +58,7 @@ public class PlayerJump : PlayerBehaviorRoot
 
         float value = 0;
 
-        while(value >= jumpAddValue) 
+        while(value <= jumpAddValue) 
         {
 
             value += Time.deltaTime * jumpAddValue;

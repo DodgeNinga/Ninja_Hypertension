@@ -124,7 +124,7 @@ public class PlayerAnimator : MonoBehaviour
     private void SetIsAir()
     {
 
-        animator.SetFloat(IsAirHash, rigid.velocity.y == 0 ? 0 : 1);
+        animator.SetFloat(IsAirHash, jumpCol.isGround ? 0 : 1);
 
     }
     public void SetJump()
