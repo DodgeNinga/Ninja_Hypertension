@@ -128,7 +128,6 @@ MonoBehaviour:
   eftPlayTime: 1
   eftPoolKey:
   - HitEFT
-  - BloodPTC
 --- !u!70 &5831551814057482264
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
