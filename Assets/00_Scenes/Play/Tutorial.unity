@@ -1157,6 +1157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpPower: 8.5
+  jumpAddValue: 0
   jumpAble: 1
 --- !u!114 &226512467
 MonoBehaviour:
@@ -34415,7 +34416,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0762c5dad42bf2e49a755acaab14b246, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -51517,7 +51518,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: df1bc092f5d374f439f7a47293255a31, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -52832,6 +52833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3c2f3295166c754b99d70b915f8b616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  noGroundTag: []
 --- !u!61 &2036192037
 BoxCollider2D:
   m_ObjectHideFlags: 0
