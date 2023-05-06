@@ -11,6 +11,7 @@ public class GolemIdleState : AIState
     {
 
         base.Awake();
+
         animator = controller.GetComponent<GolemAnimator>();
 
     }
