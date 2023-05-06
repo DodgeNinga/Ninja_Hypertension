@@ -5826,6 +5826,9 @@ GameObject:
   - component: {fileID: 622503232}
   - component: {fileID: 622503231}
   - component: {fileID: 622503230}
+  - component: {fileID: 622503235}
+  - component: {fileID: 622503236}
+  - component: {fileID: 622503237}
   m_Layer: 3
   m_Name: GolemBoss
   m_TagString: Untagged
@@ -5968,6 +5971,47 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &622503235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622503229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 124f22bc62d36364a961b3d1a1f51551, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: {fileID: 1323881394}
+--- !u!114 &622503236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622503229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05b4c1fcd3d3fab4e8564d06e1622c7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &622503237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622503229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d300a4ba57ad2264eb247f5c54873207, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitAbleLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  hitRanges: []
 --- !u!1 &669797753
 GameObject:
   m_ObjectHideFlags: 0
@@ -8483,6 +8527,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1323881393}
+  - component: {fileID: 1323881394}
   m_Layer: 3
   m_Name: IdleState
   m_TagString: Untagged
@@ -8505,6 +8550,18 @@ Transform:
   m_Father: {fileID: 1200432728}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1323881394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323881392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 968b697a839fe66428f2ea68080193bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1337680644
 GameObject:
   m_ObjectHideFlags: 0
