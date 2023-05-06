@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public abstract class InteractionObject : MonoBehaviour
+public class InteractionObject : MonoBehaviour
 {
 
     public LayerMask changeLayer;
-    public abstract void InteractionEvent();
+    public UnityEvent interactionEvent;
 
 }

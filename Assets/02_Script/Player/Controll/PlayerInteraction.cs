@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class PlayerInteraction : MonoBehaviour
+public class PlayerInteraction : PlayerBehaviorRoot
 {
 
     [SerializeField] private LayerMask interactionLayer;
@@ -27,6 +27,12 @@ public class PlayerInteraction : MonoBehaviour
             interactionText.text = "E키를 눌러 상호작용";
 
         }
+        else
+        {
+
+            interactionText.text = "";
+
+        }
 
     }
 
@@ -40,7 +46,7 @@ public class PlayerInteraction : MonoBehaviour
 
             var cpnt = obj.GetComponent<InteractionObject>();
 
-            cpnt.InteractionEvent();
+            cpnt.interactionEvent?.Invoke();
             cpnt.gameObject.layer = cpnt.changeLayer;
 
         }
@@ -56,6 +62,20 @@ public class PlayerInteraction : MonoBehaviour
         Gizmos.color = gizmoColor;
         Gizmos.DrawWireCube(transform.position + (Vector3)interactionOffset, interactionRange);
         Gizmos.color = old;
+
+    }
+
+    public override void AddEvent()
+    {
+
+
+
+    }
+
+    public override void RemoveEvent()
+    {
+
+
 
     }
 

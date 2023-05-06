@@ -16,6 +16,7 @@ public class PlayerActionSystem : MonoBehaviour
     public event Action OnHoldSkillPressEvnet;
     public event Action OnHoldSkillKeyUpEvent;
     public event Action OnDashKeyPressEvent;
+    public event Action OnInteractionKeyPressEvent;
     //여기에 키 인풋코드 추가
 
     public void OnHorizontalExecute(float v) => OnHorizontalEvent?.Invoke(v);
@@ -28,5 +29,6 @@ public class PlayerActionSystem : MonoBehaviour
     public void OnHoldSkillPressExecute() => OnHoldSkillPressEvnet?.Invoke();
     public void OnHoldSkillUpExecute() => OnHoldSkillKeyUpEvent?.Invoke();
     public void OnDashKeyPressEventExecute() => OnDashKeyPressEvent?.Invoke();
+    public void OnInteractionKeyPressExecute() => OnInteractionKeyPressEvent?.Invoke();
 
 }
