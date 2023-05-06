@@ -62,7 +62,6 @@ public class PlayerAttack : PlayerBehaviorRoot
         playerFlip.flipAble = true;
         playerJump.jumpAble = true;
         attackAble = true;
-        playerDash.AddEvent();
         StartCoroutine(ComboAbleTimeCo());
 
     }
@@ -83,6 +82,8 @@ public class PlayerAttack : PlayerBehaviorRoot
         StartCoroutine(AttackDelayCo());
 
     }
+
+    public void EndAllEvent() => playerDash.AddEvent();
 
     public void ResetAnimeValue()
     {
