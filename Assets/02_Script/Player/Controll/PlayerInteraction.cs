@@ -1,3 +1,4 @@
+using FD.Program.UI;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -37,7 +38,10 @@ public class PlayerInteraction : MonoBehaviour
 
             var obj = Physics2D.OverlapBox(transform.position + (Vector3)interactionRange, interactionOffset, 0, interactionLayer);
 
+            var cpnt = obj.GetComponent<InteractionObject>();
 
+            cpnt.InteractionEvent();
+            cpnt.gameObject.layer = cpnt.changeLayer;
 
         }
 
