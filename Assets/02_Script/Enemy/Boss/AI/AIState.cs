@@ -2,9 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AIState : MonoBehaviour
+public abstract class AIState : MonoBehaviour
 {
-    
 
+    public abstract void EnterState();
+    
+    public abstract void UpdateState();
+
+    public abstract void ExitState();
 
 }
