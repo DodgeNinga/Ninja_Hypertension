@@ -5,7 +5,7 @@ using UnityEngine;
 public class AIController : MonoBehaviour
 {
 
-    private AIState currentState;
+    [SerializeField] private AIState currentState;
 
     public Rigidbody2D enemyRigid { get; private set; }
 
@@ -16,11 +16,27 @@ public class AIController : MonoBehaviour
 
     }
 
+    private void Start()
+    {
+
+        currentState.EnterState();
+
+    }
+
+    private void Update()
+    {
+        
+        currentState.UpdateState();
+
+    }
+
     public void ChangeState(AIState state)
     {
 
         currentState.ExitState();
         currentState = state;
+
+        currentState.EnterState();
 
     }
 
