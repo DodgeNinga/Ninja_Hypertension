@@ -19,7 +19,13 @@ public class GolemIdleState : AIState
     public override void EnterState()
     {
 
-        
+        animator.SetIsMove(false);
+
+    }
+    public override void UpdateState()
+    {
+
+
 
     }
 
@@ -30,10 +36,4 @@ public class GolemIdleState : AIState
 
     }
 
-    public override void UpdateState()
-    {
-
-
-
-    }
 }
