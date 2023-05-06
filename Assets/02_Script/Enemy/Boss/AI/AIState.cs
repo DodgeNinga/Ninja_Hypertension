@@ -6,7 +6,7 @@ public abstract class AIState : MonoBehaviour
 {
 
     private List<AITransition> transitions = new List<AITransition>();
-    private AIController controller;
+    protected AIController controller;
 
     protected virtual void Awake()
     {
@@ -19,5 +19,22 @@ public abstract class AIState : MonoBehaviour
     public abstract void EnterState(); 
     public abstract void UpdateState();
     public abstract void ExitState();
+
+    public void SettingTransition()
+    {
+
+        foreach (var transition in transitions) 
+        {
+
+            if (transition.MakeTransition())
+            {
+
+
+
+            }
+
+        }
+
+    }
 
 }
