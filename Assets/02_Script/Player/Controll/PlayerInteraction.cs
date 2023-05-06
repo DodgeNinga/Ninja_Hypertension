@@ -14,6 +14,14 @@ public class PlayerInteraction : PlayerBehaviorRoot
 
     private bool interactionAble;
 
+    protected override void Awake()
+    {
+
+        base.Awake();
+        AddEvent();
+
+    }
+
     private void Update()
     {
 
@@ -53,6 +61,20 @@ public class PlayerInteraction : PlayerBehaviorRoot
 
     }
 
+    public override void AddEvent()
+    {
+
+        actionSystem.OnInteractionKeyPressEvent += Interaction;
+
+    }
+
+    public override void RemoveEvent()
+    {
+
+        actionSystem.OnInteractionKeyPressEvent -= Interaction;
+
+    }
+
 #if UNITY_EDITOR
 
     private void OnDrawGizmos()
@@ -62,20 +84,6 @@ public class PlayerInteraction : PlayerBehaviorRoot
         Gizmos.color = gizmoColor;
         Gizmos.DrawWireCube(transform.position + (Vector3)interactionOffset, interactionRange);
         Gizmos.color = old;
-
-    }
-
-    public override void AddEvent()
-    {
-
-
-
-    }
-
-    public override void RemoveEvent()
-    {
-
-
 
     }
 
