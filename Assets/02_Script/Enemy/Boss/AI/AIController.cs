@@ -27,6 +27,7 @@ public class AIController : MonoBehaviour
     {
         
         currentState.UpdateState();
+        currentState.SettingTransition();
 
     }
 

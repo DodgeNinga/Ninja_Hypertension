@@ -29,7 +29,8 @@ public abstract class AIState : MonoBehaviour
             if (transition.MakeTransition())
             {
 
-
+                controller.ChangeState(transition.nextState);
+                break;
 
             }
 
