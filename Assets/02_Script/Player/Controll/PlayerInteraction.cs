@@ -38,6 +38,7 @@ public class PlayerInteraction : MonoBehaviour
             var obj = Physics2D.OverlapBox(transform.position + (Vector3)interactionRange, interactionOffset, 0, interactionLayer);
 
 
+
         }
 
     }
