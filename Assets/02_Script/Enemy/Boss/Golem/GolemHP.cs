@@ -7,6 +7,7 @@ public class GolemHP : HPObject
 {
 
     [SerializeField] private Slider slider;
+    [SerializeField] private Transform sliderMainTrans;
     [SerializeField] private float maxHP;
 
     private void Awake()
@@ -20,6 +21,13 @@ public class GolemHP : HPObject
     {
 
         slider.value = HP / maxHP;
+
+    }
+
+    public void SetXScale(float value)
+    {
+
+        sliderMainTrans.transform.localScale = new Vector3(value, 1, 1);
 
     }
 
