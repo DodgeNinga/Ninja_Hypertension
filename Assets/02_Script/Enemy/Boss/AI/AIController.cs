@@ -6,9 +6,9 @@ public class AIController : MonoBehaviour
 {
 
     [SerializeField] private AIState currentState;
+    [field:SerializeField] public bool controllAble { get; set; } = true;
 
     public Rigidbody2D enemyRigid { get; private set; }
-    public bool controllAble { get; set; } = true;
 
     private void Awake()
     {
