@@ -13,7 +13,7 @@ public class GolemCutScene : CutScene
         FAED.InvokeDelayReal(() =>
         {
 
-            CameraManager.instance.Shake(2f, 2f, 1f, true);
+            CameraManager.instance.Shake(5f, 5f, 1f, true);
 
             FAED.InvokeDelayReal(() =>
             {
