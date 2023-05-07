@@ -8,6 +8,7 @@ public class GolemMoveState : AIState
     [SerializeField] private Transform target;
     [SerializeField] private float moveSpeed;
 
+    private SpriteRenderer spriteRenderer;
     private Rigidbody2D rigid;
 
     protected override void Awake()
@@ -15,6 +16,7 @@ public class GolemMoveState : AIState
         
         base.Awake();
         rigid = controller.GetComponent<Rigidbody2D>();
+        spriteRenderer = controller.GetComponent<SpriteRenderer>();
 
     }
 
@@ -35,9 +37,10 @@ public class GolemMoveState : AIState
     public override void UpdateState()
     {
 
-        float crtSpeed = (transform.position.x - target.position.x) > 0 ? moveSpeed : -moveSpeed;
+        float crtSpeed = (transform.position.x - target.position.x) > 0 ? -moveSpeed : moveSpeed;
 
         rigid.velocity = new Vector2(crtSpeed, 0);
+        spriteRenderer.flipX = (transform.position.x - target.position.x) > 0;
 
     }
 }
