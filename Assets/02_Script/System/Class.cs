@@ -80,4 +80,13 @@ namespace Class
 
     }
 
+    [System.Serializable]
+    public class AIAnimeEventClass
+    {
+
+        public string key;
+        public UnityEvent evt;
+
+    }
+
 }
