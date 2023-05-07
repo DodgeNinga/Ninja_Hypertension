@@ -45,6 +45,9 @@ public class GolemAttackState : AIState
 
         int randomIDX = Random.Range(0, 2);
 
+        animator.SetAttackSelectInt(randomIDX);
+        animator.SetAttackTrigger();
+
     }
 
 }
