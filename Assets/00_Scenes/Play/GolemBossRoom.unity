@@ -29141,7 +29141,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1235068463}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13490174f2a4e33409b89126a6b75032, type: 3}
+  m_Script: {fileID: 11500000, guid: e411eaa38c2ed0a45866869843ffc47e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nextState: {fileID: 1762383981}
@@ -31010,6 +31010,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coolTimeMin: 1
   coolTimeMax: 2
+  atkCoolDownMin: 3
+  atkCoolDownMax: 6
 --- !u!1 &1780143664
 GameObject:
   m_ObjectHideFlags: 0
