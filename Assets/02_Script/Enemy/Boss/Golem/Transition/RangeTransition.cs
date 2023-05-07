@@ -13,9 +13,10 @@ public class RangeTransition : AITransition
     public override bool MakeTransition()
     {
 
-        bool value = Vector2.Distance(target.position, transform.position) < range;
+        bool value = reverce ? Vector2.Distance(target.position, transform.position) >= range
+            : Vector2.Distance(target.position, transform.position) < range;
 
-        return reverce ? !value : value;
+        return value;
 
     }
 
