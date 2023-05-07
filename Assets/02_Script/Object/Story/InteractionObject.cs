@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class InteractionObject : MonoBehaviour
 {
 
-    public LayerMask changeLayer;
+    public int changeLayer;
     public UnityEvent interactionEvent;
 
 }

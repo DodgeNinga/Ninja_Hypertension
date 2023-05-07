@@ -6,6 +6,7 @@ public class GolemAnimator : MonoBehaviour
 {
 
     private readonly int IsMoveHash = Animator.StringToHash("IsMove");
+    private readonly int WakeUpHash = Animator.StringToHash("WakeUp");
 
     private Animator animator;
 
@@ -17,5 +18,6 @@ public class GolemAnimator : MonoBehaviour
     }
 
     public void SetIsMove(bool value) => animator.SetBool(IsMoveHash, value);
+    public void SetWakeUp() => animator.SetTrigger(WakeUpHash);
 
 }

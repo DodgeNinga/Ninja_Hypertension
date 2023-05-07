@@ -32,7 +32,7 @@ public class PlayerInteraction : PlayerBehaviorRoot
         if(interactionAble) 
         {
 
-            interactionText.text = "E키를 눌러 상호작용";
+            interactionText.text = "Q키를 눌러 상호작용";
 
         }
         else
