@@ -2077,6 +2077,7 @@ GameObject:
   - component: {fileID: 394002479}
   - component: {fileID: 394002480}
   - component: {fileID: 394002481}
+  - component: {fileID: 394002482}
   m_Layer: 7
   m_Name: GolemBoss
   m_TagString: Untagged
@@ -2421,6 +2422,35 @@ MonoBehaviour:
   slider: {fileID: 545774673}
   sliderMainTrans: {fileID: 2052540099}
   maxHP: 1200
+--- !u!114 &394002482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394002468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b56805bac5e9d0f4ea6d88859a83b63c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  events:
+  - key: EndAttack
+    evt:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 540095202}
+          m_TargetAssemblyTypeName: AnimeEventTransition, Assembly-CSharp
+          m_MethodName: set_animeValue
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
 --- !u!1 &449037921
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ using UnityEngine;
 public class AnimeEventTransition : AITransition
 {
     
-    public bool animeValue { get; private set; }
+    public bool animeValue { get; set; }
 
     public override bool MakeTransition()
     {
