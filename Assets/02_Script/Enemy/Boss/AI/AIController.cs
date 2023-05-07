@@ -8,7 +8,7 @@ public class AIController : MonoBehaviour
     [SerializeField] private AIState currentState;
 
     public Rigidbody2D enemyRigid { get; private set; }
-    public bool controllAble { get; set; }
+    public bool controllAble { get; set; } = true;
 
     private void Awake()
     {
@@ -20,13 +20,17 @@ public class AIController : MonoBehaviour
     private void Start()
     {
 
+        if (!controllAble) return;
+
         currentState.EnterState();
 
     }
 
     private void Update()
     {
-        
+
+        if (!controllAble) return;
+
         currentState.UpdateState();
         currentState.SettingTransition();
 
