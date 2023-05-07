@@ -2100,7 +2100,34 @@ MonoBehaviour:
   hitAbleLayer:
     serializedVersion: 2
     m_Bits: 64
-  hitRanges: []
+  hitRanges:
+  - atkKey: RangeAttack
+    feedBackName: 
+    visible: 1
+    gizmoColor: {r: 0, g: 0.43234205, b: 1, a: 1}
+    range: {x: 7, y: 3}
+    offSet: {x: 6, y: -2}
+    hitEvt:
+      m_PersistentCalls:
+        m_Calls: []
+  - atkKey: SuperAttack
+    feedBackName: 
+    visible: 1
+    gizmoColor: {r: 1, g: 0, b: 0.9272151, a: 1}
+    range: {x: 9, y: 4}
+    offSet: {x: 5.5, y: -2}
+    hitEvt:
+      m_PersistentCalls:
+        m_Calls: []
+  - atkKey: GroundAttack
+    feedBackName: 
+    visible: 1
+    gizmoColor: {r: 0.18064928, g: 1, b: 0, a: 1}
+    range: {x: 100, y: 2}
+    offSet: {x: 0, y: -4}
+    hitEvt:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!114 &394002470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2254,7 +2281,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 394002468}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.61, y: 4.65, z: 0}
+  m_LocalPosition: {x: -25.09, y: 3.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -31086,8 +31113,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coolTimeMin: 1
   coolTimeMax: 2
-  atkCoolDownMin: 3
-  atkCoolDownMax: 6
+  atkCoolDownMin: 2
+  atkCoolDownMax: 4
 --- !u!1 &1780143664
 GameObject:
   m_ObjectHideFlags: 0

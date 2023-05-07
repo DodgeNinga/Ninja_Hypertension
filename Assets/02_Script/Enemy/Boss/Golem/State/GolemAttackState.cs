@@ -50,7 +50,7 @@ public class GolemAttackState : AIState
 
         yield return new WaitForSecondsRealtime(Random.Range(coolTimeMin, coolTimeMax));
 
-        int randomIDX = Random.Range(0, 2);
+        int randomIDX = Random.Range(0, 3);
 
         animator.SetAttackSelectInt(randomIDX);
         animator.SetAttackTrigger();
