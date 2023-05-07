@@ -6,6 +6,7 @@ public class RangeTransition : AITransition
 {
 
     [SerializeField] private Transform target;
+    [SerializeField] private Color gizmoColor;
     [SerializeField] private float range;
     [SerializeField] private bool reverce;
 
@@ -17,5 +18,21 @@ public class RangeTransition : AITransition
         return reverce ? !value : value;
 
     }
+
+#if UNITY_EDITOR
+
+    private void OnDrawGizmos()
+    {
+        
+        var old = Gizmos.color;
+        Gizmos.color = gizmoColor;
+
+        Gizmos.DrawWireSphere(transform.position, range);
+
+        Gizmos.color = old;
+
+    }
+
+#endif
 
 }
