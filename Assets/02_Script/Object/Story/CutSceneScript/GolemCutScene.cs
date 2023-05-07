@@ -6,7 +6,6 @@ using UnityEngine;
 public class GolemCutScene : CutScene
 {
 
-
     private CameraTakeManager camTakeManager;
 
     private void Awake()
