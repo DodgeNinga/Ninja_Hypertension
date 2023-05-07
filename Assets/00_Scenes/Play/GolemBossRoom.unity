@@ -29144,7 +29144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13490174f2a4e33409b89126a6b75032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextState: {fileID: 0}
+  nextState: {fileID: 1762383981}
   target: {fileID: 483244778}
   gizmoColor: {r: 1, g: 0, b: 0, a: 1}
   range: 10
@@ -30973,6 +30973,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1762383980}
+  - component: {fileID: 1762383981}
   m_Layer: 7
   m_Name: AttackState
   m_TagString: Untagged
@@ -30995,6 +30996,20 @@ Transform:
   m_Father: {fileID: 1647206386}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1762383981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762383979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02af627febe31ed48816dfe7728af3fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coolTimeMin: 1
+  coolTimeMax: 2
 --- !u!1 &1780143664
 GameObject:
   m_ObjectHideFlags: 0

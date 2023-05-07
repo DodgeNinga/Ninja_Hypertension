@@ -1,3 +1,4 @@
+using FD.Dev;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,8 +8,11 @@ public class GolemAttackState : AIState
 {
 
     [SerializeField] private float coolTimeMin, coolTimeMax;
+    [SerializeField] private float atkCoolDownMin, atkCoolDownMax;
 
     private GolemAnimator animator;
+
+    public bool isCoolDown { get; private set; }
 
     protected override void Awake()
     {
@@ -22,6 +26,9 @@ public class GolemAttackState : AIState
     public override void EnterState()
     {
 
+        if (isCoolDown) return;
+
+        isCoolDown = true;
         animator.SetIsAttack(true);
         StartCoroutine(SkillSelectCo());       
 
@@ -47,6 +54,9 @@ public class GolemAttackState : AIState
 
         animator.SetAttackSelectInt(randomIDX);
         animator.SetAttackTrigger();
+
+        FAED.InvokeDelayReal(() => isCoolDown = false, 
+            Random.Range(atkCoolDownMin, atkCoolDownMax));
 
     }
 
