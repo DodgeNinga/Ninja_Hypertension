@@ -5,20 +5,11 @@ using UnityEngine;
 
 public class GolemCutScene : CutScene
 {
-
-    private CameraTakeManager camTakeManager;
-
-    private void Awake()
-    {
-        
-        camTakeManager = FindObjectOfType<CameraTakeManager>();
-
-    }
-
     public override void StartCutScene()
     {
 
-        camTakeManager.StartTake("Golem");
+        CameraManager.instance.cvcam.Follow = transform;
+
         FAED.InvokeDelayReal(() =>
         {
 
@@ -38,7 +29,7 @@ public class GolemCutScene : CutScene
     public override void EndCutScene()
     {
 
-        //
+        CameraManager.instance.SetTarget(true);
 
     }
 

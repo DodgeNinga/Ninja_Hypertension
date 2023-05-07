@@ -25,7 +25,7 @@ public class PlayerInteraction : PlayerBehaviorRoot
     private void Update()
     {
 
-        var obj = Physics2D.OverlapBox(transform.position + (Vector3)interactionRange, interactionOffset, 0, interactionLayer);
+        var obj = Physics2D.OverlapBox(transform.position + (Vector3)interactionOffset, interactionRange, 0, interactionLayer);
 
         interactionAble = obj != null;
 
@@ -50,7 +50,7 @@ public class PlayerInteraction : PlayerBehaviorRoot
         if(interactionAble) 
         {
 
-            var obj = Physics2D.OverlapBox(transform.position + (Vector3)interactionRange, interactionOffset, 0, interactionLayer);
+            var obj = Physics2D.OverlapBox(transform.position + (Vector3)interactionOffset, interactionRange, 0, interactionLayer);
 
             var cpnt = obj.GetComponent<InteractionObject>();
 
