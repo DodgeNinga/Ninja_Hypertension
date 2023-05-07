@@ -13,6 +13,7 @@ public class GolemMoveState : AIState
     protected override void Awake()
     {
         
+        base.Awake();
         rigid = controller.GetComponent<Rigidbody2D>();
 
     }
@@ -27,7 +28,7 @@ public class GolemMoveState : AIState
     public override void ExitState()
     {
 
-
+        rigid.velocity = Vector2.zero;
 
     }
 
