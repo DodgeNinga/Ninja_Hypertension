@@ -8,6 +8,7 @@ public class AIController : MonoBehaviour
     [SerializeField] private AIState currentState;
 
     public Rigidbody2D enemyRigid { get; private set; }
+    public bool controllAble { get; set; }
 
     private void Awake()
     {

@@ -1534,6 +1534,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 394002470}
+          m_TargetAssemblyTypeName: GolemAnimator, Assembly-CSharp
+          m_MethodName: SetWakeUp
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     storyTexts:
     - humanName: 
       storyText: "\uACE8\uB818\uC758 \uC2EC\uC7A5\uC5D0 \uCF54\uC5B4\uB97C \uB07C\uC6CC
