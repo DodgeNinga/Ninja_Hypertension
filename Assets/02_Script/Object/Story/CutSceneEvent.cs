@@ -9,10 +9,12 @@ public class CutSceneEvent : MonoBehaviour
 
     [SerializeField] private UnityEvent cutSceneStartEvent;
     [SerializeField] private UnityEvent cutSceneEndEvent;
+    [SerializeField] private UnityEvent<CutSceneEvent> settingCutSceneEvent;
 
     public void StartCutScene()
     {
 
+        settingCutSceneEvent?.Invoke(this);
         cutSceneStartEvent?.Invoke();
 
     }
