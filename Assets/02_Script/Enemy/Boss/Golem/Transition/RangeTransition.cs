@@ -6,7 +6,7 @@ public class RangeTransition : AITransition
 {
 
     [SerializeField] private Transform target;
-    [SerializeField] private Color gizmoColor;
+    [SerializeField] private Color gizmoColor = Color.black;
     [SerializeField] private float range;
     [SerializeField] private bool reverce;
 
