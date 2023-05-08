@@ -11,6 +11,8 @@ public class PlayerKnockBackFeedBack : FeedBack
     private Rigidbody2D rigid;
     private SpriteRenderer spriteRenderer;
     private PlayerAnimator animator;
+    private PlayerAttack playerAttack;
+    private PlayerInvincibility playerInvincibility;
 
     private void Awake()
     {
@@ -19,12 +21,15 @@ public class PlayerKnockBackFeedBack : FeedBack
         rigid = root.GetComponent<Rigidbody2D>();
         spriteRenderer = root.GetComponent<SpriteRenderer>();
         animator = root.GetComponent<PlayerAnimator>();
+        playerAttack = root.GetComponent<PlayerAttack>();
+        playerInvincibility = root.GetComponent<PlayerInvincibility>();
 
     }
 
     public override void CreateFeedBack()
     {
 
+        
         animator.SetIsHit(true);
         controller.UnSetAllEvent();
         rigid.velocity = new Vector3(spriteRenderer.flipX ? 3 : -3, 8);
@@ -42,6 +47,10 @@ public class PlayerKnockBackFeedBack : FeedBack
     private IEnumerator SetKnockBackCo()
     {
 
+        yield return null;
+
+        playerInvincibility.isInvincibility = true;
+
         yield return new WaitUntil(() =>
         {
 
@@ -51,6 +60,8 @@ public class PlayerKnockBackFeedBack : FeedBack
 
         controller.SetAllEvent();
         animator.SetIsHit(false);
+        playerAttack.ResetAnimeValue();
+        playerInvincibility.isInvincibility = false;
 
     }
 

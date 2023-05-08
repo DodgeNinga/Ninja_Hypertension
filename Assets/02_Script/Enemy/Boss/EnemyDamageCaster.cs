@@ -20,9 +20,6 @@ public class EnemyDamageCaster : MonoBehaviour
             float value = castingObj.GetDamageValue();
             obj.TakeDamage(value);
 
-            var popUp = FAED.Pop("DamageText", obj.transform.position, Quaternion.identity).GetComponent<DamageText>();
-            popUp.SetText(value);
-
         }
 
     }

@@ -1,8 +1,10 @@
+using FD.Dev;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using static UnityEngine.Rendering.DebugUI;
 
 public class PlayerHP : HPObject
 {
@@ -13,6 +15,8 @@ public class PlayerHP : HPObject
     [SerializeField] private Slider slider;
     [SerializeField] private UnityEvent dieEvent;
 
+    private PlayerInvincibility invincibility;
+
     public float GetHPLV => HP / maxHP;
 
     private void Awake()
@@ -20,6 +24,7 @@ public class PlayerHP : HPObject
 
         HP = maxHP / 2;
         SetSlider();
+        invincibility = FindObjectOfType<PlayerInvincibility>();
 
     }
 
@@ -27,6 +32,12 @@ public class PlayerHP : HPObject
     {
 
         StartCoroutine(DotDelCo());
+
+    }
+    private void Update()
+    {
+
+        DieChack();
 
     }
 
@@ -62,8 +73,21 @@ public class PlayerHP : HPObject
     public override void TakeDamage(float damage)
     {
 
+        if (invincibility.isInvincibility) return;
+
         base.TakeDamage(damage);
-        DieChack();
+        SetSlider();
+
+        var popUp = FAED.Pop("DamageText", transform.position, Quaternion.identity).GetComponent<DamageText>();
+        popUp.SetText(damage);
+
+    }
+
+
+    public void TakeDotDel(float damage)
+    {
+
+        base.TakeDamage(damage);
         SetSlider();
 
     }
@@ -75,7 +99,7 @@ public class PlayerHP : HPObject
         {
 
             yield return new WaitForSeconds(dotDelTime);
-            TakeDamage(dotDel);
+            TakeDotDel(dotDel);
 
         }
 

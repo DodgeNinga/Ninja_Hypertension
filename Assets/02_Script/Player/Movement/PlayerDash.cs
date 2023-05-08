@@ -14,6 +14,7 @@ public class PlayerDash : PlayerBehaviorRoot
     private float originGravityScale;
     private AddGravity gravity;
     private ParticlePlayer particlePlayer;
+    private PlayerInvincibility invincibility;
 
     public bool dashAble { get; set; } = true;
 
@@ -24,6 +25,7 @@ public class PlayerDash : PlayerBehaviorRoot
 
         gravity = GetComponent<AddGravity>();
         AddEvent();
+        invincibility = GetComponent<PlayerInvincibility>();
 
         originGravityScale = rigid.gravityScale;
 
@@ -47,6 +49,7 @@ public class PlayerDash : PlayerBehaviorRoot
 
         }
 
+        invincibility.isInvincibility = true;
         StartCoroutine(StartDashCo());
         StartCoroutine(DashEndCo());
 
@@ -55,6 +58,7 @@ public class PlayerDash : PlayerBehaviorRoot
     private void DashEnd()
     {
 
+        invincibility.isInvincibility = false;
         gravity.onGravity = true;
         rigid.gravityScale = originGravityScale;
         animator.SetIsDash(false);
