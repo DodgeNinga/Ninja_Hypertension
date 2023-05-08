@@ -24,8 +24,10 @@ public class GolemAnimator : MonoBehaviour
 
     public void SetIsMove(bool value) => animator.SetBool(IsMoveHash, value);
     public void SetIsAttack(bool value) => animator.SetBool(IsAttackHash, value);
+    public void SetIsSpin(bool value) => animator.SetBool(IsSpinHash, value);
     public void SetAttackSelectInt(int value) => animator.SetInteger(AttackSelectIntHash, value);
     public void SetWakeUp() => animator.SetTrigger(WakeUpHash);
     public void SetAttackTrigger() => animator.SetTrigger(AttackTriggerHash);
+    public void SetSpinTrigger() => animator.SetTrigger(SpinTriggerHash);
 
 }
