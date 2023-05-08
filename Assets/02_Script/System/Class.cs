@@ -65,7 +65,7 @@ namespace Class
     }
 
     [System.Serializable]
-    public class DamageCasterClass
+    public class PlayerDamageCasterClass
     {
 
         public string eventKey;
@@ -77,6 +77,22 @@ namespace Class
             return Random.Range(damage - randomValue, damage + randomValue) + ((damage * hpLV));
 
         } 
+
+    }
+
+    [System.Serializable]
+    public class DamageCasterClass
+    {
+
+        public string eventKey;
+        public float damage;
+        public float randomValue;
+        public float GetDamageValue()
+        {
+
+            return Random.Range(damage - randomValue, damage + randomValue);
+
+        }
 
     }
 

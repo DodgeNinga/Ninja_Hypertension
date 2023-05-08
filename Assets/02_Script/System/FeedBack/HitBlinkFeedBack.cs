@@ -9,12 +9,14 @@ public class HitBlinkFeedBack : FeedBack
     private readonly int BlinkHash = Shader.PropertyToID("_AddColorFade");
     private readonly int ShakeHash = Shader.PropertyToID("_VibrateFade");
 
+    [SerializeField] private GameObject root;
+    
     private SpriteRenderer spriteRenderer;
 
     private void Awake()
     {
         
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = root == null ? GetComponent<SpriteRenderer>() : root.GetComponent<SpriteRenderer>();
 
     }
 

@@ -19,7 +19,7 @@ public class PlayerAnimator : MonoBehaviour
     private readonly int SkillHoldTriggerHash = Animator.StringToHash("SkillHoldTrigger");
     private readonly int DashTriggerHash = Animator.StringToHash("DashTrigger");
     private readonly int IsDashHash = Animator.StringToHash("IsDash");
-    private readonly int DieTriggerHash = Animator.StringToHash("Die");
+    private readonly int DieTriggerHash = Animator.StringToHash("DieTrigger");
     private readonly int IsGroundHash = Animator.StringToHash("IsGround");
 
     private MargedSencer margedSencer;

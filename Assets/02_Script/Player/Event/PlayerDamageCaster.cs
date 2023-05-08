@@ -7,7 +7,7 @@ using UnityEngine;
 public class PlayerDamageCaster : MonoBehaviour
 {
 
-    [SerializeField] private List<DamageCasterClass> castingList = new List<DamageCasterClass>();
+    [SerializeField] private List<PlayerDamageCasterClass> castingList = new List<PlayerDamageCasterClass>();
 
     private PlayerHP playerHP;
     private PlayerSkill skill;
