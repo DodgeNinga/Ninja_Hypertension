@@ -105,4 +105,13 @@ namespace Class
 
     }
 
+    [System.Serializable]
+    public class PlayEventClass
+    {
+
+        public string key;
+        public UnityEvent playEvent;
+
+    }
+
 }
