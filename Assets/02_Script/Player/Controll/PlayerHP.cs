@@ -17,6 +17,7 @@ public class PlayerHP : HPObject
 
     private PlayerInvincibility invincibility;
 
+    public bool isDie { get; private set; }
     public float GetHPLV => HP / maxHP;
 
     private void Awake()
@@ -44,9 +45,10 @@ public class PlayerHP : HPObject
     private void DieChack()
     {
 
-        if(HP >= maxHP || HP <= 0)
+        if((HP >= maxHP || HP <= 0) && !isDie)
         {
 
+            isDie = true;
             StopAllCoroutines();
             dieEvent?.Invoke();
 

@@ -6,10 +6,12 @@ public class PlayerFeedBackManager : FeedBackManager
 {
 
     private PlayerInvincibility invincibility;
+    private PlayerHP playerHP;
 
     private void Awake()
     {
-        
+
+        playerHP = FindObjectOfType<PlayerHP>();
         invincibility = FindObjectOfType<PlayerInvincibility>();
 
     }
@@ -17,7 +19,7 @@ public class PlayerFeedBackManager : FeedBackManager
     public override void PlayFeedback(string state)
     {
 
-        if (invincibility.isInvincibility) return;
+        if (invincibility.isInvincibility || playerHP.isDie) return;
         base.PlayFeedback(state);
 
     }

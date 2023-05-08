@@ -13,6 +13,7 @@ public class PlayerKnockBackFeedBack : FeedBack
     private PlayerAnimator animator;
     private PlayerAttack playerAttack;
     private PlayerInvincibility playerInvincibility;
+    private PlayerHP playerHP;
 
     private void Awake()
     {
@@ -23,6 +24,7 @@ public class PlayerKnockBackFeedBack : FeedBack
         animator = root.GetComponent<PlayerAnimator>();
         playerAttack = root.GetComponent<PlayerAttack>();
         playerInvincibility = root.GetComponent<PlayerInvincibility>();
+        playerHP = root.GetComponent<PlayerHP>();
 
     }
 
@@ -58,7 +60,7 @@ public class PlayerKnockBackFeedBack : FeedBack
 
         });
 
-        controller.SetAllEvent();
+        if(!playerHP.isDie) controller.SetAllEvent();
         animator.SetIsHit(false);
         playerAttack.ResetAnimeValue();
         playerInvincibility.isInvincibility = false;
