@@ -23,7 +23,7 @@ public class MeleeAttackRangeTransition : AITransition
     {
 
         bool value = reverce ? Vector2.Distance(target.position, transform.position) >= range
-    : Vector2.Distance(target.position, transform.position) < range;
+            : Vector2.Distance(target.position, transform.position) < range;
 
         return value && !melState.isCoolDown;
 
