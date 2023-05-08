@@ -10,6 +10,8 @@ public class GolemAnimator : MonoBehaviour
     private readonly int IsAttackHash = Animator.StringToHash("IsAttack");
     private readonly int AttackTriggerHash = Animator.StringToHash("AttackTrigger");
     private readonly int AttackSelectIntHash = Animator.StringToHash("AttackSelectInt");
+    private readonly int IsSpinHash = Animator.StringToHash("IsSpin");
+    private readonly int SpinTriggerHash = Animator.StringToHash("SpinTrigger");
 
     private Animator animator;
 
