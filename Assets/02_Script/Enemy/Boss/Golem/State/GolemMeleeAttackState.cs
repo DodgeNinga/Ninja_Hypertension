@@ -1,3 +1,4 @@
+using FD.Dev;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -50,6 +51,8 @@ public class GolemMeleeAttackState : AIState
         yield return new WaitForSeconds(0.5f);
 
         animator.SetSpinTrigger();
+
+        FAED.InvokeDelayReal(() => isCoolDown = false, coolDownTime);
 
     }
 
