@@ -9,12 +9,14 @@ public class PlayerKnockBackFeedBack : FeedBack
 
     private PlayerEventController controller;
     private Rigidbody2D rigid;
+    private SpriteRenderer spriteRenderer;
 
     private void Awake()
     {
         
         controller = root.GetComponent<PlayerEventController>();
         rigid = root.GetComponent<Rigidbody2D>();
+        spriteRenderer = root.GetComponent<SpriteRenderer>();
 
     }
 
@@ -22,6 +24,8 @@ public class PlayerKnockBackFeedBack : FeedBack
     {
 
         controller.UnSetAllEvent();
+        StartCoroutine(SetKnockBackCo());
+        rigid.velocity = new Vector3(spriteRenderer.flipX ? 3 : -3, 3);
 
     }
 
@@ -41,6 +45,8 @@ public class PlayerKnockBackFeedBack : FeedBack
             return rigid.velocity == Vector2.zero;
 
         });
+
+        controller.SetAllEvent();
 
     }
 
