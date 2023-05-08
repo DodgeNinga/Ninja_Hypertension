@@ -25,7 +25,8 @@ public class GolemMeleeAttackState : AIState
 
         if (isCoolDown) return;
 
-        //animator
+        animator.SetIsSpin(true);
+        StartCoroutine(SpinAttackCo());
 
     }
 
@@ -40,6 +41,15 @@ public class GolemMeleeAttackState : AIState
     {
 
 
+
+    }
+
+    private IEnumerator SpinAttackCo()
+    {
+
+        yield return new WaitForSeconds(0.5f);
+
+        animator.SetSpinTrigger();
 
     }
 
