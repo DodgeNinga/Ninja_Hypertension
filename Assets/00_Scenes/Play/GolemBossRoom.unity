@@ -1851,6 +1851,9 @@ MonoBehaviour:
   - eventKey: RangeAttack
     damage: 30
     randomValue: 5
+  - eventKey: SpinAttack
+    damage: 10
+    randomValue: 5
 --- !u!1 &335998036
 GameObject:
   m_ObjectHideFlags: 0
@@ -1882,6 +1885,7 @@ Transform:
   m_Children:
   - {fileID: 166581890}
   - {fileID: 1235068464}
+  - {fileID: 1138252594}
   m_Father: {fileID: 1647206386}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2264,6 +2268,27 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - atkKey: SpinAttack
+    feedBackName: 
+    visible: 1
+    gizmoColor: {r: 0, g: 1, b: 0.78919077, a: 1}
+    range: {x: 7, y: 3}
+    offSet: {x: -0.7, y: -2}
+    hitEvt:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 295592427}
+          m_TargetAssemblyTypeName: EnemyDamageCaster, Assembly-CSharp
+          m_MethodName: CastingDamage
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &394002470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2602,6 +2627,34 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
+  - key: EndSpin
+    evt:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 458059269}
+          m_TargetAssemblyTypeName: AnimeEventTransition, Assembly-CSharp
+          m_MethodName: set_animeValue
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 394002470}
+          m_TargetAssemblyTypeName: GolemAnimator, Assembly-CSharp
+          m_MethodName: SetIsSpin
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &394002483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2706,6 +2759,51 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.92072606, y: 0.2147454}
   m_EdgeRadius: 0
+--- !u!1 &458059267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 458059268}
+  - component: {fileID: 458059269}
+  m_Layer: 7
+  m_Name: AnimeTransMelee
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &458059268
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458059267}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 671301827}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &458059269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458059267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2526f67c5d5041f40a744893e9e2950a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextState: {fileID: 2145440497}
 --- !u!1 &483244777
 GameObject:
   m_ObjectHideFlags: 0
@@ -3554,6 +3652,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stopTimeScale: 0.2
   hitStopDuration: 0.2
+--- !u!1 &671301826
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 671301827}
+  - component: {fileID: 671301828}
+  m_Layer: 7
+  m_Name: MeleeAttackState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &671301827
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671301826}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 458059268}
+  m_Father: {fileID: 1647206386}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &671301828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671301826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db2be300ce4135a44b6b190a8484e6ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  root: {fileID: 394002468}
+  coolDownTime: 1
 --- !u!1 &703947069
 GameObject:
   m_ObjectHideFlags: 0
@@ -29227,6 +29372,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1123310903}
   m_CullTransparentMesh: 1
+--- !u!1 &1138252593
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1138252594}
+  - component: {fileID: 1138252595}
+  m_Layer: 7
+  m_Name: GotoMeleeAttack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1138252594
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138252593}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 335998037}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1138252595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138252593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ba90ef92e0ef7946b07977e7fb057c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextState: {fileID: 671301828}
+  target: {fileID: 483244778}
+  gizmoColor: {r: 1, g: 0, b: 0.8200102, a: 1}
+  range: 5
+  reverce: 0
 --- !u!1 &1156589195
 GameObject:
   m_ObjectHideFlags: 0
@@ -31194,6 +31388,7 @@ Transform:
   - {fileID: 2145440498}
   - {fileID: 335998037}
   - {fileID: 1762383980}
+  - {fileID: 671301827}
   m_Father: {fileID: 394002476}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
