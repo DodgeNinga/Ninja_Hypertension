@@ -2238,7 +2238,7 @@ MonoBehaviour:
     m_Bits: 64
   hitRanges:
   - atkKey: RangeAttack
-    feedBackName: 
+    feedBackName: Hit
     visible: 1
     gizmoColor: {r: 0, g: 0.43234205, b: 1, a: 1}
     range: {x: 7, y: 3}
@@ -2259,7 +2259,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - atkKey: SuperAttack
-    feedBackName: 
+    feedBackName: Hit
     visible: 1
     gizmoColor: {r: 1, g: 0, b: 0.9272151, a: 1}
     range: {x: 9, y: 4}
@@ -2280,7 +2280,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - atkKey: GroundAttack
-    feedBackName: 
+    feedBackName: Hit
     visible: 1
     gizmoColor: {r: 0.18064928, g: 1, b: 0, a: 1}
     range: {x: 100, y: 2}
@@ -2301,7 +2301,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - atkKey: SpinAttack
-    feedBackName: 
+    feedBackName: Hit
     visible: 1
     gizmoColor: {r: 0, g: 1, b: 0.78919077, a: 1}
     range: {x: 7, y: 3}

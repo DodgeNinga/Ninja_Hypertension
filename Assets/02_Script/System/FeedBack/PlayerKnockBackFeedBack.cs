@@ -27,7 +27,7 @@ public class PlayerKnockBackFeedBack : FeedBack
 
         animator.SetIsHit(true);
         controller.UnSetAllEvent();
-        rigid.velocity = new Vector3(spriteRenderer.flipX ? 3 : -3, 3);
+        rigid.velocity = new Vector3(spriteRenderer.flipX ? 3 : -3, 8);
         StartCoroutine(SetKnockBackCo());
         
     }
