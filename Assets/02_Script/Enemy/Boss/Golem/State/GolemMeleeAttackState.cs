@@ -9,7 +9,7 @@ public class GolemMeleeAttackState : AIState
     [SerializeField] private float coolDownTime;
 
     private GolemAnimator animator;
-    private bool isCoolDown;
+    public bool isCoolDown { get; private set; }
 
     protected override void Awake()
     {
@@ -22,6 +22,8 @@ public class GolemMeleeAttackState : AIState
 
     public override void EnterState()
     {
+
+        if (isCoolDown) return;
 
 
 
