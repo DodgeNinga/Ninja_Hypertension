@@ -21,6 +21,7 @@ public class PlayerAnimator : MonoBehaviour
     private readonly int IsDashHash = Animator.StringToHash("IsDash");
     private readonly int DieTriggerHash = Animator.StringToHash("DieTrigger");
     private readonly int IsGroundHash = Animator.StringToHash("IsGround");
+    private readonly int IsHitHash = Animator.StringToHash("IsHit");
 
     private MargedSencer margedSencer;
     private PlayerFlip playerFlip;
@@ -194,5 +195,7 @@ public class PlayerAnimator : MonoBehaviour
         animator.SetTrigger(DieTriggerHash);
 
     }
+
+    public void SetIsHit(bool value) => animator.SetBool(IsHitHash, value);
 
 }
