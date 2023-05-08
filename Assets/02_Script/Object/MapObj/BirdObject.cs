@@ -23,8 +23,27 @@ public class BirdObject : MonoBehaviour
     public void MoveStart()
     {
 
-        rigid.velocity = moveDir;
+        StartCoroutine(MoveCo());
         animator.SetTrigger(MoveTriggerHash);
+
+    }
+
+    private IEnumerator MoveCo()
+    {
+
+        var stertPower = moveDir / 2;
+
+        float per = 0;
+
+        while(per < 1)
+        {
+
+            yield return null;
+
+            per += Time.deltaTime;
+            rigid.velocity = Vector2.Lerp(stertPower, moveDir, per);
+
+        }
 
     }
 
