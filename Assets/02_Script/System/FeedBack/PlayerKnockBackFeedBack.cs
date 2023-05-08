@@ -2,17 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerKnockBackFeedBack : MonoBehaviour
+public class PlayerKnockBackFeedBack : FeedBack
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void CreateFeedBack()
     {
-        
+
+
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void EndFeedBack()
     {
-        
+
+
+
     }
 }
