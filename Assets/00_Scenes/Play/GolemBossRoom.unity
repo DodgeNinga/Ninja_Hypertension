@@ -1180,7 +1180,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 139049957}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1773,7 +1773,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 273353584}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1797,6 +1797,60 @@ Transform:
   m_Father: {fileID: 1083296242}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &295592425
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 295592426}
+  - component: {fileID: 295592427}
+  m_Layer: 7
+  m_Name: DamageCaster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &295592426
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295592425}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 394002476}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &295592427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295592425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c41037d7f86bda4192f4f1b11e58c99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  castings:
+  - eventKey: GroundAttack
+    damage: 25
+    randomValue: 5
+  - eventKey: SuperAttack
+    damage: 50
+    randomValue: 10
+  - eventKey: RangeAttack
+    damage: 30
+    randomValue: 5
 --- !u!1 &335998036
 GameObject:
   m_ObjectHideFlags: 0
@@ -2155,7 +2209,19 @@ MonoBehaviour:
     offSet: {x: 6, y: -2}
     hitEvt:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 295592427}
+          m_TargetAssemblyTypeName: EnemyDamageCaster, Assembly-CSharp
+          m_MethodName: CastingDamage
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - atkKey: SuperAttack
     feedBackName: 
     visible: 1
@@ -2164,7 +2230,19 @@ MonoBehaviour:
     offSet: {x: 5.5, y: -2}
     hitEvt:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 295592427}
+          m_TargetAssemblyTypeName: EnemyDamageCaster, Assembly-CSharp
+          m_MethodName: CastingDamage
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - atkKey: GroundAttack
     feedBackName: 
     visible: 1
@@ -2173,7 +2251,19 @@ MonoBehaviour:
     offSet: {x: 0, y: -4}
     hitEvt:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 295592427}
+          m_TargetAssemblyTypeName: EnemyDamageCaster, Assembly-CSharp
+          m_MethodName: CastingDamage
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &394002470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2327,12 +2417,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 394002468}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.09, y: 3.65, z: 0}
+  m_LocalPosition: {x: -23.43, y: 3.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1647206386}
   - {fileID: 1557543193}
+  - {fileID: 295592426}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2554,7 +2645,7 @@ GameObject:
   - component: {fileID: 449037922}
   - component: {fileID: 449037924}
   - component: {fileID: 449037923}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: JumpCol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28978,7 +29069,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1083296242}
   - component: {fileID: 1083296243}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: WallSencer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30007,7 +30098,7 @@ GameObject:
   - component: {fileID: 1323417596}
   - component: {fileID: 1323417598}
   - component: {fileID: 1323417597}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30961,7 +31052,7 @@ GameObject:
   - component: {fileID: 1567843233}
   - component: {fileID: 1567843235}
   - component: {fileID: 1567843234}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31022,7 +31113,7 @@ GameObject:
   - component: {fileID: 1594691062}
   - component: {fileID: 1594691064}
   - component: {fileID: 1594691063}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62351,7 +62442,7 @@ GameObject:
   - component: {fileID: 2033477518}
   - component: {fileID: 2033477520}
   - component: {fileID: 2033477519}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -5,19 +5,19 @@ using UnityEngine;
 public class AIController : MonoBehaviour
 {
 
-    [SerializeField] private AIState currentState;
+    [SerializeField] protected AIState currentState;
     [field:SerializeField] public bool controllAble { get; set; } = true;
 
     public Rigidbody2D enemyRigid { get; private set; }
 
-    private void Awake()
+    protected virtual void Awake()
     {
         
         enemyRigid = GetComponent<Rigidbody2D>();
 
     }
 
-    private void Start()
+    protected virtual void Start()
     {
 
         if (!controllAble) return;
@@ -26,7 +26,7 @@ public class AIController : MonoBehaviour
 
     }
 
-    private void Update()
+    protected virtual void Update()
     {
 
         if (!controllAble) return;
