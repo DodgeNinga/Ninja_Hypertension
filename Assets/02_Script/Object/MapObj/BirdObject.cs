@@ -19,7 +19,7 @@ public class BirdObject : MonoBehaviour
     public void SetStart()
     {
 
-
+        rigid.velocity = moveDir;
 
     }
 
