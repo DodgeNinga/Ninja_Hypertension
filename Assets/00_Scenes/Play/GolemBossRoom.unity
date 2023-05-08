@@ -2169,7 +2169,6 @@ GameObject:
   - component: {fileID: 394002474}
   - component: {fileID: 394002473}
   - component: {fileID: 394002472}
-  - component: {fileID: 394002471}
   - component: {fileID: 394002470}
   - component: {fileID: 394002469}
   - component: {fileID: 394002478}
@@ -2178,6 +2177,7 @@ GameObject:
   - component: {fileID: 394002481}
   - component: {fileID: 394002482}
   - component: {fileID: 394002483}
+  - component: {fileID: 394002484}
   m_Layer: 7
   m_Name: GolemBoss
   m_TagString: Untagged
@@ -2276,20 +2276,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05b4c1fcd3d3fab4e8564d06e1622c7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &394002471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 394002468}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 124f22bc62d36364a961b3d1a1f51551, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentState: {fileID: 2145440497}
-  <controllAble>k__BackingField: 0
 --- !u!61 &394002472
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2545,7 +2531,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 394002471}
+      - m_Target: {fileID: 394002484}
         m_TargetAssemblyTypeName: AIController, Assembly-CSharp
         m_MethodName: set_controllAble
         m_Mode: 6
@@ -2634,6 +2620,20 @@ MonoBehaviour:
     - {fileID: 535514961}
     - {fileID: 14346747}
     - {fileID: 597489507}
+--- !u!114 &394002484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394002468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eacc1519a35fc7c44a87b3520c5337d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: {fileID: 2145440497}
+  <controllAble>k__BackingField: 0
 --- !u!1 &449037921
 GameObject:
   m_ObjectHideFlags: 0
