@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GolemContriller : AIController
+public class GolemController : AIController
 {
 
     private HitSencer sencer;
