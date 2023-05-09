@@ -114,4 +114,13 @@ namespace Class
 
     }
 
+    [System.Serializable]
+    public class SoundEventClass
+    {
+
+        public string key;
+        public AudioSource soundSource;
+
+    }
+
 }
