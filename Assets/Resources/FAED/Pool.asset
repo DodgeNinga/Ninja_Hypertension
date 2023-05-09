@@ -31,3 +31,6 @@ MonoBehaviour:
   - poolName: SpriteParticle
     poolObj: {fileID: 2151807688663568373, guid: 7906b0f4377e97d4d95b9c5e58b2f6f9, type: 3}
     poolSize: 30
+  - poolName: GolemEFT
+    poolObj: {fileID: 8888938333651165221, guid: fd8995c4b530d024a91973cf4953cf1b, type: 3}
+    poolSize: 30

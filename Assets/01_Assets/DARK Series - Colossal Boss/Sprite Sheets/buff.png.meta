@@ -377,6 +377,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: buff_13
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 25
+        width: 68
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b6d14fd50644e24d8cc966c9b69ed7f
+      internalID: -1449403185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -393,6 +414,7 @@ TextureImporter:
       buff_10: 419535951
       buff_11: 486662396
       buff_12: 1686618562
+      buff_13: -1449403185
       buff_2: -2082650977
       buff_3: 1148417945
       buff_4: 197987063
