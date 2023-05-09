@@ -14,8 +14,8 @@ public class PlayerSoundManager : PlayerRoot
     private void Update()
     {
 
-        FallingChack();
         PlayLandingSound();
+        FallingChack();
 
     }
 
@@ -28,18 +28,31 @@ public class PlayerSoundManager : PlayerRoot
             fallingTime += Time.deltaTime;
 
         }
+        else
+        {
+
+            fallingTime = 0;
+
+        }
 
     }
 
     private void PlayLandingSound()
     {
 
-        if(fallingTime > 1 && jumpCol.isGround) 
+        if(fallingTime > 0.5f && jumpCol.isGround) 
         {
 
             PlaySound("Landing");
         
         }
+
+    }
+
+    public void PlayDashSound()
+    {
+
+        PlaySound("Dash");
 
     }
 
@@ -53,7 +66,7 @@ public class PlayerSoundManager : PlayerRoot
     public void PlayJumpSound()
     {
 
-        if (jumpCol.isGround) return;
+        if (!jumpCol.isGround) return;
         
         PlaySound("JumpSound");
 

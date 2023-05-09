@@ -15,6 +15,7 @@ public class PlayerDash : PlayerBehaviorRoot
     private AddGravity gravity;
     private ParticlePlayer particlePlayer;
     private PlayerInvincibility invincibility;
+    private PlayerSoundManager soundManager;
 
     public bool dashAble { get; set; } = true;
 
@@ -30,6 +31,7 @@ public class PlayerDash : PlayerBehaviorRoot
         originGravityScale = rigid.gravityScale;
 
         particlePlayer = transform.Find("ParticlePlayer").Find("DashParticle").GetComponent<ParticlePlayer>();
+        soundManager = GetComponent<PlayerSoundManager>();
 
     }
 
@@ -93,6 +95,7 @@ public class PlayerDash : PlayerBehaviorRoot
 
         yield return null;
 
+        soundManager.PlayDashSound();
         float curDashPower = spriteRenderer.flipX ? -dashPower : dashPower;
         animator.SetDashTrigger();
         animator.SetIsDash(true);
