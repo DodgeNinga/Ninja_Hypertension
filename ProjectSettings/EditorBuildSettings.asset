@@ -5,7 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/00_Scenes/Main.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/00_Scenes/DebugScene.unity
+    guid: 0c922e8e236353c45b9938ed3c7ff50c
+  - enabled: 1
+    path: Assets/00_Scenes/Play/StoryTutorial.unity
+    guid: 799e1b022ef63a54eb1e3c28ceb5c087
+  - enabled: 1
+    path: Assets/00_Scenes/Play/GolemBossRoom.unity
+    guid: d38abd06dc81b94478afc761894280c7
   m_configObjects: {}
