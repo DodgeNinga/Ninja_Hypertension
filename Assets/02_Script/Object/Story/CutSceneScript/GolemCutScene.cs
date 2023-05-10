@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class GolemCutScene : CutScene
 {
+
+    [SerializeField] private AudioSource playSource;
+
     public override void StartCutScene()
     {
 
@@ -13,14 +16,15 @@ public class GolemCutScene : CutScene
         FAED.InvokeDelayReal(() =>
         {
 
-            CameraManager.instance.Shake(5f, 5f, 1f, true);
+            CameraManager.instance.Shake(5f, 5f, 2.5f, true);
+            playSource.Play();
 
             FAED.InvokeDelayReal(() =>
             {
 
                 thisCutScene.EndCutScene();
 
-            }, 1f);
+            }, 2.5f);
 
         }, 1f);
 
