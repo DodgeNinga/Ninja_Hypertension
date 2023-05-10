@@ -6,6 +6,7 @@ public class EnemyMove : MonoBehaviour
 {
     [SerializeField] bool allDirection;
     [SerializeField] bool chaseJump;
+    [SerializeField] bool ignoreCol;
     [SerializeField] float speed;
     [SerializeField] float chasingSpeed;
     [SerializeField] float jumpPower;
@@ -31,6 +32,8 @@ public class EnemyMove : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         StartCoroutine("ChangeDir");
         jumpPower *= 10;
+        if (ignoreCol)
+            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Enemy"), LayerMask.NameToLayer("Ground"), true);
     }
     IEnumerator ChangeDir()
     {
