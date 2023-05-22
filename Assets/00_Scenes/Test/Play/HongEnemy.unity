@@ -2953,6 +2953,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpPower: 8.5
+  jumpAddValue: 0
   jumpAble: 1
 --- !u!114 &457901048
 MonoBehaviour:
@@ -30695,7 +30696,7 @@ GameObject:
   - component: {fileID: 1741217867}
   - component: {fileID: 1741217866}
   - component: {fileID: 1741217865}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Col
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -46127,7 +46128,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 333532339}
           m_TargetAssemblyTypeName: PlayerActionSystem, Assembly-CSharp
-          m_MethodName: OnJumpKeyExecute
+          m_MethodName: OnJumpKeyDownExecute
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -46196,6 +46197,23 @@ MonoBehaviour:
         - m_Target: {fileID: 333532339}
           m_TargetAssemblyTypeName: PlayerActionSystem, Assembly-CSharp
           m_MethodName: OnDashKeyPressEventExecute
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - inputKey: 32
+    eventType: 2
+    actionEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 333532339}
+          m_TargetAssemblyTypeName: PlayerActionSystem, Assembly-CSharp
+          m_MethodName: OnSkillKeyUpExecute
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
