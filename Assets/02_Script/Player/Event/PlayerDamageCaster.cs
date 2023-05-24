@@ -36,7 +36,7 @@ public class PlayerDamageCaster : MonoBehaviour
         var damage = obj.GetComponent<DamageText>();
         damage.SetText(damageValue);
 
-        playerHP.HealingHP(damageValue / 10);
+        playerHP.HealingHP(damageValue / 30);
 
     }
 
@@ -56,7 +56,7 @@ public class PlayerDamageCaster : MonoBehaviour
         var damage = obj.GetComponent<DamageText>();
         damage.SetText(damageValue);
 
-        playerHP.HealingHP(damageValue / 10);
+        playerHP.HealingHP(damageValue / 30);
 
     }
 
