@@ -51254,7 +51254,6 @@ GameObject:
   - component: {fileID: 1868342962}
   - component: {fileID: 1868342961}
   - component: {fileID: 1868342976}
-  - component: {fileID: 1868342977}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -51651,25 +51650,6 @@ MonoBehaviour:
     soundSource: {fileID: 1954457162}
   - key: Dash
     soundSource: {fileID: 939981038}
---- !u!114 &1868342977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1868342959}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3afc25664f8d3a6489d588397bc141aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  interactionText: {fileID: 0}
-  interactionRange: {x: 0, y: 0}
-  interactionOffset: {x: 0, y: 0}
-  gizmoColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &1870027674
 GameObject:
   m_ObjectHideFlags: 0
