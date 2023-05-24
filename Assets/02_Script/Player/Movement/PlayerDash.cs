@@ -51,7 +51,7 @@ public class PlayerDash : PlayerBehaviorRoot
 
         }
 
-        invincibility.isInvincibility = true;
+        if(invincibility != null) invincibility.isInvincibility = true;
         StartCoroutine(StartDashCo());
         StartCoroutine(DashEndCo());
 
@@ -60,7 +60,7 @@ public class PlayerDash : PlayerBehaviorRoot
     private void DashEnd()
     {
 
-        invincibility.isInvincibility = false;
+        if (invincibility != null) invincibility.isInvincibility = false;
         gravity.onGravity = true;
         rigid.gravityScale = originGravityScale;
         animator.SetIsDash(false);
