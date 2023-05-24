@@ -74,7 +74,7 @@ namespace Class
         public float GetDamageValue(float hpLV)
         {
 
-            return Random.Range(damage - randomValue, damage + randomValue) + ((damage * hpLV));
+            return Random.Range(damage - randomValue, damage + randomValue) + ((damage / hpLV));
 
         } 
 
