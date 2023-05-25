@@ -221,6 +221,7 @@ GameObject:
   - component: {fileID: 638269542}
   - component: {fileID: 638269544}
   - component: {fileID: 638269543}
+  - component: {fileID: 638269545}
   m_Layer: 0
   m_Name: Sample
   m_TagString: Untagged
@@ -310,7 +311,6 @@ MonoBehaviour:
   enemyCurrentState: 0
   Player: {fileID: 0}
   enemyData: {fileID: 11400000, guid: 1d0a31b0c2d56874dbcf3699f078dfde, type: 2}
-  animator: {fileID: 0}
   TraceEvent:
     m_PersistentCalls:
       m_Calls:
@@ -333,6 +333,36 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: AttackAgent, Assembly-CSharp
         m_MethodName: AttackStart
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  AnimationEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 638269545}
+        m_TargetAssemblyTypeName: AnimationAgent, Assembly-CSharp
+        m_MethodName: SetAnimation
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  FlipEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 638269544}
+        m_TargetAssemblyTypeName: TraceAgent, Assembly-CSharp
+        m_MethodName: FlipFunc
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -385,6 +415,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e2c350974ab700746a1857f536fe21a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &638269545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638269538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89b59a448e9572246a569773de79049a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1034293389

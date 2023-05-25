@@ -97,5 +97,6 @@ public class AIBrain : MonoBehaviour
             CalHPLogic();
         }
         AnimationEvent?.Invoke(enemyCurrentState);
+        FlipEvent?.Invoke();
     }
 }

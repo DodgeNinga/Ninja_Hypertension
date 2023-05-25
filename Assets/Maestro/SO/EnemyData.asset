@@ -17,4 +17,4 @@ MonoBehaviour:
   atkValue: 10
   detectRange: 5
   atkRange: 1
-  atkcool: 1
+  atkcool: 2
