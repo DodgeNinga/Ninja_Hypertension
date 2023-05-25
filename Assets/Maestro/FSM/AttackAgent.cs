@@ -5,11 +5,12 @@ using UnityEngine;
 public class AttackAgent : MonoBehaviour
 {
     bool isAttacking;
-    AIBrain _brain;
-
+    AIBrain _aiBrain;
+    float cool;
+    float atkv;
     private void Awake()
     {
-        _brain = GetComponentInParent<AIBrain>();
+        _aiBrain = GetComponent<AIBrain>();
     }
 
     public void AttackStart(float atkVal, float atkCool)
@@ -17,14 +18,21 @@ public class AttackAgent : MonoBehaviour
         if(!isAttacking)
         {
             isAttacking = true;
-            Debug.Log(atkVal); // 플레이어 찾아서 데미지 주기
-            _brain.
-            StartCoroutine(Attacking(atkCool));
+            atkv = atkVal;
+            cool = atkCool;
+            StartCoroutine(Attacking());
         }
     }
 
-    IEnumerator Attacking(float cool)
+    public void OnAttackStart()
     {
+        Debug.Log(atkv); // 에니메이터 실행
+        //플레이어 데미지 주는 로직
+    }
+
+    IEnumerator Attacking()
+    {
+        _aiBrain.enemyCurrentState = EnemyAIState.Trace;
         yield return new WaitForSeconds(cool);
         isAttacking = false;
     }

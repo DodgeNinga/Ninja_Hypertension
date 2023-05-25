@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "SO/EnemyData", order = 0)]
 public class EnemyData : ScriptableObject
 {
+    public float MAXHP;
     public float speed;
     public float atkValue;
     public float detectRange;

@@ -4,26 +4,31 @@ using UnityEngine;
 
 public class TraceAgent : MonoBehaviour
 {
-    bool istrace;
-    AIBrain _brain;
-
+    Vector3 direction;
+    SpriteRenderer _sr;
     private void Awake()
     {
-        _brain = GetComponentInParent<AIBrain>();
+        _sr = GetComponent<SpriteRenderer>();
     }
 
-    public void TraceOn()
+    public void TraceOn(Transform detectPos, float speed)
     {
-        istrace = !istrace;
+        direction = (detectPos.position - transform.position).normalized;
+        Vector3 moveDir = direction * speed * Time.deltaTime;
+        transform.position += new Vector3(moveDir.x, 0, 0);
     }
 
-    private void Update()
+    public void FlipFunc()
     {
-        if(istrace)
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+        if(angle > -90f && angle < 90)
         {
-            transform.position = Vector3.MoveTowards(transform.position,
-                                                     _brain.Player.transform.position,
-                                                     _brain.enemyData.speed * Time.deltaTime);
+            _sr.flipX = true;
+        }
+        else
+        {
+            _sr.flipX = false;
         }
     }
 }

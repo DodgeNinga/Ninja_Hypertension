@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd963be01043ee7468f85f152bbf7eea, type: 3}
   m_Name: EnemyData
   m_EditorClassIdentifier: 
+  MAXHP: 10
   speed: 5
   atkValue: 10
   detectRange: 5
