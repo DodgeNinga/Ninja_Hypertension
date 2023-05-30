@@ -11,4 +11,5 @@ public class EnemyData : ScriptableObject
     public float detectRange;
     public float atkRange;
     public float atkcool;
+    public Sprite dieSprite;
 }

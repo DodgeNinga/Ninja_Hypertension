@@ -24,11 +24,11 @@ public class TraceAgent : MonoBehaviour
 
         if(angle > -90f && angle < 90)
         {
-            _sr.flipX = true;
+            _sr.flipX = false;
         }
         else
         {
-            _sr.flipX = false;
+            _sr.flipX = true;
         }
     }
 }

@@ -16,5 +16,12 @@ public class PlayerMoveSample : MonoBehaviour
         {
             transform.Translate(Vector3.left * Time.deltaTime * speed, Space.World);
         }
+
+        if(Input.GetButtonDown("Jump"))
+        {
+            AIBrain _aiBrain;
+            _aiBrain = FindObjectOfType<AIBrain>();
+            _aiBrain.CurrentHP = 0;
+        }
     }
 }

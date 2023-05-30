@@ -12,6 +12,8 @@ public enum EnemyAIState
     Die
 }
 
+[RequireComponent(typeof(SpriteRenderer), (typeof(Animator)), (typeof(TraceAgent)))]
+[RequireComponent(typeof(AttackAgent), (typeof(AnimationAgent)), (typeof(DieAgent)))]
 public class AIBrain : MonoBehaviour
 {
     public EnemyAIState enemyCurrentState;
@@ -27,7 +29,7 @@ public class AIBrain : MonoBehaviour
     private List<Action> _LogicList = new List<Action>();
 
     bool isDie = false;
-
+    public bool isAttacking = false;
     public float MaxHp;
     public float CurrentHP;
 
@@ -78,7 +80,7 @@ public class AIBrain : MonoBehaviour
 
     private void DieLogic()
     {
-        Debug.Log("Die");
+        AnimationEvent?.Invoke(enemyCurrentState);
     }
 
     public void CalHPLogic()
@@ -86,6 +88,7 @@ public class AIBrain : MonoBehaviour
         if(CurrentHP <= 0)
         {
             enemyCurrentState = EnemyAIState.Die;
+            isDie = true;
         }
     }
 
@@ -93,10 +96,13 @@ public class AIBrain : MonoBehaviour
     {
         if (!isDie)
         {
-            LogicSelecter[enemyCurrentState]?.Invoke();
+            if(!isAttacking)
+            {
+                LogicSelecter[enemyCurrentState]?.Invoke();
+            }
             CalHPLogic();
+            AnimationEvent?.Invoke(enemyCurrentState);
+            FlipEvent?.Invoke();
         }
-        AnimationEvent?.Invoke(enemyCurrentState);
-        FlipEvent?.Invoke();
     }
 }
