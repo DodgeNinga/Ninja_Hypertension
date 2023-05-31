@@ -26,16 +26,18 @@ public class AttackAgent : MonoBehaviour
     {
         Debug.Log(atkv); // 에니메이터 실행
         //플레이어 데미지 주는 로직
+        _aiBrain.enemyCurrentState = EnemyAIState.Idle;
     }
 
     public void OnAttackEnd()
     {
+        
         StartCoroutine(Attacking());
     }
 
     IEnumerator Attacking()
     {
-        _aiBrain.enemyCurrentState = EnemyAIState.Idle;
+        
         yield return new WaitForSeconds(cool);
         _aiBrain.isAttacking = false;
         _aiBrain.enemyCurrentState = EnemyAIState.Trace;
