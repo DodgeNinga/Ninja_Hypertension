@@ -17,5 +17,5 @@ MonoBehaviour:
   atkValue: 10
   detectRange: 5
   atkRange: 2
-  atkcool: 10
+  atkcool: 2
   dieSprite: {fileID: 0}
