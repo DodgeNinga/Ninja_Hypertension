@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 46781cf178f68a247a975a7334db6f8a
+guid: 1373a677c76beb04883400b2054c7973
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -101,29 +101,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hell-hound-walk_0
+      name: range_0
       rect:
         serializedVersion: 2
-        x: 10
+        x: 0
         y: 0
-        width: 44
-        height: 24
+        width: 129
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f347ca0202639814294d2a671c330cbe
-      internalID: 1130594656
+      spriteID: 3763777fc907e074598295617364c2e6
+      internalID: -367316059
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hell-hound-walk_1
+      name: range_1
       rect:
         serializedVersion: 2
-        x: 74
+        x: 129
         y: 0
-        width: 45
-        height: 25
+        width: 129
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2520f39fb2e9424a8be352656b44f55
-      internalID: 1020214194
+      spriteID: 8e18b137476caea48959f9378ea0f7a8
+      internalID: -63799828
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hell-hound-walk_2
+      name: range_2
       rect:
         serializedVersion: 2
-        x: 138
+        x: 258
         y: 0
-        width: 45
-        height: 26
+        width: 129
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69d2ee601e18cdd4c8093efe36fcf67f
-      internalID: 1164498832
+      spriteID: e2fb6e20c7143fa40b762e4b10b04065
+      internalID: -1899112853
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hell-hound-walk_3
+      name: range_3
       rect:
         serializedVersion: 2
-        x: 202
+        x: 387
         y: 0
-        width: 45
-        height: 25
+        width: 129
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4524575dd88b71443a0c568f8ddd9652
-      internalID: -2141885242
+      spriteID: c9b998dcc56fbe742a79b797363baa9a
+      internalID: 1095984969
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hell-hound-walk_4
+      name: range_4
       rect:
         serializedVersion: 2
-        x: 266
+        x: 516
         y: 0
-        width: 45
-        height: 24
+        width: 129
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 522a49923fb87e042911a20affb28b64
-      internalID: 1017529447
+      spriteID: be047e708781ad94a9429c48e34d2434
+      internalID: 401868483
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hell-hound-walk_5
+      name: range_5
       rect:
         serializedVersion: 2
-        x: 330
+        x: 645
         y: 0
-        width: 44
-        height: 24
+        width: 129
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,20 +224,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 175b3b520de80fb47a046c0bad05378f
-      internalID: -1922656116
+      spriteID: 69df270964a083340a7da8a3d65883b8
+      internalID: 766627605
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hell-hound-walk_6
+      name: range_6
       rect:
         serializedVersion: 2
-        x: 394
+        x: 774
         y: 0
-        width: 44
-        height: 24
+        width: 129
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,20 +245,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e567b17fc590fd4c94534981f4699c4
-      internalID: 714609769
+      spriteID: ba22e6533aeb04b48aa6bceee35e058a
+      internalID: 1450371610
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hell-hound-walk_7
+      name: range_7
       rect:
         serializedVersion: 2
-        x: 458
+        x: 903
         y: 0
-        width: 45
-        height: 25
+        width: 129
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,20 +266,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d7675128e7f29f4b95b0046bb985236
-      internalID: -1157379684
+      spriteID: 8e379abaa6b54014c8891ca982eb0e93
+      internalID: 951742486
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hell-hound-walk_8
+      name: range_8
       rect:
         serializedVersion: 2
-        x: 522
+        x: 1032
         y: 0
-        width: 45
-        height: 26
+        width: 129
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -299,20 +287,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 315a250673e3a9f4abea086ccafe5c29
-      internalID: -1972583650
+      spriteID: 67a9b9d45e74bdc4585923baba7e4cfd
+      internalID: 20682553
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hell-hound-walk_9
+      name: range_9
       rect:
         serializedVersion: 2
-        x: 586
+        x: 1161
         y: 0
-        width: 45
-        height: 25
+        width: 129
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -320,20 +308,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8227bd60a0e2aff4ba829cfd7b0fd822
-      internalID: -2039519286
+      spriteID: 2fd00305e23c136498eeff02f4a51c76
+      internalID: 1254823222
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hell-hound-walk_10
+      name: range_10
       rect:
         serializedVersion: 2
-        x: 650
+        x: 1290
         y: 0
-        width: 45
-        height: 24
+        width: 129
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -341,20 +329,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 963a6fb9ecc128d40bb4b32da482d21d
-      internalID: -1893932695
+      spriteID: 2f17aea3c03ea954d84481098649439c
+      internalID: -1977815089
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hell-hound-walk_11
+      name: range_11
       rect:
         serializedVersion: 2
-        x: 714
+        x: 1419
         y: 0
-        width: 44
-        height: 24
+        width: 129
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -362,8 +350,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba2c31082c26cbb46ae5f81ba52ca621
-      internalID: -134102855
+      spriteID: ea8dfce38356a664aa67a1b92e08bd21
+      internalID: -1661919634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: range_12
+      rect:
+        serializedVersion: 2
+        x: 1548
+        y: 0
+        width: 129
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb3180179c7824346849d808bfaf4913
+      internalID: 1511430938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: range_13
+      rect:
+        serializedVersion: 2
+        x: 1677
+        y: 0
+        width: 129
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dee482023dfe73543880128323c4880c
+      internalID: -2102126737
       vertices: []
       indices: 
       edges: []
@@ -379,18 +409,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      hell-hound-walk_0: 1130594656
-      hell-hound-walk_1: 1020214194
-      hell-hound-walk_10: -1893932695
-      hell-hound-walk_11: -134102855
-      hell-hound-walk_2: 1164498832
-      hell-hound-walk_3: -2141885242
-      hell-hound-walk_4: 1017529447
-      hell-hound-walk_5: -1922656116
-      hell-hound-walk_6: 714609769
-      hell-hound-walk_7: -1157379684
-      hell-hound-walk_8: -1972583650
-      hell-hound-walk_9: -2039519286
+      range_0: -367316059
+      range_1: -63799828
+      range_10: -1977815089
+      range_11: -1661919634
+      range_12: 1511430938
+      range_13: -2102126737
+      range_2: -1899112853
+      range_3: 1095984969
+      range_4: 401868483
+      range_5: 766627605
+      range_6: 1450371610
+      range_7: 951742486
+      range_8: 20682553
+      range_9: 1254823222
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 46781cf178f68a247a975a7334db6f8a
+guid: 89666a235083a334ea1a8b36120e2f3f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -67,7 +67,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -101,29 +101,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hell-hound-walk_0
+      name: attack_0
       rect:
         serializedVersion: 2
-        x: 10
+        x: 0
         y: 0
-        width: 44
-        height: 24
+        width: 129
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f347ca0202639814294d2a671c330cbe
-      internalID: 1130594656
+      spriteID: f389d2daabfcbc24fb5e4a0aea983b00
+      internalID: 1226088812
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hell-hound-walk_1
+      name: attack_1
       rect:
         serializedVersion: 2
-        x: 74
+        x: 129
         y: 0
-        width: 45
-        height: 25
+        width: 129
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2520f39fb2e9424a8be352656b44f55
-      internalID: 1020214194
+      spriteID: 3873f59287afb994f88fe29de6111187
+      internalID: 1049030978
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hell-hound-walk_2
+      name: attack_2
       rect:
         serializedVersion: 2
-        x: 138
+        x: 258
         y: 0
-        width: 45
-        height: 26
+        width: 129
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69d2ee601e18cdd4c8093efe36fcf67f
-      internalID: 1164498832
+      spriteID: 4be4cbec4a05ecf439d4dbcf9821e884
+      internalID: -1889847810
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hell-hound-walk_3
+      name: attack_3
       rect:
         serializedVersion: 2
-        x: 202
+        x: 387
         y: 0
-        width: 45
-        height: 25
+        width: 129
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4524575dd88b71443a0c568f8ddd9652
-      internalID: -2141885242
+      spriteID: d292f8b48a13ac148848092a33aabafd
+      internalID: -1172186606
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hell-hound-walk_4
+      name: attack_4
       rect:
         serializedVersion: 2
-        x: 266
+        x: 516
         y: 0
-        width: 45
-        height: 24
+        width: 129
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 522a49923fb87e042911a20affb28b64
-      internalID: 1017529447
+      spriteID: b335759a9820fc045812ed66f9709f87
+      internalID: 547686048
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hell-hound-walk_5
+      name: attack_5
       rect:
         serializedVersion: 2
-        x: 330
+        x: 645
         y: 0
-        width: 44
-        height: 24
+        width: 129
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,20 +224,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 175b3b520de80fb47a046c0bad05378f
-      internalID: -1922656116
+      spriteID: f5cca0caefb285241aa4464d679c6e5e
+      internalID: 1083564222
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hell-hound-walk_6
+      name: attack_6
       rect:
         serializedVersion: 2
-        x: 394
+        x: 774
         y: 0
-        width: 44
-        height: 24
+        width: 129
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,20 +245,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e567b17fc590fd4c94534981f4699c4
-      internalID: 714609769
+      spriteID: 67ce13ccef878d54c957a77629e855dc
+      internalID: -1246907778
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hell-hound-walk_7
+      name: attack_7
       rect:
         serializedVersion: 2
-        x: 458
+        x: 903
         y: 0
-        width: 45
-        height: 25
+        width: 129
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,20 +266,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d7675128e7f29f4b95b0046bb985236
-      internalID: -1157379684
+      spriteID: 498f5fdc294c8f643a4cfa28e802282a
+      internalID: 1827122327
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hell-hound-walk_8
+      name: attack_8
       rect:
         serializedVersion: 2
-        x: 522
+        x: 1032
         y: 0
-        width: 45
-        height: 26
+        width: 129
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -299,20 +287,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 315a250673e3a9f4abea086ccafe5c29
-      internalID: -1972583650
+      spriteID: 8090181ca5bb02e4ab23e151a60d61ac
+      internalID: -1796136166
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hell-hound-walk_9
+      name: attack_9
       rect:
         serializedVersion: 2
-        x: 586
+        x: 1161
         y: 0
-        width: 45
-        height: 25
+        width: 129
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -320,20 +308,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8227bd60a0e2aff4ba829cfd7b0fd822
-      internalID: -2039519286
+      spriteID: f02663e3bd99c9b4ebee7e54b8ee983d
+      internalID: -1843311419
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hell-hound-walk_10
+      name: attack_10
       rect:
         serializedVersion: 2
-        x: 650
+        x: 1290
         y: 0
-        width: 45
-        height: 24
+        width: 129
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -341,20 +329,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 963a6fb9ecc128d40bb4b32da482d21d
-      internalID: -1893932695
+      spriteID: 220cc0cbc5348de419ad8f9da2ffdb2f
+      internalID: 774876569
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hell-hound-walk_11
+      name: attack_11
       rect:
         serializedVersion: 2
-        x: 714
+        x: 1419
         y: 0
-        width: 44
-        height: 24
+        width: 129
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -362,8 +350,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba2c31082c26cbb46ae5f81ba52ca621
-      internalID: -134102855
+      spriteID: e07f476a7bd901f47ae453bb27f56f5a
+      internalID: 1346493008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_12
+      rect:
+        serializedVersion: 2
+        x: 1548
+        y: 0
+        width: 129
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5ff53c9f47f1254fb31e64829fc9f9d
+      internalID: 472926629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_13
+      rect:
+        serializedVersion: 2
+        x: 1677
+        y: 0
+        width: 129
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c206571e5cfd1694a8a768fd28160efe
+      internalID: 241070049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_14
+      rect:
+        serializedVersion: 2
+        x: 1806
+        y: 0
+        width: 129
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a79d940b08c6ec0469ebe3abf1891290
+      internalID: 1050553843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_15
+      rect:
+        serializedVersion: 2
+        x: 1935
+        y: 0
+        width: 129
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4647a1a8b891250469af11e2f25a343a
+      internalID: 1759635694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_16
+      rect:
+        serializedVersion: 2
+        x: 2064
+        y: 0
+        width: 129
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98ec295e5d865654c945439d48e5be21
+      internalID: 1844088584
       vertices: []
       indices: 
       edges: []
@@ -379,18 +472,23 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      hell-hound-walk_0: 1130594656
-      hell-hound-walk_1: 1020214194
-      hell-hound-walk_10: -1893932695
-      hell-hound-walk_11: -134102855
-      hell-hound-walk_2: 1164498832
-      hell-hound-walk_3: -2141885242
-      hell-hound-walk_4: 1017529447
-      hell-hound-walk_5: -1922656116
-      hell-hound-walk_6: 714609769
-      hell-hound-walk_7: -1157379684
-      hell-hound-walk_8: -1972583650
-      hell-hound-walk_9: -2039519286
+      attack_0: 1226088812
+      attack_1: 1049030978
+      attack_10: 774876569
+      attack_11: 1346493008
+      attack_12: 472926629
+      attack_13: 241070049
+      attack_14: 1050553843
+      attack_15: 1759635694
+      attack_16: 1844088584
+      attack_2: -1889847810
+      attack_3: -1172186606
+      attack_4: 547686048
+      attack_5: 1083564222
+      attack_6: -1246907778
+      attack_7: 1827122327
+      attack_8: -1796136166
+      attack_9: -1843311419
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
