@@ -45,19 +45,7 @@ public class PlayerSkill : PlayerBehaviorRoot
 
         if (!skillAble) return;
 
-        currentLV = 1;
-        isShowAnime = true;
-        spriteRenderer.material.SetFloat(OutLineValueHash, 1);
-        playerMove.SetMoveSpeed(holdMoveSpeed);
-
-        playerAttack.RemoveEvent();
-        playerDash.RemoveEvent();
-        playerJump.RemoveEvent();
-
-        animator.SetSkillHoldHash(true);
-        animator.SetSkillHoldTriggerHash();
-
-        StartCoroutine(LvUpCo());
+        StartCoroutine(PressCo());
 
     }
 
@@ -139,6 +127,32 @@ public class PlayerSkill : PlayerBehaviorRoot
             yield return new WaitForSeconds(lvUpTime);
             currentLV++;
 
+
+        }
+
+    }
+
+    private IEnumerator PressCo()
+    {
+
+        yield return null;
+
+        if (!playerControllValue.isJumpAttack)
+        {
+
+            currentLV = 1;
+            isShowAnime = true;
+            spriteRenderer.material.SetFloat(OutLineValueHash, 1);
+            playerMove.SetMoveSpeed(holdMoveSpeed);
+
+            playerAttack.RemoveEvent();
+            playerDash.RemoveEvent();
+            playerJump.RemoveEvent();
+
+            animator.SetSkillHoldHash(true);
+            animator.SetSkillHoldTriggerHash();
+
+            StartCoroutine(LvUpCo());
 
         }
 

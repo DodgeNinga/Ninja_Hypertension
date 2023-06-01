@@ -18,26 +18,27 @@ public class PlayerJumpAttack : PlayerBehaviorRoot
 
     }
 
-    private void JumpAttact()
+    private void JumpAttack()
     {
 
         if (!jumpCol.isGround || !playerJump.jumpAble) return;
 
         animator.SetJumpAttackTrigger();
+        playerControllValue.isJumpAttack = true;
 
     }
 
     public override void AddEvent()
     {
 
-        actionSystem.OnJumpAttackKeyPressEvent += JumpAttact;
+        actionSystem.OnJumpAttackKeyPressEvent += JumpAttack;
 
     }
 
     public override void RemoveEvent()
     {
 
-        actionSystem.OnJumpAttackKeyPressEvent -= JumpAttact;
+        actionSystem.OnJumpAttackKeyPressEvent -= JumpAttack;
 
     }
 

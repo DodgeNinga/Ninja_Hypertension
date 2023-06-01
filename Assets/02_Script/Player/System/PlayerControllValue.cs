@@ -6,5 +6,6 @@ public class PlayerControllValue : MonoBehaviour
 {
 
     public bool isJumpAttack { get; set; } = false;
+    public bool isHoldAttack { get; set; } = false;
 
 }
