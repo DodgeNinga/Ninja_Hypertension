@@ -14,6 +14,8 @@ public class PlayerJumpAttack : PlayerBehaviorRoot
         
         playerJump = GetComponent<PlayerJump>();
 
+        AddEvent();
+
     }
 
     private void JumpAttact()
@@ -21,7 +23,7 @@ public class PlayerJumpAttack : PlayerBehaviorRoot
 
         if (!jumpCol.isGround || !playerJump.jumpAble) return;
 
-        
+        animator.SetJumpAttackTrigger();
 
     }
 

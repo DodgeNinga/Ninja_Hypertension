@@ -7701,6 +7701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55501b8656532054195408f60d3fa6aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionText: "Q\uD0A4\uB97C \uB20C\uB7EC \uC0C1\uD638\uC791\uC6A9"
   changeLayer: 3
   interactionEvent:
     m_PersistentCalls:
@@ -8269,6 +8270,7 @@ GameObject:
   - component: {fileID: 483244797}
   - component: {fileID: 483244798}
   - component: {fileID: 483244799}
+  - component: {fileID: 483244800}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -8887,6 +8889,18 @@ MonoBehaviour:
     soundSource: {fileID: 766514416}
   - key: Dash
     soundSource: {fileID: 1514566384}
+--- !u!114 &483244800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483244777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2c9b0a34ecdfa447a8578591ca0ccc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &491727427
 GameObject:
   m_ObjectHideFlags: 0
@@ -36677,14 +36691,14 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   multKeyEvnets:
-  - inputkeys: 6500000072000000
-    eventType: 0
+  - firstkeys: 107
+    secoundKey: 32
     actionEvent:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1503575207}
           m_TargetAssemblyTypeName: PlayerActionSystem, Assembly-CSharp
-          m_MethodName: OnSkillKeyPress
+          m_MethodName: OnJumpAttackKeyPressExecute
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

@@ -143,6 +143,7 @@ public class InputManager : MonoBehaviour
             if (value)
             {
 
+                Debug.Log(123);
                 item.actionEvent?.Invoke();
 
             }
