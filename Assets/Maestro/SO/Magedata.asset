@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd963be01043ee7468f85f152bbf7eea, type: 3}
   m_Name: Magedata
   m_EditorClassIdentifier: 
-  MAXHP: 0
-  speed: 0
-  atkValue: 0
-  detectRange: 0
-  atkRange: 0
-  atkcool: 0
+  MAXHP: 10
+  speed: 5
+  atkValue: 10
+  detectRange: 10
+  atkRange: 7
+  atkcool: 3
   dieSprite: {fileID: 0}

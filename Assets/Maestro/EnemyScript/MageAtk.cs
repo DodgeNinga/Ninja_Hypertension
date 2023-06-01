@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class MageAtk : AttackAgent
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private GameObject EffectPrefab;
+    
+    public override void OnAttackStart()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Vector3 pos = new Vector3(Player.transform.position.x, 0, 0);
+        GameObject effect = Instantiate(EffectPrefab);
+        effect.transform.position = pos;
     }
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1819197903223036674}
   - component: {fileID: 1819197903223036675}
   - component: {fileID: 1819197903223036676}
+  - component: {fileID: 7609339312715102462}
   m_Layer: 0
   m_Name: MageAtkEffect
   m_TagString: Untagged
@@ -105,3 +106,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &7609339312715102462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819197903223036677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43601b595e31c3046b7da552f80a27c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0

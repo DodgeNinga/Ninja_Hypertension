@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 6215187815364779878}
   - component: {fileID: 6215187815364779877}
   - component: {fileID: 6215187815364779880}
-  - component: {fileID: 6215187815364779879}
   - component: {fileID: 6215187815364779881}
   - component: {fileID: 6215187815364779882}
   - component: {fileID: 1695646822437787346}
+  - component: {fileID: -3884596033111329384}
   m_Layer: 0
   m_Name: Orb_Mage
   m_TagString: Untagged
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyCurrentState: 0
   Player: {fileID: 0}
-  enemyData: {fileID: 11400000, guid: 1d0a31b0c2d56874dbcf3699f078dfde, type: 2}
+  enemyData: {fileID: 11400000, guid: e4d157e00b179774abc4c32581698498, type: 2}
   TraceEvent:
     m_PersistentCalls:
       m_Calls:
@@ -144,7 +144,7 @@ MonoBehaviour:
   AttackEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6215187815364779879}
+      - m_Target: {fileID: -3884596033111329384}
         m_TargetAssemblyTypeName: AttackAgent, Assembly-CSharp
         m_MethodName: AttackStart
         m_Mode: 0
@@ -217,18 +217,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2c350974ab700746a1857f536fe21a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6215187815364779879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6215187815364779874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a7b25915b79e14d88c32f65e3c5a24, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6215187815364779881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,3 +253,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e91807234c3416d45a5080dddd22ddf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-3884596033111329384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6215187815364779874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44a725044fcd2ed419f8a14abff68a52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EffectPrefab: {fileID: 1819197903223036677, guid: 77492a27d3af79549af9b036e6c3c59d, type: 3}

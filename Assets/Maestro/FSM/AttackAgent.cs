@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class AttackAgent : MonoBehaviour
 {
+    protected GameObject Player;
     AIBrain _aiBrain;
     float cool;
     float atkv;
     private void Awake()
     {
+        Player = GameObject.Find("Player");
         _aiBrain = GetComponent<AIBrain>();
     }
 
@@ -22,7 +24,7 @@ public class AttackAgent : MonoBehaviour
         }
     }
 
-    public void OnAttackStart()
+    public virtual void OnAttackStart()
     {
         if (Vector3.Distance(this.transform.position, _aiBrain.Player.transform.position) < _aiBrain.enemyData.atkRange)
         {
@@ -34,6 +36,7 @@ public class AttackAgent : MonoBehaviour
 
     public void OnAttackEnd()
     {
+        Debug.Log(cool);
         _aiBrain.enemyCurrentState = EnemyAIState.Idle;
         StartCoroutine(Attacking());
     }
