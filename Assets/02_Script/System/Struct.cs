@@ -32,8 +32,8 @@ namespace Struct
     public struct MultKeyEvnet
     {
 
-        public List<KeyCode> inputkeys;
-        public KeyEventType eventType;
+        public KeyCode firstkeys;
+        public KeyCode secoundKey;
         public UnityEvent actionEvent;
 
     }

@@ -135,48 +135,16 @@ public class InputManager : MonoBehaviour
         foreach(var item in multKeyEvnets)
         {
 
-            int number = 0;
+            bool value =
+                (Input.GetKey(item.firstkeys) && Input.GetKeyDown(item.secoundKey)) ||
+                (Input.GetKeyDown(item.firstkeys) && Input.GetKey(item.secoundKey)) ||
+                (Input.GetKeyDown(item.firstkeys) && Input.GetKeyDown(item.secoundKey));
 
-            foreach(var evt in item.inputkeys)
+            if (value)
             {
 
-                Action action = item.eventType switch
-                {
-
-                    KeyEventType.Up => () =>
-                    {
-
-                        if (Input.GetKeyUp(evt)) number++;
-
-                    }
-                    ,
-                    KeyEventType.Down => () =>
-                    {
-
-                        if (Input.GetKeyDown(evt)) number++;
-
-                    }
-                    ,
-                    KeyEventType.Alway => () =>
-                    {
-
-                        if (Input.GetKey(evt)) number++;
-
-                    }
-                    ,
-                    _ => null
-
-                };
-
-                action?.Invoke();
-
-            }
-
-            if(item.inputkeys.Count == number) 
-            { 
-                
                 item.actionEvent?.Invoke();
-            
+
             }
 
         }
