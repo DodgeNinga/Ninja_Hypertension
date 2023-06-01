@@ -21,6 +21,8 @@ public class PlayerJumpAttack : PlayerBehaviorRoot
 
         if (!jumpCol.isGround || !playerJump.jumpAble) return;
 
+        
+
     }
 
     public override void AddEvent()
