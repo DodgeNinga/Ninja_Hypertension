@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using System;
+using FD.Dev;
 
 public enum EnemyAIState
 {
@@ -12,8 +13,6 @@ public enum EnemyAIState
     Die
 }
 
-[RequireComponent(typeof(SpriteRenderer), (typeof(Animator)), (typeof(TraceAgent)))]
-[RequireComponent(typeof(AttackAgent), (typeof(AnimationAgent)), (typeof(DieAgent)))]
 public class AIBrain : MonoBehaviour
 {
     public EnemyAIState enemyCurrentState;
@@ -24,11 +23,12 @@ public class AIBrain : MonoBehaviour
     [SerializeField] private UnityEvent<float, float> AttackEvent;
     [SerializeField] private UnityEvent<EnemyAIState> AnimationEvent;
     [SerializeField] private UnityEvent FlipEvent;
+    [SerializeField] private UnityEvent HitFeedBackEvent;
 
     private Dictionary<EnemyAIState, Action> LogicSelecter = new Dictionary<EnemyAIState, Action>();
     private List<Action> _LogicList = new List<Action>();
 
-    bool isDie = false;
+    [SerializeField] private bool isDie = false;
     public bool isAttacking = false;
     public float MaxHp;
     public float CurrentHP;
@@ -83,7 +83,19 @@ public class AIBrain : MonoBehaviour
         AnimationEvent?.Invoke(enemyCurrentState);
     }
 
-    public void CalHPLogic()
+    public void HPDamage(float damage)
+    {
+        CurrentHP -= damage;
+        HitFeedBackEvent?.Invoke();
+    }
+
+    public void Die()
+    {
+        //Destroy(this.gameObject);
+        FAED.Push(this.gameObject);
+    }
+
+    private void CalHPLogic()
     {
         if(CurrentHP <= 0)
         {
