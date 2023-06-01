@@ -21,10 +21,20 @@ public class PlayerJumpAttack : PlayerBehaviorRoot
     private void JumpAttack()
     {
 
-        if (!jumpCol.isGround || !playerJump.jumpAble) return;
+        if (!jumpCol.isGround || 
+            !playerJump.jumpAble || 
+            playerControllValue.isHoldAttack ||
+            rigid.velocity.y <= 0) return;
 
         animator.SetJumpAttackTrigger();
         playerControllValue.isJumpAttack = true;
+
+    }
+
+    public void SetEndJumpAttack()
+    {
+
+        playerControllValue.isJumpAttack = false;
 
     }
 

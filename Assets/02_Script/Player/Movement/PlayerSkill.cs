@@ -76,6 +76,7 @@ public class PlayerSkill : PlayerBehaviorRoot
         playerJump.AddEvent();
         playerDash.AddEvent();
         playerMove.SetMoveSpeed(-1);
+        playerControllValue.isHoldAttack = false;
 
     }
 
@@ -135,13 +136,21 @@ public class PlayerSkill : PlayerBehaviorRoot
     private IEnumerator PressCo()
     {
 
-        yield return null;
+        for (int i = 0; i < 5; i++)
+        {
+
+            yield return null;
+
+        }
 
         if (!playerControllValue.isJumpAttack)
         {
 
             currentLV = 1;
+
             isShowAnime = true;
+            playerControllValue.isHoldAttack = true;
+
             spriteRenderer.material.SetFloat(OutLineValueHash, 1);
             playerMove.SetMoveSpeed(holdMoveSpeed);
 
