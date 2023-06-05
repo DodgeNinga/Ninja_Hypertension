@@ -2,17 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerRoll : MonoBehaviour
+public class PlayerRoll : PlayerBehaviorRoot
 {
-    // Start is called before the first frame update
-    void Start()
+
+
+    protected override void Awake()
     {
         
+        base.Awake();
+
+        AddEvent();
+
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Rolling()
     {
-        
+
+
+
+    }
+
+    public override void AddEvent()
+    {
+
+
+
+    }
+
+    public override void RemoveEvent()
+    {
+
+
+
     }
 }
