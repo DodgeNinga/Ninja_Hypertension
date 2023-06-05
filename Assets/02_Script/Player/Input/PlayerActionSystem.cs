@@ -18,6 +18,7 @@ public class PlayerActionSystem : MonoBehaviour
     public event Action OnDashKeyPressEvent;
     public event Action OnInteractionKeyPressEvent;
     public event Action OnJumpAttackKeyPressEvent;
+    public event Action OnRollingAttaclKeyPressEvent;
     //여기에 키 인풋코드 추가
 
     public void OnHorizontalExecute(float v) => OnHorizontalEvent?.Invoke(v);
@@ -32,5 +33,6 @@ public class PlayerActionSystem : MonoBehaviour
     public void OnDashKeyPressEventExecute() => OnDashKeyPressEvent?.Invoke();
     public void OnInteractionKeyPressExecute() => OnInteractionKeyPressEvent?.Invoke();
     public void OnJumpAttackKeyPressExecute() => OnJumpAttackKeyPressEvent?.Invoke();
+    public void OnRollingAttaclKeyPressEventExecute() => OnRollingAttaclKeyPressEvent?.Invoke();
 
 }
