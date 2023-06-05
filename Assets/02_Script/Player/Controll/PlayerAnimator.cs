@@ -54,14 +54,12 @@ public class PlayerAnimator : MonoBehaviour
         SetIsGround();
 
     }
-
     private void SetIsGround()
     {
 
         animator.SetBool(IsGroundHash, jumpCol.isGround);
 
     }
-
     private void SetMoveVelHash()
     {
 
@@ -196,9 +194,7 @@ public class PlayerAnimator : MonoBehaviour
         animator.SetTrigger(DieTriggerHash);
 
     }
-
-    public void SetIsHit(bool value) => animator.SetBool(IsHitHash, value);
-    
+    public void SetIsHit(bool value) => animator.SetBool(IsHitHash, value); 
     public void SetJumpAttackTrigger() => animator.SetTrigger(JumpAttackTriggerHash);
 
 }
