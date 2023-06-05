@@ -15,9 +15,9 @@ public class InputManager : MonoBehaviour
     private void Update()
     {
 
+        MultKeyEvnet();
         KeyEvent();
         AxisEvent();
-        MultKeyEvnet();
 
     }
 

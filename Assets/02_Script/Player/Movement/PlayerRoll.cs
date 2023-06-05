@@ -18,21 +18,21 @@ public class PlayerRoll : PlayerBehaviorRoot
     private void Rolling()
     {
 
-
+        if (jumpCol.isGround) return;
 
     }
 
     public override void AddEvent()
     {
 
-
+        actionSystem.OnRollingAttaclKeyPressEvent += Rolling;
 
     }
 
     public override void RemoveEvent()
     {
 
-
+        actionSystem.OnRollingAttaclKeyPressEvent -= Rolling;
 
     }
 }
