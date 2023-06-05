@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerRoll : PlayerBehaviorRoot
 {
 
+    private float rollingCoolDown = 1f;
+    private bool rollingAble = true;
 
     protected override void Awake()
     {
@@ -18,7 +20,11 @@ public class PlayerRoll : PlayerBehaviorRoot
     private void Rolling()
     {
 
-        if (jumpCol.isGround) return;
+        if (jumpCol.isGround || playerControllValue.isAnySkillAttack || !rollingAble) return;
+
+        animator.SetRollingTrigger();
+        playerControllValue.isAnySkillAttack = true;
+        StartCoroutine(RollingCoolDownCo());
 
     }
 
@@ -35,4 +41,14 @@ public class PlayerRoll : PlayerBehaviorRoot
         actionSystem.OnRollingAttaclKeyPressEvent -= Rolling;
 
     }
+
+    private IEnumerator RollingCoolDownCo()
+    {
+
+        rollingAble = false;
+        yield return new WaitForSeconds(rollingCoolDown);
+        rollingAble = true;
+
+    }
+
 }

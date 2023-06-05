@@ -33,7 +33,7 @@ public class PlayerAttack : PlayerBehaviorRoot
     private void Attack()
     {
 
-        if (!attackAble) return;
+        if (!attackAble || playerControllValue.isAnySkillAttack) return;
         attackAble = false;
         playerJump.jumpAble = false;
         playerFlip.flipAble = false;
