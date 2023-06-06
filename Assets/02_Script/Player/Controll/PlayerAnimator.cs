@@ -25,6 +25,8 @@ public class PlayerAnimator : MonoBehaviour
     private readonly int JumpAttackTriggerHash = Animator.StringToHash("JumpAttackTrigger");
     private readonly int RollingTriggerHash = Animator.StringToHash("AirRollTrigger");
     private readonly int RollingEndTriggerHash = Animator.StringToHash("RollingEndTrigger");
+    private readonly int PoundTriggerHash = Animator.StringToHash("PoundTrigger");
+    private readonly int PoundEndTriggerHash = Animator.StringToHash("PoundEndTrigger");
 
     private MargedSencer margedSencer;
     private PlayerFlip playerFlip;
@@ -200,5 +202,7 @@ public class PlayerAnimator : MonoBehaviour
     public void SetJumpAttackTrigger() => animator.SetTrigger(JumpAttackTriggerHash);
     public void SetRollingTrigger() => animator.SetTrigger(RollingTriggerHash);
     public void SetRollingEndTrigger() => animator.SetTrigger(RollingEndTriggerHash);
+    public void SetPoundTrigger() => animator.SetTrigger(PoundTriggerHash);
+    public void SetPoundEndTrigger() => animator.SetTrigger(PoundEndTriggerHash);
 
 }
