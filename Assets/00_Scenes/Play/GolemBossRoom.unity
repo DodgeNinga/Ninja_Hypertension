@@ -8394,6 +8394,9 @@ MonoBehaviour:
   - eventKey: JumpAttack
     damage: 5
     randomValue: 3
+  - eventKey: AirRoll
+    damage: 5
+    randomValue: 3
 --- !u!114 &483244781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8575,6 +8578,27 @@ MonoBehaviour:
     gizmoColor: {r: 0, g: 0.43798304, b: 1, a: 1}
     range: {x: 2.28, y: 2.5}
     offSet: {x: 0.5, y: 0}
+    hitEvt:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 483244780}
+          m_TargetAssemblyTypeName: PlayerDamageCaster, Assembly-CSharp
+          m_MethodName: CastingHoldAttackDamage
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - atkKey: AirRoll
+    feedBackName: Hit
+    visible: 1
+    gizmoColor: {r: 1, g: 0, b: 0.500896, a: 1}
+    range: {x: 3.5, y: 3.5}
+    offSet: {x: 0, y: 0}
     hitEvt:
       m_PersistentCalls:
         m_Calls:

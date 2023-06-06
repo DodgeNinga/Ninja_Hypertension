@@ -43,7 +43,7 @@ public class PlayerSkill : PlayerBehaviorRoot
     private void PressEvent()
     {
 
-        if (!skillAble) return;
+        if (!skillAble || !jumpCol.isGround) return;
 
         StartCoroutine(PressCo());
 
