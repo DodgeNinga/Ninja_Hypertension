@@ -19,9 +19,25 @@ public class PlayerPound : PlayerBehaviorRoot
     private void Pounding()
     {
 
-        if (!jumpCol.isGround || playerControllValue.isAnySkillAttack || isPounding) return;
+        if (jumpCol.isGround || playerControllValue.isAnySkillAttack || isPounding) return;
 
-        rigid.velocity += new Vector2(0, -2);
+        rigid.velocity -= new Vector2(0, 7);
+        animator.SetPoundTrigger();
+        playerControllValue.isAnySkillAttack = true;
+        isPounding = true;
+
+        StartCoroutine(PoundEndChackCo());
+
+    }
+
+    private IEnumerator PoundEndChackCo()
+    {
+
+        yield return new WaitUntil(() => jumpCol.isGround);
+
+        animator.SetPoundEndTrigger();
+        isPounding = false;
+        playerControllValue.isAnySkillAttack = false;
 
     }
 
@@ -38,4 +54,5 @@ public class PlayerPound : PlayerBehaviorRoot
         actionSystem.OnPoundKeyPressEvent -= Pounding;
 
     }
+
 }
