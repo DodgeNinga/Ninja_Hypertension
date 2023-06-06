@@ -8289,7 +8289,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 483244777}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.21, y: 18.33, z: 0}
+  m_LocalPosition: {x: -5.34, y: 4.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8396,6 +8396,9 @@ MonoBehaviour:
     damage: 5
     randomValue: 3
   - eventKey: AirRoll
+    damage: 5
+    randomValue: 3
+  - eventKey: Pound
     damage: 5
     randomValue: 3
 --- !u!114 &483244781
@@ -8554,7 +8557,7 @@ MonoBehaviour:
           m_CallState: 2
   - atkKey: HoldAtk
     feedBackName: Hit
-    visible: 1
+    visible: 0
     gizmoColor: {r: 1, g: 0.2941045, b: 0, a: 1}
     range: {x: 4, y: 2.5}
     offSet: {x: 0.5, y: 0}
@@ -8575,7 +8578,7 @@ MonoBehaviour:
           m_CallState: 2
   - atkKey: JumpAttack
     feedBackName: Hit
-    visible: 1
+    visible: 0
     gizmoColor: {r: 0, g: 0.43798304, b: 1, a: 1}
     range: {x: 2.28, y: 2.5}
     offSet: {x: 0.5, y: 0}
@@ -8596,10 +8599,31 @@ MonoBehaviour:
           m_CallState: 2
   - atkKey: AirRoll
     feedBackName: Hit
-    visible: 1
+    visible: 0
     gizmoColor: {r: 1, g: 0, b: 0.500896, a: 1}
     range: {x: 3.5, y: 3.5}
     offSet: {x: 0, y: 0}
+    hitEvt:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 483244780}
+          m_TargetAssemblyTypeName: PlayerDamageCaster, Assembly-CSharp
+          m_MethodName: CastingHoldAttackDamage
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - atkKey: Pound
+    feedBackName: Hit
+    visible: 1
+    gizmoColor: {r: 1, g: 0, b: 0.500896, a: 1}
+    range: {x: 2.5, y: 1}
+    offSet: {x: 0, y: -0.5}
     hitEvt:
       m_PersistentCalls:
         m_Calls:
@@ -37364,7 +37388,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1445528116}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.21, y: 18.33, z: -10}
+  m_LocalPosition: {x: -5.34, y: 4.65, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -69296,7 +69320,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1886047127}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.21, y: 18.33, z: -10}
+  m_LocalPosition: {x: -5.34, y: 4.65, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

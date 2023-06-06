@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerPound : PlayerBehaviorRoot
 {
 
+    private HitSencer playerHitSencer;
     private bool isPounding = false;
 
     protected override void Awake()
@@ -13,6 +14,8 @@ public class PlayerPound : PlayerBehaviorRoot
         base.Awake();
 
         AddEvent();
+
+        playerHitSencer = GetComponent<HitSencer>();
 
     }
 
@@ -38,6 +41,7 @@ public class PlayerPound : PlayerBehaviorRoot
         animator.SetPoundEndTrigger();
         isPounding = false;
         playerControllValue.isAnySkillAttack = false;
+        playerHitSencer.ChackHit("Pound");
 
     }
 
