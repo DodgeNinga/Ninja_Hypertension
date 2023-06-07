@@ -36,6 +36,8 @@ public class PlayerAnimator : MonoBehaviour
     private JumpCol jumpCol;
     private float fallDownTime;
 
+    public bool fallDownAble { get; set; } = true;
+
     private void Awake()
     {
         
@@ -92,7 +94,7 @@ public class PlayerAnimator : MonoBehaviour
     private void ChackLanding()
     {
 
-        if(fallDownTime > 1f && jumpCol.isGround == true)
+        if(fallDownTime > 1f && jumpCol.isGround == true && fallDownAble)
         {
 
             fallDownTime = 0;

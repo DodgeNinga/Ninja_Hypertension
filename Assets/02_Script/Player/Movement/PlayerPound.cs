@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerPound : PlayerBehaviorRoot
 {
 
+    [SerializeField] private PlayerBehaviorRoot[] removeEventScript;
+
     private HitSencer playerHitSencer;
     private bool isPounding = false;
 
@@ -26,8 +28,17 @@ public class PlayerPound : PlayerBehaviorRoot
 
         rigid.velocity -= new Vector2(0, 7);
         animator.SetPoundTrigger();
+        animator.fallDownAble = false;
+
         playerControllValue.isAnySkillAttack = true;
         isPounding = true;
+
+        foreach(var item in removeEventScript) 
+        {
+
+            item.RemoveEvent();
+        
+        }
 
         StartCoroutine(PoundEndChackCo());
 
@@ -41,7 +52,18 @@ public class PlayerPound : PlayerBehaviorRoot
         animator.SetPoundEndTrigger();
         isPounding = false;
         playerControllValue.isAnySkillAttack = false;
+
+        yield return new WaitForSeconds(0.2f);
+
         playerHitSencer.ChackHit("Pound");
+        animator.fallDownAble = true;
+
+        foreach (var item in removeEventScript)
+        {
+
+            item.AddEvent();
+
+        }
 
     }
 
