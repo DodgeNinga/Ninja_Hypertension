@@ -34,3 +34,12 @@ MonoBehaviour:
   - poolName: GolemEFT
     poolObj: {fileID: 8888938333651165221, guid: fd8995c4b530d024a91973cf4953cf1b, type: 3}
     poolSize: 30
+  - poolName: Shielder
+    poolObj: {fileID: 4903876398127961081, guid: 71af9a32b57b6a442be6122ed35444d8, type: 3}
+    poolSize: 30
+  - poolName: Mage
+    poolObj: {fileID: 6215187815364779874, guid: a803adf2844bbd248b7bc1ce10d3a636, type: 3}
+    poolSize: 30
+  - poolName: MageEffect
+    poolObj: {fileID: 1819197903223036677, guid: 77492a27d3af79549af9b036e6c3c59d, type: 3}
+    poolSize: 30

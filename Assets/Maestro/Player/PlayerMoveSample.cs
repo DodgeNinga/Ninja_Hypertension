@@ -21,7 +21,7 @@ public class PlayerMoveSample : MonoBehaviour
         {
             AIBrain _aiBrain;
             _aiBrain = FindObjectOfType<AIBrain>();
-            _aiBrain.CurrentHP = 0;
+            _aiBrain.HPDamage(10);
         }
     }
 }

@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class AttackAgent : MonoBehaviour
 {
+    protected GameObject Player;
     AIBrain _aiBrain;
     float cool;
     float atkv;
     private void Awake()
     {
+        Player = GameObject.Find("Player");
         _aiBrain = GetComponent<AIBrain>();
     }
 
@@ -22,16 +24,20 @@ public class AttackAgent : MonoBehaviour
         }
     }
 
-    public void OnAttackStart()
+    public virtual void OnAttackStart()
     {
-        Debug.Log(atkv); // 에니메이터 실행
+        if (Vector3.Distance(this.transform.position, _aiBrain.Player.transform.position) < _aiBrain.enemyData.atkRange)
+        {
+            Debug.Log(atkv);
+        }
+         // 에니메이터 실행
         //플레이어 데미지 주는 로직
-        _aiBrain.enemyCurrentState = EnemyAIState.Idle;
     }
 
     public void OnAttackEnd()
     {
-        
+        Debug.Log(cool);
+        _aiBrain.enemyCurrentState = EnemyAIState.Idle;
         StartCoroutine(Attacking());
     }
 

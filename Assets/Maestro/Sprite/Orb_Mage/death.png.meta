@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9380b1972114fff459db0a458d942f4f
+guid: 5eb9b25247d6b274f8280c24e7b0e35d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sweep Attack without VFX_0
+      name: death_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 171
-        width: 45.5
-        height: 19
+        y: 204
+        width: 39.666668
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2838eaef4a83aa046983c8e84255c5f3
-      internalID: -1348774444
+      spriteID: 63e533990fe5ca94e970e6842e20c421
+      internalID: -922802262
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sweep Attack without VFX_1
+      name: death_1
       rect:
         serializedVersion: 2
         x: 0
-        y: 152
-        width: 45.5
-        height: 19
+        y: 170
+        width: 39.666668
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc04c261f7a751846997f10c4dea8702
-      internalID: -1827523639
+      spriteID: 2e3d083d544d12e44812e0221b9c592f
+      internalID: 615404026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sweep Attack without VFX_2
+      name: death_2
       rect:
         serializedVersion: 2
         x: 0
-        y: 133
-        width: 45.5
-        height: 19
+        y: 136
+        width: 39.666668
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: baa683b392572044ea121313d51ed257
-      internalID: -353185731
+      spriteID: 84897e9ac149fc34da335b2021783ce5
+      internalID: 891341415
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sweep Attack without VFX_3
+      name: death_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 114
-        width: 45.5
-        height: 19
+        y: 102
+        width: 39.666668
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e3b0da4312f6e1498621245da06f6e3
-      internalID: -133265404
+      spriteID: d529bf807e92a174ea7669fae7588ffc
+      internalID: 184462006
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sweep Attack without VFX_4
+      name: death_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 95
-        width: 45.5
-        height: 19
+        y: 68
+        width: 39.666668
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 537642293792145479a5719c12a8fe27
-      internalID: 1158911944
+      spriteID: e37ef47790683b74f86e4866a7383fdb
+      internalID: 1064378630
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sweep Attack without VFX_5
+      name: death_5
       rect:
         serializedVersion: 2
-        x: 45
-        y: 76
-        width: 45.5
-        height: 19
+        x: 0
+        y: 34
+        width: 39.666668
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,83 +224,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0f7657b27eefdb45b5eb22acadc2c19
-      internalID: -1335186428
+      spriteID: bb0b11f7e80a86642a5ea73bcbb39ed6
+      internalID: -1957326801
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sweep Attack without VFX_6
+      name: death_6
       rect:
         serializedVersion: 2
-        x: 45
-        y: 57
-        width: 45.5
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f1085bc050789b74c8e62d39acc0eaa0
-      internalID: 1919190432
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sweep Attack without VFX_7
-      rect:
-        serializedVersion: 2
-        x: 45
-        y: 38
-        width: 45.5
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 000c71e1be7c28b408b9ce25d41c7815
-      internalID: 547577838
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sweep Attack without VFX_8
-      rect:
-        serializedVersion: 2
-        x: 45
-        y: 19
-        width: 45.5
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d8635fac2573d0e46bb15007ad357771
-      internalID: -1578764113
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sweep Attack without VFX_9
-      rect:
-        serializedVersion: 2
-        x: 45
+        x: 0
         y: 0
-        width: 45.5
-        height: 19
+        width: 39.666668
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -308,8 +245,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6306860524d2403448af0267599d9eb0
-      internalID: -278449091
+      spriteID: 33e9aa1a770284b4e908baa59813a4d7
+      internalID: -87869969
       vertices: []
       indices: 
       edges: []
@@ -325,16 +262,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sweep Attack without VFX_0: -1348774444
-      Sweep Attack without VFX_1: -1827523639
-      Sweep Attack without VFX_2: -353185731
-      Sweep Attack without VFX_3: -133265404
-      Sweep Attack without VFX_4: 1158911944
-      Sweep Attack without VFX_5: -1335186428
-      Sweep Attack without VFX_6: 1919190432
-      Sweep Attack without VFX_7: 547577838
-      Sweep Attack without VFX_8: -1578764113
-      Sweep Attack without VFX_9: -278449091
+      death_0: -922802262
+      death_1: 615404026
+      death_2: 891341415
+      death_3: 184462006
+      death_4: 1064378630
+      death_5: -1957326801
+      death_6: -87869969
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
