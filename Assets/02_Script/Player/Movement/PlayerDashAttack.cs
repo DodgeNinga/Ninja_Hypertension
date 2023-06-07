@@ -14,17 +14,24 @@ public class PlayerDashAttack : PlayerBehaviorRoot
 
     }
 
-    public override void AddEvent()
+    private void DashAttack()
     {
 
 
 
     }
 
+    public override void AddEvent()
+    {
+
+        actionSystem.OnDashAttackKeyPressEvent += DashAttack;
+
+    }
+
     public override void RemoveEvent()
     {
 
-
+        actionSystem.OnDashAttackKeyPressEvent -= DashAttack;
 
     }
 
