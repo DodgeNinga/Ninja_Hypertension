@@ -49,13 +49,13 @@ public class PlayerPound : PlayerBehaviorRoot
 
         yield return new WaitUntil(() => jumpCol.isGround);
 
-        animator.SetPoundEndTrigger();
         isPounding = false;
+        playerHitSencer.ChackHit("Pound");
         playerControllValue.isAnySkillAttack = false;
 
         yield return new WaitForSeconds(0.2f);
 
-        playerHitSencer.ChackHit("Pound");
+        animator.SetPoundEndTrigger();
         animator.fallDownAble = true;
 
         foreach (var item in removeEventScript)
