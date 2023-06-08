@@ -15,6 +15,7 @@ public class PlayerDashAttack : PlayerBehaviorRoot
     private ParticlePlayer particlePlayer;
     private PlayerInvincibility invincibility;
     private PlayerSoundManager soundManager;
+    private HitSencer hitSencer;
     private bool isDashHolding = false;
     private bool isSkillCoolDown = false;
 
@@ -28,6 +29,7 @@ public class PlayerDashAttack : PlayerBehaviorRoot
         playerMove = GetComponent<PlayerMove>();
         particlePlayer = transform.Find("ParticlePlayer").Find("DashParticle").GetComponent<ParticlePlayer>();
         soundManager = GetComponent<PlayerSoundManager>();
+        hitSencer = GetComponent<HitSencer>();
 
     }
 
@@ -39,6 +41,7 @@ public class PlayerDashAttack : PlayerBehaviorRoot
             playerControllValue.isAnySkillAttack ||
             isSkillCoolDown) return;
 
+        isSkillCoolDown = true;
         playerControllValue.isAnySkillAttack = true;
         isDashHolding = true;
         playerMove.SetMoveSpeed(1);
@@ -52,7 +55,6 @@ public class PlayerDashAttack : PlayerBehaviorRoot
 
         if(playerControllValue.isHoldAttack || !isDashHolding) return;
 
-        isDashHolding = false;
         animator.SetDashAttackHoldingEndTrigger();
         
         StartCoroutine(StartDashCo());
@@ -71,6 +73,11 @@ public class PlayerDashAttack : PlayerBehaviorRoot
     private void DashEnd()
     {
 
+        isDashHolding = false;
+        playerControllValue.isAnySkillAttack = false;
+        playerMove.SetMoveSpeed(-1);
+        hitSencer.ChackHit("DashAttack");
+
         foreach (var item in removeEvts)
         {
 
@@ -79,7 +86,6 @@ public class PlayerDashAttack : PlayerBehaviorRoot
 
         }
 
-        playerMove.SetMoveSpeed(-1);
 
     }
 
@@ -126,6 +132,8 @@ public class PlayerDashAttack : PlayerBehaviorRoot
         DashEnd();
 
         yield return new WaitForSeconds(skillCoolTime);
+
+        isSkillCoolDown = false;
 
     }
 

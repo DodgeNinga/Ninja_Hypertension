@@ -8402,6 +8402,9 @@ MonoBehaviour:
   - eventKey: Pound
     damage: 5
     randomValue: 3
+  - eventKey: DashAttack
+    damage: 15
+    randomValue: 3
 --- !u!114 &483244781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8621,10 +8624,31 @@ MonoBehaviour:
           m_CallState: 2
   - atkKey: Pound
     feedBackName: Hit
-    visible: 1
+    visible: 0
     gizmoColor: {r: 1, g: 0, b: 0.500896, a: 1}
     range: {x: 2.5, y: 1}
     offSet: {x: 0, y: -0.5}
+    hitEvt:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 483244780}
+          m_TargetAssemblyTypeName: PlayerDamageCaster, Assembly-CSharp
+          m_MethodName: CastingHoldAttackDamage
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - atkKey: DashAttack
+    feedBackName: Hit
+    visible: 1
+    gizmoColor: {r: 0, g: 0.19279957, b: 1, a: 1}
+    range: {x: 7, y: 2}
+    offSet: {x: -2, y: 0}
     hitEvt:
       m_PersistentCalls:
         m_Calls:
@@ -8711,7 +8735,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comboAbleTime: 0.2
-  attackDelayTime: 1
+  attackDelayTime: 0.5
 --- !u!251 &483244787
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -9031,7 +9055,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85ddda81ccafac3499e3faa6b90d78f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  removeEvts: []
+  removeEvts:
+  - {fileID: 483244794}
+  - {fileID: 483244783}
+  - {fileID: 483244786}
+  - {fileID: 483244789}
   dashPower: 20
   dashTime: 0.2
   skillCoolTime: 3
