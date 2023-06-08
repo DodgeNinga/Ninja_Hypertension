@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerDashAttack : PlayerBehaviorRoot
 {
 
+    [SerializeField] private PlayerBehaviorRoot[] removeEvts;
+
     private PlayerMove playerMove;
     private bool isDashHolding = false;
 
@@ -22,7 +24,9 @@ public class PlayerDashAttack : PlayerBehaviorRoot
     private void DashAttack()
     {
 
-        if (!jumpCol.isGround) return;
+        if (!jumpCol.isGround ||
+            playerControllValue.isHoldAttack ||
+            playerControllValue.isAnySkillAttack) return;
 
         playerControllValue.isAnySkillAttack = true;
         isDashHolding = true;
