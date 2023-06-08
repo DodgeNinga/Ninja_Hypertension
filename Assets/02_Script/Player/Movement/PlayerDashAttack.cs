@@ -22,9 +22,7 @@ public class PlayerDashAttack : PlayerBehaviorRoot
     private void DashAttack()
     {
 
-        if (!jumpCol.isGround ||
-            playerControllValue.isHoldAttack ||
-            playerControllValue.isAnySkillAttack) return;
+        if (!jumpCol.isGround) return;
 
         playerControllValue.isAnySkillAttack = true;
         isDashHolding = true;
@@ -37,10 +35,11 @@ public class PlayerDashAttack : PlayerBehaviorRoot
     private void EndHold()
     {
 
-        if(!playerControllValue.isHoldAttack || !isDashHolding) return;
+        if(playerControllValue.isHoldAttack || !isDashHolding) return;
 
         isDashHolding = false;
         animator.SetDashAttackHoldingEndTrigger();
+        playerMove.SetMoveSpeed(-1);
 
     }
 

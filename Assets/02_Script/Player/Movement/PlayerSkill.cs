@@ -143,7 +143,7 @@ public class PlayerSkill : PlayerBehaviorRoot
 
         }
 
-        if (!playerControllValue.isJumpAttack || !playerControllValue.isAnySkillAttack)
+        if (!playerControllValue.isJumpAttack && !playerControllValue.isAnySkillAttack)
         {
 
             currentLV = 1;
