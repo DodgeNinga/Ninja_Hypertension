@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerDashAttack : PlayerBehaviorRoot
 {
 
-    private bool isDashHolding = false;
     private PlayerMove playerMove;
+    private bool isDashHolding = false;
 
     protected override void Awake()
     {
