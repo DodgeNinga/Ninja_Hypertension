@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerDashAttack : PlayerBehaviorRoot
 {
 
+    private bool isDashHolding = false;
     private PlayerMove playerMove;
 
     protected override void Awake()
@@ -26,15 +27,20 @@ public class PlayerDashAttack : PlayerBehaviorRoot
             playerControllValue.isAnySkillAttack) return;
 
         playerControllValue.isAnySkillAttack = true;
+        isDashHolding = true;
         playerMove.SetMoveSpeed(1);
-        
+        animator.SetDashAttackTrigger();
+
 
     }
 
     private void EndHold()
     {
 
+        if(!playerControllValue.isHoldAttack || !isDashHolding) return;
 
+        isDashHolding = false;
+        animator.SetDashAttackHoldingEndTrigger();
 
     }
 

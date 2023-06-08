@@ -91,7 +91,6 @@ public class PlayerAnimator : MonoBehaviour
 
         }
 
-
     }
     private void ChackLanding()
     {
@@ -135,7 +134,6 @@ public class PlayerAnimator : MonoBehaviour
         animator.SetFloat(IsAirHash, jumpCol.isGround ? 0 : 1);
 
     }
-    public void SetJump() => animator.SetTrigger(JumpHash);
     public void SetAttackTrigger()
     {
 
@@ -149,6 +147,7 @@ public class PlayerAnimator : MonoBehaviour
     public void SetComboCount(int count) => animator.SetInteger(ComboCountHash, count);
     public void ResetComboCount() => animator.SetInteger(ComboCountHash, 0);
     public void SetEndAttack() => animator.SetTrigger(AttackEndHash);
+    public void SetDashAttackHoldingEndTrigger() => animator.SetTrigger(DashAttackHoldingEndTriggerHash);
     public void SetSkillHoldTriggerHash() => animator.SetTrigger(SkillHoldTriggerHash);
     public void ResetLandingTrigger() => animator.ResetTrigger(LandingTriggerHash);
     public void SetDashTrigger() => animator.SetTrigger(DashTriggerHash);
@@ -159,6 +158,6 @@ public class PlayerAnimator : MonoBehaviour
     public void SetPoundTrigger() => animator.SetTrigger(PoundTriggerHash);
     public void SetPoundEndTrigger() => animator.SetTrigger(PoundEndTriggerHash);
     public void SetDashAttackTrigger() => animator.SetTrigger(DashAttackTriggerHash);
-    public void SetDashAttackHoldingEndTrigger() => animator.SetTrigger(DashAttackHoldingEndTriggerHash);
+    public void SetJump() => animator.SetTrigger(JumpHash);
 
 }
