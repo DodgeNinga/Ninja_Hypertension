@@ -5,12 +5,16 @@ using UnityEngine;
 public class PlayerDashAttack : PlayerBehaviorRoot
 {
 
+    private PlayerMove playerMove;
+
     protected override void Awake()
     {
         
         base.Awake();
 
         AddEvent();
+
+        playerMove = GetComponent<PlayerMove>();
 
     }
 
@@ -21,7 +25,15 @@ public class PlayerDashAttack : PlayerBehaviorRoot
             playerControllValue.isHoldAttack ||
             playerControllValue.isAnySkillAttack) return;
 
-        
+        playerControllValue.isAnySkillAttack = true;
+        playerMove.SetMoveSpeed(1);
+
+    }
+
+    private void EndHold()
+    {
+
+
 
     }
 
@@ -29,6 +41,7 @@ public class PlayerDashAttack : PlayerBehaviorRoot
     {
 
         actionSystem.OnDashAttackKeyPressEvent += DashAttack;
+        actionSystem.OnHoldSkillKeyUpEvent += EndHold;
 
     }
 
@@ -36,6 +49,7 @@ public class PlayerDashAttack : PlayerBehaviorRoot
     {
 
         actionSystem.OnDashAttackKeyPressEvent -= DashAttack;
+        actionSystem.OnHoldSkillKeyUpEvent -= EndHold;
 
     }
 
