@@ -27,6 +27,7 @@ public class PlayerDashAttack : PlayerBehaviorRoot
 
         playerControllValue.isAnySkillAttack = true;
         playerMove.SetMoveSpeed(1);
+        
 
     }
 
