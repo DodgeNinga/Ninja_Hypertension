@@ -58,11 +58,26 @@ public class PlayerDashAttack : PlayerBehaviorRoot
         StartCoroutine(StartDashCo());
         StartCoroutine(DashEndCo());
 
+        foreach(var item in removeEvts) 
+        {
+            
+            item.RemoveEvent();
+
+        
+        }
 
     }
 
     private void DashEnd()
     {
+
+        foreach (var item in removeEvts)
+        {
+
+            item.AddEvent();
+
+
+        }
 
         playerMove.SetMoveSpeed(-1);
 
