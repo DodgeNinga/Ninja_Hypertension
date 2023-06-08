@@ -17,6 +17,10 @@ public class PlayerDashAttack : PlayerBehaviorRoot
     private void DashAttack()
     {
 
+        if (!jumpCol.isGround ||
+            playerControllValue.isHoldAttack ||
+            playerControllValue.isAnySkillAttack) return;
+
         
 
     }
