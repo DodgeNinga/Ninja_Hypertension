@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SweepEnemy
+  m_Controller: {fileID: 9100000, guid: 57ebe47973d741e4e93cc92d4aa9a06f, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: f5a6474af27415a4d84cbd732298e6af, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4a041c37b4f0f7b4a8326e83ae9af463, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: b82c9a0c97029e443b69c5b795ea4891, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4a0221f5c8b72b4438c6e24667c14f8c, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 6378eda1aec7af147b7849b251e89941, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4eed699e09fd4d74ca57ba5d3a7bc7f9, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 7641f69ddb5d74e43b1f4f564f11062c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 285b24693582ed448a876b89e9bf09a9, type: 2}

@@ -43,7 +43,6 @@ public class AttackAgent : MonoBehaviour
 
     IEnumerator Attacking()
     {
-        
         yield return new WaitForSeconds(cool);
         _aiBrain.isAttacking = false;
         _aiBrain.enemyCurrentState = EnemyAIState.Trace;
