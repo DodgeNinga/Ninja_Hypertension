@@ -6,11 +6,15 @@ using UnityEngine;
 public class PlayerDashAttack : PlayerBehaviorRoot
 {
 
+    private readonly int OutLineValueHash = Shader.PropertyToID("_OuterOutlineFade");
+    private readonly int OutLineColorHash = Shader.PropertyToID("_OuterOutlineColor");
+
     [SerializeField] private PlayerBehaviorRoot[] removeEvts;
     [SerializeField] private float dashPower;
     [SerializeField] private float dashTime;
     [SerializeField] private float skillCoolTime;
 
+    private SpriteRenderer playerRenderer;
     private PlayerMove playerMove;
     private ParticlePlayer particlePlayer;
     private PlayerInvincibility invincibility;
@@ -30,6 +34,7 @@ public class PlayerDashAttack : PlayerBehaviorRoot
         particlePlayer = transform.Find("ParticlePlayer").Find("DashParticle").GetComponent<ParticlePlayer>();
         soundManager = GetComponent<PlayerSoundManager>();
         hitSencer = GetComponent<HitSencer>();
+        invincibility = GetComponent<PlayerInvincibility>();
 
     }
 
@@ -41,6 +46,10 @@ public class PlayerDashAttack : PlayerBehaviorRoot
             playerControllValue.isAnySkillAttack ||
             isSkillCoolDown) return;
 
+        spriteRenderer.material.SetFloat(OutLineValueHash, 1);
+        spriteRenderer.material.SetColor(OutLineColorHash, Color.white);
+
+        invincibility.isInvincibility = true;
         isSkillCoolDown = true;
         playerControllValue.isAnySkillAttack = true;
         isDashHolding = true;
@@ -60,7 +69,9 @@ public class PlayerDashAttack : PlayerBehaviorRoot
         StartCoroutine(StartDashCo());
         StartCoroutine(DashEndCo());
 
-        foreach(var item in removeEvts) 
+        spriteRenderer.material.SetFloat(OutLineValueHash, 0);
+
+        foreach (var item in removeEvts) 
         {
             
             item.RemoveEvent();
@@ -75,6 +86,7 @@ public class PlayerDashAttack : PlayerBehaviorRoot
 
         isDashHolding = false;
         playerControllValue.isAnySkillAttack = false;
+        invincibility.isInvincibility = false;
         playerMove.SetMoveSpeed(-1);
         hitSencer.ChackHit("DashAttack");
 

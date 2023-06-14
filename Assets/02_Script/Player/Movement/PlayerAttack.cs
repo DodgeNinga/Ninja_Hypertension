@@ -40,7 +40,7 @@ public class PlayerAttack : PlayerBehaviorRoot
         playerDash.RemoveEvent();
 
         StopAllCoroutines();
-        playerMove.SetMoveAble(0);
+        playerMove.SetMoveSpeed(0.3f);
         comboCnt++;
 
         animator.SetAttackTrigger();
@@ -73,7 +73,7 @@ public class PlayerAttack : PlayerBehaviorRoot
         {
 
             animator.SetEndAttack();
-            playerMove.SetMoveAble(1);
+            playerMove.SetMoveSpeed(-1);
             playerJump.jumpAble = true;
             playerFlip.flipAble = true;
 
@@ -90,6 +90,7 @@ public class PlayerAttack : PlayerBehaviorRoot
 
         comboCnt = 0;
         playerMove.SetMoveAble(1);
+        playerMove.SetMoveSpeed(-1);
         playerFlip.flipAble = true;
         playerJump.jumpAble = true;
         attackAble = true;

@@ -6,6 +6,8 @@ using UnityEngine;
 public class PlayerAnimator : MonoBehaviour
 {
 
+    #region Hash    
+
     private readonly int MoveVelXHash = Animator.StringToHash("MoveVelX");
     private readonly int MoveVelYHash = Animator.StringToHash("MoveVelY");
     private readonly int JumpHash = Animator.StringToHash("Jump");
@@ -29,6 +31,9 @@ public class PlayerAnimator : MonoBehaviour
     private readonly int PoundEndTriggerHash = Animator.StringToHash("PoundEndTrigger");
     private readonly int DashAttackTriggerHash = Animator.StringToHash("DashAttackTrigger");
     private readonly int DashAttackHoldingEndTriggerHash = Animator.StringToHash("DashAttackHoldingEndTrigger");
+    private readonly int IsRunHash = Animator.StringToHash("IsRun");
+
+    #endregion
 
     private MargedSencer margedSencer;
     private PlayerFlip playerFlip;
@@ -141,6 +146,8 @@ public class PlayerAnimator : MonoBehaviour
         animator.SetTrigger(AttackTriggerHash);
 
     }
+
+    public void SetIsRun(float value) => animator.SetFloat(IsRunHash, value);
     public void SetSkillHoldHash(bool value) => animator.SetBool(SkillHoldHash, value);
     public void SetIsDash(bool value) => animator.SetBool(IsDashHash, value);
     public void SetIsHit(bool value) => animator.SetBool(IsHitHash, value); 
