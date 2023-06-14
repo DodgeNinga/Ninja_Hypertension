@@ -101,7 +101,7 @@ Animator:
   m_GameObject: {fileID: 1164767802530098175}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: af482928d3d7fc44c98e26b8cbb24a1b, type: 2}
+  m_Controller: {fileID: 22100000, guid: 8ffef7093de0658408c46a9ce14461ad, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyCurrentState: 0
   Player: {fileID: 0}
-  enemyData: {fileID: 11400000, guid: e4d157e00b179774abc4c32581698498, type: 2}
+  enemyData: {fileID: 11400000, guid: 1d0a31b0c2d56874dbcf3699f078dfde, type: 2}
   TraceEvent:
     m_PersistentCalls:
       m_Calls:
@@ -265,3 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3ce42e30551226418988ae3f8a97c41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sweeperOvCon: {fileID: 22100000, guid: 8ffef7093de0658408c46a9ce14461ad, type: 2}
+  _attackClipArr:
+  - {fileID: 7400000, guid: 4a041c37b4f0f7b4a8326e83ae9af463, type: 2}
+  - {fileID: 7400000, guid: 156618b53375cae4ca468d87b61b42e9, type: 2}

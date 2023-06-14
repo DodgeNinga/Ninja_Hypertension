@@ -516,12 +516,20 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4903876398127961087, guid: 71af9a32b57b6a442be6122ed35444d8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4903876398127961087, guid: 71af9a32b57b6a442be6122ed35444d8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4903876398127961087, guid: 71af9a32b57b6a442be6122ed35444d8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.76
       objectReference: {fileID: 0}
     - target: {fileID: 4903876398127961087, guid: 71af9a32b57b6a442be6122ed35444d8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4903876398127961087, guid: 71af9a32b57b6a442be6122ed35444d8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -631,7 +639,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7831690989533327369, guid: 8d368560d194bd143bd3f5655760f791, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7831690989533327375, guid: 8d368560d194bd143bd3f5655760f791, type: 3}
       propertyPath: m_RootOrder
@@ -686,10 +694,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1164767802530098168, guid: 9c09ed2872abf72429623b9f7d9a3768, type: 3}
-      propertyPath: enemyData
-      value: 
-      objectReference: {fileID: 11400000, guid: 1d0a31b0c2d56874dbcf3699f078dfde, type: 2}
     - target: {fileID: 1164767802530098169, guid: 9c09ed2872abf72429623b9f7d9a3768, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -734,13 +738,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1164767802530098171, guid: 9c09ed2872abf72429623b9f7d9a3768, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 22100000, guid: 8ffef7093de0658408c46a9ce14461ad, type: 2}
     - target: {fileID: 1164767802530098175, guid: 9c09ed2872abf72429623b9f7d9a3768, type: 3}
       propertyPath: m_Name
       value: Sweeper
+      objectReference: {fileID: 0}
+    - target: {fileID: 1164767802530098175, guid: 9c09ed2872abf72429623b9f7d9a3768, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c09ed2872abf72429623b9f7d9a3768, type: 3}

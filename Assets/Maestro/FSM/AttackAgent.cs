@@ -8,13 +8,13 @@ public class AttackAgent : MonoBehaviour
     AIBrain _aiBrain;
     float cool;
     float atkv;
-    private void Awake()
+    protected void Awake()
     {
         Player = GameObject.Find("Player");
         _aiBrain = GetComponent<AIBrain>();
     }
 
-    public void AttackStart(float atkVal, float atkCool)
+    public virtual void AttackStart(float atkVal, float atkCool)
     {
         if(!_aiBrain.isAttacking)
         {
@@ -36,7 +36,6 @@ public class AttackAgent : MonoBehaviour
 
     public void OnAttackEnd()
     {
-        Debug.Log(cool);
         _aiBrain.enemyCurrentState = EnemyAIState.Idle;
         StartCoroutine(Attacking());
     }
