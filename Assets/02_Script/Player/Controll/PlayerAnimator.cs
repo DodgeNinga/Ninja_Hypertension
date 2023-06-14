@@ -6,6 +6,8 @@ using UnityEngine;
 public class PlayerAnimator : MonoBehaviour
 {
 
+    #region Hash    
+
     private readonly int MoveVelXHash = Animator.StringToHash("MoveVelX");
     private readonly int MoveVelYHash = Animator.StringToHash("MoveVelY");
     private readonly int JumpHash = Animator.StringToHash("Jump");
@@ -27,6 +29,11 @@ public class PlayerAnimator : MonoBehaviour
     private readonly int RollingEndTriggerHash = Animator.StringToHash("RollingEndTrigger");
     private readonly int PoundTriggerHash = Animator.StringToHash("PoundTrigger");
     private readonly int PoundEndTriggerHash = Animator.StringToHash("PoundEndTrigger");
+    private readonly int DashAttackTriggerHash = Animator.StringToHash("DashAttackTrigger");
+    private readonly int DashAttackHoldingEndTriggerHash = Animator.StringToHash("DashAttackHoldingEndTrigger");
+    private readonly int IsRunHash = Animator.StringToHash("IsRun");
+
+    #endregion
 
     private MargedSencer margedSencer;
     private PlayerFlip playerFlip;
@@ -89,7 +96,6 @@ public class PlayerAnimator : MonoBehaviour
 
         }
 
-
     }
     private void ChackLanding()
     {
@@ -133,12 +139,6 @@ public class PlayerAnimator : MonoBehaviour
         animator.SetFloat(IsAirHash, jumpCol.isGround ? 0 : 1);
 
     }
-    public void SetJump()
-    {
-
-        animator.SetTrigger(JumpHash);
-
-    }
     public void SetAttackTrigger()
     {
 
@@ -146,65 +146,25 @@ public class PlayerAnimator : MonoBehaviour
         animator.SetTrigger(AttackTriggerHash);
 
     }
-    public void SetComboCount(int count)
-    {
 
-        animator.SetInteger(ComboCountHash, count);
-
-    }
-    public void ResetComboCount()
-    {
-
-        animator.SetInteger(ComboCountHash, 0);
-        
-    }
-    public void SetEndAttack()
-    {
-
-        animator.SetTrigger(AttackEndHash);
-
-    }
-    public void SetSkillHoldHash(bool value)
-    {
-
-        animator.SetBool(SkillHoldHash, value);
-
-    }
-    public void SetSkillHoldTriggerHash()
-    {
-
-        animator.SetTrigger(SkillHoldTriggerHash);
-
-    }
-    public void ResetLandingTrigger()
-    {
-
-        animator.ResetTrigger(LandingTriggerHash);
-
-    }
-    public void SetDashTrigger()
-    {
-
-        animator.SetTrigger(DashTriggerHash);
-
-    }
-    public void SetIsDash(bool value) 
-    {
-        
-        animator.SetBool(IsDashHash, value);
-    
-    }
-    public void SetDieTrigger()
-    {
-
-        animator.SetTrigger(DieTriggerHash);
-
-    }
+    public void SetIsRun(float value) => animator.SetFloat(IsRunHash, value);
+    public void SetSkillHoldHash(bool value) => animator.SetBool(SkillHoldHash, value);
+    public void SetIsDash(bool value) => animator.SetBool(IsDashHash, value);
     public void SetIsHit(bool value) => animator.SetBool(IsHitHash, value); 
+    public void SetComboCount(int count) => animator.SetInteger(ComboCountHash, count);
+    public void ResetComboCount() => animator.SetInteger(ComboCountHash, 0);
+    public void SetEndAttack() => animator.SetTrigger(AttackEndHash);
+    public void SetDashAttackHoldingEndTrigger() => animator.SetTrigger(DashAttackHoldingEndTriggerHash);
+    public void SetSkillHoldTriggerHash() => animator.SetTrigger(SkillHoldTriggerHash);
+    public void ResetLandingTrigger() => animator.ResetTrigger(LandingTriggerHash);
+    public void SetDashTrigger() => animator.SetTrigger(DashTriggerHash);
+    public void SetDieTrigger() => animator.SetTrigger(DieTriggerHash);
     public void SetJumpAttackTrigger() => animator.SetTrigger(JumpAttackTriggerHash);
     public void SetRollingTrigger() => animator.SetTrigger(RollingTriggerHash);
     public void SetRollingEndTrigger() => animator.SetTrigger(RollingEndTriggerHash);
     public void SetPoundTrigger() => animator.SetTrigger(PoundTriggerHash);
     public void SetPoundEndTrigger() => animator.SetTrigger(PoundEndTriggerHash);
+    public void SetDashAttackTrigger() => animator.SetTrigger(DashAttackTriggerHash);
+    public void SetJump() => animator.SetTrigger(JumpHash);
 
 }

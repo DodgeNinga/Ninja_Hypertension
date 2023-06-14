@@ -77,6 +77,7 @@ public class PlayerSkill : PlayerBehaviorRoot
         playerDash.AddEvent();
         playerMove.SetMoveSpeed(-1);
         playerControllValue.isHoldAttack = false;
+        playerControllValue.isAnySkillAttack = false;
 
     }
 
@@ -143,13 +144,14 @@ public class PlayerSkill : PlayerBehaviorRoot
 
         }
 
-        if (!playerControllValue.isJumpAttack)
+        if (!playerControllValue.isJumpAttack && !playerControllValue.isAnySkillAttack)
         {
 
             currentLV = 1;
 
             isShowAnime = true;
             playerControllValue.isHoldAttack = true;
+            playerControllValue.isAnySkillAttack = true;
 
             spriteRenderer.material.SetFloat(OutLineValueHash, 1);
             playerMove.SetMoveSpeed(holdMoveSpeed);

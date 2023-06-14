@@ -8,7 +8,6 @@ public class PlayerMove : PlayerBehaviorRoot
     [SerializeField] private float moveSpeed;
 
     private float currentSpeed;
-
     private bool moveAble = true;
 
     protected override void Awake()
@@ -28,6 +27,24 @@ public class PlayerMove : PlayerBehaviorRoot
         if (!moveAble) return;
 
         rigid.velocity = new Vector2(inputX * currentSpeed, rigid.velocity.y);
+
+    }
+
+    private void Run()
+    {
+
+        if (playerControllValue.isAnySkillAttack) return;
+
+        currentSpeed = currentSpeed * 1.5f;
+        animator.SetIsRun(1);
+
+    }
+
+    private void EndRun()
+    {
+
+        currentSpeed = moveSpeed;
+        animator.SetIsRun(0);
 
     }
 
@@ -81,6 +98,8 @@ public class PlayerMove : PlayerBehaviorRoot
     {
 
         actionSystem.OnHorizontalEvent += Move;
+        actionSystem.OnRunKeyPressEvent += Run;
+        actionSystem.OnRunKeyUpEvent += EndRun;
 
     }
 
@@ -88,6 +107,8 @@ public class PlayerMove : PlayerBehaviorRoot
     {
 
         actionSystem.OnHorizontalEvent -= Move;
+        actionSystem.OnRunKeyPressEvent -= Run;
+        actionSystem.OnRunKeyUpEvent -= EndRun;
 
     }
 
