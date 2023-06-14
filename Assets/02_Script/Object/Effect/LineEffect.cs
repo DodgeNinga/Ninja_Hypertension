@@ -21,7 +21,7 @@ public class LineEffect : MonoBehaviour
     public void Show()
     {
 
-        transform.eulerAngles = new Vector3(0, Random.Range(0, 360f), 0);
+        transform.eulerAngles = new Vector3(0, 0, Random.Range(0, 360f));
 
         spriteRenderer.color = Color.white;
 

@@ -1,18 +1,23 @@
+using FD.Dev;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LineEffectFeedBack : MonoBehaviour
+public class LineEffectFeedBack : FeedBack
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void CreateFeedBack()
     {
-        
+
+        var obj = FAED.Pop("LineEffect", transform.position, Quaternion.identity);
+
+        var compo = obj.GetComponent<LineEffect>();
+        compo.Show();
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void EndFeedBack()
     {
-        
+
+
     }
 }
