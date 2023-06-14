@@ -43,3 +43,9 @@ MonoBehaviour:
   - poolName: MageEffect
     poolObj: {fileID: 1819197903223036677, guid: 77492a27d3af79549af9b036e6c3c59d, type: 3}
     poolSize: 30
+  - poolName: Sweeper
+    poolObj: {fileID: 1164767802530098175, guid: 9c09ed2872abf72429623b9f7d9a3768, type: 3}
+    poolSize: 30
+  - poolName: AssesinEffect
+    poolObj: {fileID: 3726927892817030318, guid: 39bdcadee6ff59d40ad1e46eb159937f, type: 3}
+    poolSize: 30

@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 7831690989533327373}
   - component: {fileID: 7831690989533327374}
   - component: {fileID: 7831690989533327363}
-  - component: {fileID: 7831690989533327372}
   - component: {fileID: 7831690989533327362}
   - component: {fileID: 7831690989533327361}
   - component: {fileID: 3271632975917824441}
+  - component: {fileID: 860126908}
   m_Layer: 0
   m_Name: Assesin
   m_TagString: Untagged
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1017102615, guid: 29852077ae3bbf847bedb2284f6c9b1d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -144,7 +144,7 @@ MonoBehaviour:
   AttackEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7831690989533327372}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AttackAgent, Assembly-CSharp
         m_MethodName: AttackStart
         m_Mode: 0
@@ -217,18 +217,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2c350974ab700746a1857f536fe21a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7831690989533327372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7831690989533327369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9a7b25915b79e14d88c32f65e3c5a24, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7831690989533327362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,3 +253,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e91807234c3416d45a5080dddd22ddf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &860126908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7831690989533327369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44e10a6c56a05fd478803d97f855e105, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EffectPrefab: {fileID: 3726927892817030318, guid: 39bdcadee6ff59d40ad1e46eb159937f, type: 3}

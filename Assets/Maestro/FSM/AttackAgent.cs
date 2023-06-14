@@ -6,8 +6,8 @@ public class AttackAgent : MonoBehaviour
 {
     protected GameObject Player;
     AIBrain _aiBrain;
-    float cool;
-    float atkv;
+    protected float cool;
+    protected float atkv;
     protected void Awake()
     {
         Player = GameObject.Find("Player");
