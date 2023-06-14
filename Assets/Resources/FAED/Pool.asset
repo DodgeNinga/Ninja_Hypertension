@@ -43,3 +43,6 @@ MonoBehaviour:
   - poolName: MageEffect
     poolObj: {fileID: 1819197903223036677, guid: 77492a27d3af79549af9b036e6c3c59d, type: 3}
     poolSize: 30
+  - poolName: LineEffect
+    poolObj: {fileID: 1759598715794826875, guid: e12518ff16ceb494ca749955d3a5a5c6, type: 3}
+    poolSize: 30
