@@ -7,7 +7,6 @@ public class AssasinAtkEffect : MonoBehaviour
 {
     GameObject Player;
     public float damage;
-
     
     public void CalAttack()
     {
