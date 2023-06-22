@@ -1,0 +1,1069 @@
+fileFormatVersion: 2
+guid: 056d82b5306cc2b49a44e62c0c0b826b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: B_witch-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf6cc83281f6aaf49b70458b4f64accc
+      internalID: -1125439186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecb2f09e47b895840bb66c99f6f6a457
+      internalID: -1491245619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bedee3b9f0e25c64a96c4920e20789bb
+      internalID: -1718100452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87946ff03219b3d41b681c99e9b4ce94
+      internalID: 303108584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e54ac801128b934b81b1f12a4d7f50a
+      internalID: 831775323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de58488157ba3084c91c01b9b27083f7
+      internalID: 969267003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c7565be3828eb4094532326f07296e
+      internalID: 1622959538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9174d7015809a8544a8bf98e886b7bef
+      internalID: -1865052388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bc0d4c8f3f94f44c9b8ae2afdd727f1
+      internalID: 763383884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c646022002a59f847b2ef8d49c257d5d
+      internalID: -728613866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15268f366cd94d1428cc02ca38040787
+      internalID: -1583285510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7b39fb3aecbe9541bf3f9392739d947
+      internalID: -1250156741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60f5c694ec4b0a84f847592b92ea6597
+      internalID: -216045718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89a50443023792c44bbb8c087b036b12
+      internalID: 875385899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe09f4312a86b7a4791317dccab7fd01
+      internalID: 518654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1665
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 663ee788d567ca14c94c61b7e53e7757
+      internalID: -1945247599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0c79c1a970afd2408337e9d4ee8bf15
+      internalID: -1434927657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 1887
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f9b7803fcdb5ab4c81468fa758947b4
+      internalID: 1862291088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 1998
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6deb62026efe5234d81f3ddb1e520f83
+      internalID: 1868523824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 2109
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41484b6004ecd834f9688d8d7dda6bec
+      internalID: 1864347064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 2220
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b071b5e5b0d02441a4a887d7ea035d8
+      internalID: -1273787750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 2331
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a208184467f58d4c96ecfbf38d657e4
+      internalID: 2025426507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 2442
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8368c1c9d5d0e8d4a92d63c992b2f819
+      internalID: -137299018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 2553
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61d4d636b49b24a44bcb9af33aed2a8d
+      internalID: 1904396034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 2664
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48e853cf90245b641b1824919ffa3c88
+      internalID: -766757007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 2775
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df5c71e75e593a745905922627fce146
+      internalID: 2091562679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 2886
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 893c85dc88886164b82693ee55cba8a0
+      internalID: -2007689366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 2997
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f6b83d90deeab04095b8374196fff63
+      internalID: -1397874251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 3108
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0bbff8936ded014c95b45bb1d7204b3
+      internalID: -1977365646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 3219
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d497f3df2cc3414898b3bfd4ce2376d
+      internalID: 352288484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 3330
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c400fedefee97f41a34ec05224fb2bd
+      internalID: -962592941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 3441
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27d963398348f474197a36b005c31243
+      internalID: 1782788815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 3552
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1a329633ed4c5e4aadd069bd72cd214
+      internalID: -743952618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 3663
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13d3e58dd1587144f8e078e919e96934
+      internalID: 475995698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 3774
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b500e9b118340c48b059cc098ae9f4b
+      internalID: 1662821628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 3885
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 601f9fc365f618243926a98f6fe2991c
+      internalID: -169496615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 3996
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6d432c61af0c114fb4f005c6364d0a5
+      internalID: -911238569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 4107
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3974403f6ef39a04794d0dc59d5ec399
+      internalID: 1338258843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 4218
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3493e39760dbb5b43adb5fa57f8ca073
+      internalID: -188316671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 4329
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d028a7ed4fbea79488aa2e6735a3c788
+      internalID: 899391150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 4440
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 859de13a5573119448adcbf281eab494
+      internalID: 914337393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 4551
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fc3594ca38a8fd49b6d9412b263a661
+      internalID: 795167682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B_witch-Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 4662
+        y: 0
+        width: 111
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 000a9fdc307952342b9b310f6a7ccda7
+      internalID: -456402633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      B_witch-Sheet_0: -1125439186
+      B_witch-Sheet_1: -1491245619
+      B_witch-Sheet_10: -1583285510
+      B_witch-Sheet_11: -1250156741
+      B_witch-Sheet_12: -216045718
+      B_witch-Sheet_13: 875385899
+      B_witch-Sheet_14: 518654
+      B_witch-Sheet_15: -1945247599
+      B_witch-Sheet_16: -1434927657
+      B_witch-Sheet_17: 1862291088
+      B_witch-Sheet_18: 1868523824
+      B_witch-Sheet_19: 1864347064
+      B_witch-Sheet_2: -1718100452
+      B_witch-Sheet_20: -1273787750
+      B_witch-Sheet_21: 2025426507
+      B_witch-Sheet_22: -137299018
+      B_witch-Sheet_23: 1904396034
+      B_witch-Sheet_24: -766757007
+      B_witch-Sheet_25: 2091562679
+      B_witch-Sheet_26: -2007689366
+      B_witch-Sheet_27: -1397874251
+      B_witch-Sheet_28: -1977365646
+      B_witch-Sheet_29: 352288484
+      B_witch-Sheet_3: 303108584
+      B_witch-Sheet_30: -962592941
+      B_witch-Sheet_31: 1782788815
+      B_witch-Sheet_32: -743952618
+      B_witch-Sheet_33: 475995698
+      B_witch-Sheet_34: 1662821628
+      B_witch-Sheet_35: -169496615
+      B_witch-Sheet_36: -911238569
+      B_witch-Sheet_37: 1338258843
+      B_witch-Sheet_38: -188316671
+      B_witch-Sheet_39: 899391150
+      B_witch-Sheet_4: 831775323
+      B_witch-Sheet_40: 914337393
+      B_witch-Sheet_41: 795167682
+      B_witch-Sheet_42: -456402633
+      B_witch-Sheet_5: 969267003
+      B_witch-Sheet_6: 1622959538
+      B_witch-Sheet_7: -1865052388
+      B_witch-Sheet_8: 763383884
+      B_witch-Sheet_9: -728613866
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
