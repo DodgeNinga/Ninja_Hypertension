@@ -26,7 +26,7 @@ public class HitSencer : MonoBehaviour
             foreach(var item in hitArr)
             {
 
-                item.transform.GetComponent<FeedBackManager>()?.PlayFeedback("Hit");
+                item.transform.GetComponent<FeedBackManager>()?.PlayFeedback(hit.feedBackName);
                 hit.hitEvt?.Invoke(item.GetComponent<HPObject>(), hit.atkKey);
 
             }
