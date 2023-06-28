@@ -1,0 +1,178 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BossSheet
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 4e375bd44d64eee43bc930075069a97b, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: a99b6a00956de45499042081dd7a26fd, type: 3}
+  - {fileID: 21300000, guid: e3e4213045e80d34dabde2f2ad52f2fb, type: 3}
+  - {fileID: 21300000, guid: 3ec89630911f86e4e9988ca0bb40b11f, type: 3}
+  - {fileID: 21300000, guid: 0dd32b70fba299c43b870738c6951595, type: 3}
+  - {fileID: 21300000, guid: 07103090865c0044ebfb651753dc1364, type: 3}
+  - {fileID: 21300000, guid: 11138fc024a289045bd23f849b0fcde4, type: 3}
+  - {fileID: 21300000, guid: 2098f7d09d34a6044b1299195c206cdb, type: 3}
+  - {fileID: 21300000, guid: dc987cf0d88027a4194169ecefd3d011, type: 3}
+  - {fileID: 21300000, guid: 9101d0111ee602d4ca5f37b19b88812f, type: 3}
+  - {fileID: 21300000, guid: 613995813534a544da8ec42c370d716c, type: 3}
+  - {fileID: 21300000, guid: 4e8b3f12d9e32f04181253bdce3a4a93, type: 3}
+  - {fileID: 21300000, guid: c4afa822b2931714784fe2ce05778b7c, type: 3}
+  - {fileID: 21300000, guid: 80234a228c85d724fa6595f2253be1d2, type: 3}
+  - {fileID: 21300000, guid: 2e91f352bb84f294696c3cd5d9157cb7, type: 3}
+  - {fileID: 21300000, guid: ab9cda62bbcef1c448228ff38496359d, type: 3}
+  - {fileID: 21300000, guid: 468d659201ec46d48ae1a823230cfe26, type: 3}
+  - {fileID: 21300000, guid: feb644b2281c5df489202571f4252951, type: 3}
+  - {fileID: 21300000, guid: e0e2c6d2ee6bab442ae564d3715c20bb, type: 3}
+  - {fileID: 21300000, guid: 4162b8231d9712740902d78a71c71635, type: 3}
+  - {fileID: 21300000, guid: a8b651447fc185b428ad50bf72a7f9a5, type: 3}
+  - {fileID: 21300000, guid: 03af434446c673d49897eefa9688d178, type: 3}
+  - {fileID: 21300000, guid: 896307a40bf1e7e46b37cee403794c0b, type: 3}
+  - {fileID: 21300000, guid: 092c1fa4ae24089479ea4239c4e677cc, type: 3}
+  - {fileID: 21300000, guid: 4ad230d48aa1d3547af4e4b27f61aa4f, type: 3}
+  - {fileID: 21300000, guid: d99c1dd43d6a4da47904b44cefc980b4, type: 3}
+  - {fileID: 21300000, guid: 0cf9bce43d802d1489036444efaa36f9, type: 3}
+  - {fileID: 21300000, guid: e1dc831558cecc040947e99f6bc9ed67, type: 3}
+  - {fileID: 21300000, guid: 2b2aec552c1a29c41b45974210ddc240, type: 3}
+  - {fileID: 21300000, guid: c3227db54c47e4b4387699e00f995901, type: 3}
+  - {fileID: 21300000, guid: b92435c5dfbf974448903e6fa4b47d7f, type: 3}
+  - {fileID: 21300000, guid: 4a55cee5317c5074699f0822be5b0ba4, type: 3}
+  - {fileID: 21300000, guid: bbd8be06689c4f941a776caf3c7c0b62, type: 3}
+  - {fileID: 21300000, guid: cacfe866829054e4b89f078e626b953d, type: 3}
+  - {fileID: 21300000, guid: eaabb586250e5bc498e61bb9c59e0c6f, type: 3}
+  - {fileID: 21300000, guid: 206776a6329aab240b86c3b793e4dc4d, type: 3}
+  - {fileID: 21300000, guid: 44c722f6940ba254d842184cf3bee6df, type: 3}
+  - {fileID: 21300000, guid: 7546f0b7669af1f4aaaf2c37219dbb49, type: 3}
+  - {fileID: 21300000, guid: 671a2a08a9dfc534e9330e9b96bbe9c3, type: 3}
+  - {fileID: 21300000, guid: 26de4bd86104c0a49a01b02fd17008c5, type: 3}
+  - {fileID: 21300000, guid: f9815ff84962aeb4fbf73c33ad8b14be, type: 3}
+  - {fileID: 21300000, guid: 9ad8579921769dc4d971fafa7e5178bf, type: 3}
+  - {fileID: 21300000, guid: 1019bbe93fb82754ca7c39e6d5fa46f1, type: 3}
+  - {fileID: 21300000, guid: 79463b7aa43106841aa8725028625d75, type: 3}
+  - {fileID: 21300000, guid: 3118628ad61f48c4d92d718d11701d1f, type: 3}
+  - {fileID: 21300000, guid: f03edbaadf4d0b448bced08ce2697914, type: 3}
+  - {fileID: 21300000, guid: ad1c18cab58a2fd4e94875e723072042, type: 3}
+  - {fileID: 21300000, guid: eafae5fa139ca1446b85b5e33a1fb960, type: 3}
+  - {fileID: 21300000, guid: 5e7ebe5b882abcb4194bec72ca298451, type: 3}
+  - {fileID: 21300000, guid: 6cbfbe6b4ca2fa748b487f860a7624e3, type: 3}
+  - {fileID: 21300000, guid: 722049ebee94c35409844e17a1d2c641, type: 3}
+  - {fileID: 21300000, guid: c0c1540cae1e1ff43a85c02b016b720a, type: 3}
+  - {fileID: 21300000, guid: 4b6c640c31dfc4147be138ba94af0888, type: 3}
+  - {fileID: 21300000, guid: 4488315c2e1c79f4b8861a8944f55785, type: 3}
+  - {fileID: 21300000, guid: b38d918c92ec4e14c9e927fc80d109bc, type: 3}
+  - {fileID: 21300000, guid: 7047f7cce33afa7409243accdde50802, type: 3}
+  - {fileID: 21300000, guid: 3070f1ec9688f554ebb1388412c44628, type: 3}
+  - {fileID: 21300000, guid: 4101dd3d1c342664bb9013880434047b, type: 3}
+  - {fileID: 21300000, guid: ce5f395d254699b46bbc1967a21b3428, type: 3}
+  - {fileID: 21300000, guid: 7e6af63e27091bd41b2d732816ea31e1, type: 3}
+  - {fileID: 21300000, guid: bd9bdf3e90826324fbb183d52c0d9e4d, type: 3}
+  - {fileID: 21300000, guid: c6b4c57e3bf74a843a276a1bc15aae4e, type: 3}
+  - {fileID: 21300000, guid: 95bc728e6ae85c048b66009b7db7438d, type: 3}
+  - {fileID: 21300000, guid: 1fb81b9ef82522043aded61aa58de321, type: 3}
+  - {fileID: 21300000, guid: eb4f9baec8601544fa6d35b5cb731b9b, type: 3}
+  - {fileID: 21300000, guid: 1f694eae798d8a04f9d15d4ce61c7107, type: 3}
+  - {fileID: 21300000, guid: 7b825b4f564403a4c8da612e5bc8e964, type: 3}
+  - {fileID: 21300000, guid: 85b9f87f6c912c44d985d32df982e9b8, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - attack_teleport_5
+  - hit_3
+  - ready_teleport_2
+  - attack_7
+  - attack_3
+  - cast_loop_4
+  - ready_teleport_6
+  - dead_4
+  - cast_4
+  - dead_loop_3
+  - attack_1
+  - flying_8
+  - attack_teleport_1
+  - cast_loop_1
+  - dead_loop_2
+  - ready_1
+  - attack_teleport_9
+  - attack_4
+  - ready_3
+  - attack_teleport_10
+  - dead_5
+  - cast_5
+  - cast_3
+  - attack_teleport_2
+  - ready_teleport_4
+  - flying_7
+  - cast_loop_6
+  - flying_1
+  - ready_4
+  - hit_1
+  - attack_6
+  - ready_2
+  - dead_loop_1
+  - attack_teleport_6
+  - cast_8
+  - flying_2
+  - attack_teleport_7
+  - cast_7
+  - ready_teleport_1
+  - flying_4
+  - ready_5
+  - dead_2
+  - attack_teleport_4
+  - cast_loop_2
+  - attack_teleport_8
+  - cast_1
+  - flying_6
+  - dead_7
+  - hit_4
+  - attack_2
+  - dead_3
+  - attack_5
+  - ready_7
+  - ready_8
+  - hit_2
+  - ready_teleport_5
+  - dead_1
+  - ready_teleport_3
+  - flying_5
+  - cast_2
+  - dead_6
+  - flying_3
+  - ready_6
+  - cast_loop_5
+  - cast_loop_3
+  - attack_teleport_3
+  - cast_6
+  m_RenderDataMap: {}
+  m_Tag: BossSheet
+  m_IsVariant: 0
