@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ReaperAttackState : AIState
+public class ReaperRoarState : AIState
 {
 
     private ReaperAnimator reaperAnimator;
-
-    public bool isCoolDown { get; private set; }
 
     protected override void Awake()
     {
@@ -21,8 +19,7 @@ public class ReaperAttackState : AIState
     public override void EnterState()
     {
 
-        reaperAnimator.SetAttackTrigger();
-        StartCoroutine(AttackCoolDownCo());
+        reaperAnimator.SetRoarTrigger();
 
     }
 
@@ -37,15 +34,6 @@ public class ReaperAttackState : AIState
     {
 
 
-
-    }
-
-    private IEnumerator AttackCoolDownCo()
-    {
-
-        isCoolDown = true;
-        yield return new WaitForSeconds(3f);
-        isCoolDown = false;
 
     }
 
