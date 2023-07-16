@@ -2,17 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ReaperController : MonoBehaviour
+public class ReaperController : AIController
 {
-    // Start is called before the first frame update
-    void Start()
+
+    private HitSencer hitSencer;
+    private SpriteRenderer spriteRenderer;
+
+    protected override void Awake()
     {
-        
+
+        base.Awake();
+
+        hitSencer = GetComponent<HitSencer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
     }
 
-    // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
-        
+
+        base.Update();
+
+        hitSencer.swap = spriteRenderer.flipX;
+
     }
+
 }
