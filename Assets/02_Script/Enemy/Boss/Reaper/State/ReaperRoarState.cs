@@ -7,6 +7,8 @@ public class ReaperRoarState : AIState
 
     private ReaperAnimator reaperAnimator;
 
+    public bool isCoolDown { get; private set; }
+
     protected override void Awake()
     {
 
@@ -20,6 +22,7 @@ public class ReaperRoarState : AIState
     {
 
         reaperAnimator.SetRoarTrigger();
+        StartCoroutine(RoarCoolDownCo());
 
     }
 
@@ -34,6 +37,15 @@ public class ReaperRoarState : AIState
     {
 
 
+
+    }
+
+    private IEnumerator RoarCoolDownCo()
+    {
+
+        isCoolDown = true;
+        yield return new WaitForSeconds(2f);
+        isCoolDown = false;
 
     }
 
