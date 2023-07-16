@@ -49,3 +49,6 @@ MonoBehaviour:
   - poolName: AssesinEffect
     poolObj: {fileID: 3726927892817030318, guid: 39bdcadee6ff59d40ad1e46eb159937f, type: 3}
     poolSize: 30
+  - poolName: LineEffect
+    poolObj: {fileID: 1759598715794826875, guid: e12518ff16ceb494ca749955d3a5a5c6, type: 3}
+    poolSize: 30

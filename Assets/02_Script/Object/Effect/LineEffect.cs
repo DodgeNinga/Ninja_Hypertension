@@ -13,7 +13,6 @@ public class LineEffect : MonoBehaviour
 
     private void Awake()
     {
-        
         spriteRenderer = GetComponent<SpriteRenderer>();
 
     }
