@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class ReaperHP : HPObject
 {
-    
 
+    private ReaperAnimator animator;
+    private AIController controller;
 
+    private void Awake()
+    {
+        
+        animator = GetComponent<ReaperAnimator>();
+        controller = GetComponent<AIController>();
 
+    }
 
     private void Update()
     {
