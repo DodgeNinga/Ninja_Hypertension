@@ -18,6 +18,7 @@ public class ReaperMoveState : AIState
 
         target = GameObject.Find("Player").transform;
         spriteRenderer = controller.GetComponent<SpriteRenderer>();
+        rigid = controller.GetComponent<Rigidbody2D>();
 
     }
 
