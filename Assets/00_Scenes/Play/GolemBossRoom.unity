@@ -7319,6 +7319,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 369807393}
+  - component: {fileID: 369807394}
   m_Layer: 0
   m_Name: BossLine
   m_TagString: Untagged
@@ -7343,6 +7344,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &369807394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369807392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea837eaa9ceb68c4e960189c9fc5d7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lineEffect: {fileID: 5261482009844189354}
+  waringLine: {fileID: 13962152}
 --- !u!1 &378452345
 GameObject:
   m_ObjectHideFlags: 0
