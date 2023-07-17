@@ -10,6 +10,8 @@ public class ReaperAnimator : MonoBehaviour
     private readonly int RoarTriggerHash = Animator.StringToHash("RoarTrigger");
     private readonly int RoarEndTriggerHash = Animator.StringToHash("RoarEndTrigger");
     private readonly int AttackEndTriggerHash = Animator.StringToHash("AttackEndTrigger");
+    private readonly int HoldAttackTriggerHash = Animator.StringToHash("HoldAttackTrigger");
+    private readonly int HoldAttackEndTriggerHash = Animator.StringToHash("HoldAttackEndTrigger");
 
     private Animator animator;
 
@@ -25,5 +27,7 @@ public class ReaperAnimator : MonoBehaviour
     public void SetRoarTrigger() => animator.SetTrigger(RoarTriggerHash);
     public void SetRoarEndTrigger() => animator.SetTrigger(RoarEndTriggerHash);
     public void SetAttackEndTrigger() => animator.SetTrigger(AttackEndTriggerHash);
+    public void SetHoldAttackTrigger() => animator.SetTrigger(HoldAttackTriggerHash);
+    public void SetHoldAttacklEndTrigger() => animator.SetTrigger(HoldAttackEndTriggerHash);
 
 }
