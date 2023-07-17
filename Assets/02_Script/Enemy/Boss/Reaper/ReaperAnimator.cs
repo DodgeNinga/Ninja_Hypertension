@@ -8,6 +8,8 @@ public class ReaperAnimator : MonoBehaviour
     private readonly int DieTriggerHash = Animator.StringToHash("DieTrigger");
     private readonly int AttackTriggerHash = Animator.StringToHash("AttackTrigger");
     private readonly int RoarTriggerHash = Animator.StringToHash("RoarTrigger");
+    private readonly int RoarEndTriggerHash = Animator.StringToHash("RoarEndTrigger");
+    private readonly int AttackEndTriggerHash = Animator.StringToHash("AttackEndTrigger");
 
     private Animator animator;
 
