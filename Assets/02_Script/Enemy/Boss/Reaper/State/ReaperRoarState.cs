@@ -6,6 +6,7 @@ public class ReaperRoarState : AIState
 {
 
     private ReaperAnimator reaperAnimator;
+    private ReaperHP reaperHP;
 
     public bool isCoolDown { get; private set; }
 
@@ -14,7 +15,8 @@ public class ReaperRoarState : AIState
 
         base.Awake();
 
-        reaperAnimator = transform.parent.parent.GetComponent<ReaperAnimator>();
+        reaperAnimator = controller.GetComponent<ReaperAnimator>();
+        reaperHP = controller.GetComponent<ReaperHP>();
 
     }
 
@@ -22,6 +24,7 @@ public class ReaperRoarState : AIState
     {
 
         reaperAnimator.SetRoarTrigger();
+        reaperHP.HealingHP(100);
         StartCoroutine(RoarCoolDownCo());
 
     }
@@ -44,7 +47,7 @@ public class ReaperRoarState : AIState
     {
 
         isCoolDown = true;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(30f);
         isCoolDown = false;
 
     }

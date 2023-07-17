@@ -23,5 +23,7 @@ public class ReaperAnimator : MonoBehaviour
     public void SetDieTrigger() => animator.SetTrigger(DieTriggerHash);
     public void SetAttackTrigger() => animator.SetTrigger(AttackTriggerHash);
     public void SetRoarTrigger() => animator.SetTrigger(RoarTriggerHash);
+    public void SetRoarEndTrigger() => animator.SetTrigger(RoarEndTriggerHash);
+    public void SetAttackEndTrigger() => animator.SetTrigger(AttackEndTriggerHash);
 
 }
