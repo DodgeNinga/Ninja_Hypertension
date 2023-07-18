@@ -52,3 +52,6 @@ MonoBehaviour:
   - poolName: LineEffect
     poolObj: {fileID: 1759598715794826875, guid: e12518ff16ceb494ca749955d3a5a5c6, type: 3}
     poolSize: 30
+  - poolName: SkillLine
+    poolObj: {fileID: 8554145346942242990, guid: ace54aa75d2a8344ca8eac437c39e98b, type: 3}
+    poolSize: 30

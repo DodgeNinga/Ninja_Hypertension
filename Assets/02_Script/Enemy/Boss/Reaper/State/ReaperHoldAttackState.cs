@@ -10,6 +10,8 @@ public class ReaperHoldAttackState : AIState
     private Transform target;
     private ReaperAnimator reaperAnimator;
 
+    public bool isCoolDown { get; private set; }
+
     protected override void Awake()
     {
 
@@ -41,6 +43,8 @@ public class ReaperHoldAttackState : AIState
 
         }, 0.2f);
 
+        StartCoroutine(HoldAttaclCoolDownCo());
+
     }
 
     public override void ExitState()
@@ -68,6 +72,15 @@ public class ReaperHoldAttackState : AIState
         }
 
         lineEffects.Clear();
+
+    }
+
+    private IEnumerator HoldAttaclCoolDownCo()
+    {
+
+        isCoolDown = true;
+        yield return new WaitForSeconds(15f);
+        isCoolDown = false;
 
     }
 
