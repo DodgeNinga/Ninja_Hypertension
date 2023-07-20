@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MonsterRangeAttackxState : AIState
+public class MonsterRangeAttackState : AIState
 {
 
     public override void EnterState()

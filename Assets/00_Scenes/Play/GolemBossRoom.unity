@@ -9412,6 +9412,9 @@ GameObject:
   - component: {fileID: 580974966}
   - component: {fileID: 580974965}
   - component: {fileID: 580974964}
+  - component: {fileID: 580974970}
+  - component: {fileID: 580974969}
+  - component: {fileID: 580974968}
   m_Layer: 0
   m_Name: Monster
   m_TagString: Untagged
@@ -9532,6 +9535,48 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &580974968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580974963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d300a4ba57ad2264eb247f5c54873207, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitAbleLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  hitRanges: []
+--- !u!114 &580974969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580974963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78a2694d6d45b6749a97e59376012bfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: {fileID: 0}
+  <controllAble>k__BackingField: 1
+--- !u!114 &580974970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580974963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da3ad7723312e7c45803f29ace474537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &597489505
 GameObject:
   m_ObjectHideFlags: 0
