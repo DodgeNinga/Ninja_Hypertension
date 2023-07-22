@@ -55,3 +55,6 @@ MonoBehaviour:
   - poolName: SkillLine
     poolObj: {fileID: 8554145346942242990, guid: ace54aa75d2a8344ca8eac437c39e98b, type: 3}
     poolSize: 30
+  - poolName: MonsterSpell
+    poolObj: {fileID: 6876022989086534664, guid: 69ef153da8224c440a88c822ddd89032, type: 3}
+    poolSize: 30
