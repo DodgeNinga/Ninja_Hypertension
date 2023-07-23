@@ -6,6 +6,8 @@ using UnityEngine;
 public class ReaperHoldAttackState : AIState
 {
 
+    [SerializeField] private AudioSource s;
+
     private List<LineSkill> lineEffects = new List<LineSkill>();
     private Transform target;
     private ReaperAnimator reaperAnimator;
@@ -38,6 +40,7 @@ public class ReaperHoldAttackState : AIState
                 var obj = FAED.Pop("SkillLine", summonVec, Quaternion.Euler(new Vector3(0, 0, Random.Range(0, 360f)))).GetComponent<LineSkill>();
 
                 lineEffects.Add(obj);
+                s.Play();
 
             }
 

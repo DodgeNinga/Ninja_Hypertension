@@ -13,4 +13,11 @@ public class SceneLoadManager : MonoBehaviour
 
     }
 
+    public void SettingTTRL()
+    {
+
+        PlayerPrefs.SetInt("TTC", int.MaxValue);
+
+    }
+
 }

@@ -8,7 +8,7 @@ public class ColSencer : StorySencer
 
     [SerializeField] private float delTime;
 
-    private bool able;
+    protected bool able;
 
     public override bool Sencing()
     {

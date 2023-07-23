@@ -5,6 +5,7 @@ using UnityEngine;
 public class MonsterAttackState : AIState
 {
 
+    [SerializeField] private AudioSource s;
     private MonsterAnimator animator;
 
     public bool isCoolDown {  get; private set; }
@@ -22,6 +23,7 @@ public class MonsterAttackState : AIState
     {
 
         animator.SetAttackTrigger();
+        s.Play();
         StartCoroutine(AttackDelCo());
 
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ReaperRoarState : AIState
 {
-
+    [SerializeField] private AudioSource s;
     private ReaperAnimator reaperAnimator;
     private ReaperHP reaperHP;
 
@@ -24,6 +24,7 @@ public class ReaperRoarState : AIState
     {
 
         reaperAnimator.SetRoarTrigger();
+        s.Play();
         reaperHP.HealingHP(100);
         StartCoroutine(RoarCoolDownCo());
 

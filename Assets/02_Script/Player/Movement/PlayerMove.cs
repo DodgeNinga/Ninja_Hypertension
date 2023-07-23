@@ -9,6 +9,7 @@ public class PlayerMove : PlayerBehaviorRoot
 
     private float currentSpeed;
     private bool moveAble = true;
+    private bool isAdd;
 
     protected override void Awake()
     {
@@ -97,6 +98,8 @@ public class PlayerMove : PlayerBehaviorRoot
     public override void AddEvent()
     {
 
+        if (isAdd) return;
+        isAdd = true;
         actionSystem.OnHorizontalEvent += Move;
         actionSystem.OnRunKeyPressEvent += Run;
         actionSystem.OnRunKeyUpEvent += EndRun;
@@ -106,6 +109,7 @@ public class PlayerMove : PlayerBehaviorRoot
     public override void RemoveEvent()
     {
 
+        isAdd = false;
         actionSystem.OnHorizontalEvent -= Move;
         actionSystem.OnRunKeyPressEvent -= Run;
         actionSystem.OnRunKeyUpEvent -= EndRun;

@@ -5,6 +5,8 @@ using UnityEngine;
 public class MonsterRangeAttackState : AIState
 {
 
+    [SerializeField] private AudioSource s;
+
     private MonsterAnimator animator;
 
     public bool isCoolDown {  get; private set; }
@@ -22,6 +24,7 @@ public class MonsterRangeAttackState : AIState
     {
 
         animator.SetSpellTrigger();
+        s.Play();
         StartCoroutine(SpellCoolDownCo());
         
     }

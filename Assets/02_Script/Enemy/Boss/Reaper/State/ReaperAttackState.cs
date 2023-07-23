@@ -5,6 +5,7 @@ using UnityEngine;
 public class ReaperAttackState : AIState
 {
 
+    [SerializeField] private AudioSource s;
     private ReaperAnimator reaperAnimator;
 
     public bool isCoolDown { get; private set; }
@@ -22,6 +23,7 @@ public class ReaperAttackState : AIState
     {
 
         reaperAnimator.SetAttackTrigger();
+        s.Play();
         StartCoroutine(AttackCoolDownCo());
 
     }

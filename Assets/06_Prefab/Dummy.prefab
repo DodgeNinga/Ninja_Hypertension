@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 1242251714184380226}
   - component: {fileID: 510770330}
   - component: {fileID: 4687639904235922709}
+  - component: {fileID: 1855019102}
   m_Layer: 3
   m_Name: Dummy
   m_TagString: Untagged
@@ -37,7 +38,7 @@ Transform:
   m_GameObject: {fileID: 5831551814057482269}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.52, y: 9.58, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -116,6 +117,14 @@ MonoBehaviour:
     - {fileID: 5831551814057482240}
     - {fileID: 1242251714184380226}
     - {fileID: 510770330}
+  - feedbackState: DashHit
+    feedBack:
+    - {fileID: 5831551814057482265}
+    - {fileID: 5831551814057482270}
+    - {fileID: 5831551814057482246}
+    - {fileID: 5831551814057482240}
+    - {fileID: 1242251714184380226}
+    - {fileID: 1855019102}
 --- !u!114 &5831551814057482265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,6 +218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3df008ec06ac6d547b348533f90a4a58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  root: {fileID: 0}
 --- !u!114 &1463410073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -343,3 +353,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1855019102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5831551814057482269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ae0dea7604466e468c70206a277c2d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

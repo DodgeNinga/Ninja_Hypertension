@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using static UnityEngine.Rendering.DebugUI;
 
@@ -59,6 +60,8 @@ public class PlayerHP : HPObject
     private void SetSlider()
     {
 
+        if (slider == null) return;
+
         slider.value = HP / maxHP;
 
     }
@@ -104,6 +107,13 @@ public class PlayerHP : HPObject
             TakeDotDel(dotDel);
 
         }
+
+    }
+
+    public void DIEEVT()
+    {
+
+        SceneManager.LoadScene("Lobby");
 
     }
 

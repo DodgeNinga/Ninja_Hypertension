@@ -80,6 +80,7 @@ public class AIBrain : MonoBehaviour
 
     private void DieLogic()
     {
+        isDie = true;
         AnimationEvent?.Invoke(enemyCurrentState);
     }
 
