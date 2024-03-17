@@ -7,7 +7,7 @@
 
 최대원(개발) : https://no-name-stroy.tistory.com/37
 
-장하원(기획, 개발) : https://docs.google.com/document/d/1GxA78D-1m1NCgT2CcGHdsve_KXaTMnf0/edit?usp=sharing&ouid=109373809551025676672&rtpof=true&sd=true
+장하원(기획, 개발) : https://www.notion.so/HYPER-TENSION-1213e3c5b89a443c9d5e9d1f7cf09fb9
 
 
 ![image](https://github.com/DodgeNinga/Ninja_Hypertension/assets/98935315/1b1dd245-05be-4458-9d95-be4d753a5198)
